@@ -32,7 +32,7 @@ If you require support from SAP Consulting please open an incident on support co
 
 ## Contributing
 
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository or create an incident on support component XX-PROJ-CON-SEC if you want to contribute content.
+[Create an issue](https://github.com/SAP-samples/idm-business-extensions-service/issues) in this repository or create an incident on support component XX-PROJ-CON-SEC if you want to contribute content.
 
 ## License
 
