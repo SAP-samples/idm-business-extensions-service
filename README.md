@@ -6,7 +6,7 @@ This repository contains the content of the SAP Identity Management Business Ext
 
 Considerations:
 * The content can be downloaded and used without any license charges.
-* If you require support during installation, configuration or when using, modifying or extending the content you need to open an SAP support incident under support component XX-PROJ-CON-SEC.
+* If you require support during installation, configuration or when using, modifying or extending the content, please send an email to <securityconsulting@global.corp.sap>.
 * If you did not purchase the service from SAP Consulting, you will get charged for the support activities. 
 
 ## Requirements
@@ -28,11 +28,11 @@ Please refer to the Configuration Guide inside the package.
  
 For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
-If you require support from SAP Consulting please open an incident on support component XX-PROJ-CON-SEC.
+If you require support from SAP Consulting please send an email to <securityconsulting@global.corp.sap>.
 
 ## Contributing
 
-[Create an issue](https://github.com/SAP-samples/idm-business-extensions-service/issues) in this repository or create an incident on support component XX-PROJ-CON-SEC if you want to contribute content.
+[Create an issue](https://github.com/SAP-samples/idm-business-extensions-service/issues) in this repository or send an email to <securityconsulting@global.corp.sap> if you want to contribute content.
 
 ## License
 
