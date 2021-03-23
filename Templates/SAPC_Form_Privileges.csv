@@ -1,0 +1,61 @@
+MSKEYVALUE;DISPLAYNAME;DESCRIPTION
+SAPC_PRIV:FORM:SAPC_CONFIGITEM_SEARCH;Access to Form SAPC_Configitem_Search;Access to Form SAPC_Configitem_Search
+SAPC_PRIV:FORM:SAPC_CONFIGITEM_CREATE;Access to Form SAPC_Configitem_Create;Access to Form SAPC_Configitem_Create
+SAPC_PRIV:FORM:SAPC_CONFIGITEM_DISPLAY;Access to Form SAPC_Configitem_Display;Access to Form SAPC_Configitem_Display
+SAPC_PRIV:FORM:SAPC_CONFIGITEM_MODIFY;Access to Form SAPC_Configitem_Modify;Access to Form SAPC_Configitem_Modify
+SAPC_PRIV:FORM:SAPC_CONFIGITEM_DELETE;Access to Form SAPC_Configitem_Delete;Access to Form SAPC_Configitem_Delete
+SAPC_PRIV:FORM:SAPC_REQUEST_DISPLAY;Access to Form SAPC_REQUEST_Display;Access to Form SAPC_REQUEST_Display
+SAPC_PRIV:FORM:SAPC_MASS_ADMINISTRATION_DELETE_REQUEST;Access to Form SAPC Mass Administration - Delete Request;Access to Form SAPC Mass Administration - Delete Request
+SAPC_PRIV:FORM:SAPC_REQUEST_SEARCH;Access to Form SAPC_REQUEST_Search;Access to Form SAPC_REQUEST_Search
+SAPC_PRIV:FORM:SAPC_MASS_ADMINISTRATION;Access to Form SAPC Mass Administration;Access to Form SAPC Mass Administration
+SAPC_PRIV:FORM:SAPC_DISPLAY_COMPANY_ADDRESS_COMPLETE_DATA;Access to Form SAPC Display Company Address - Complete Data;Access to Form SAPC Display Company Address - Complete Data
+SAPC_PRIV:FORM:SAPC_CREATE_COMPANY_ADDRESS;Access to Form SAPC Create Company Address;Access to Form SAPC Create Company Address
+SAPC_PRIV:FORM:SAPC_RULEENGINE_DISPLAY_DYNAMIC_GROUP;Access to Form SAPC RuleEngine: Display Dynamic Group;Access to Form SAPC RuleEngine: Display Dynamic Group
+SAPC_PRIV:FORM:SAPC_RULEENGINE_RECALCULATE_DYNAMIC_GROUP_MEMBERS;Access to Form SAPC RuleEngine: Recalculate Dynamic Group Members;Access to Form SAPC RuleEngine: Recalculate Dynamic Group Members
+SAPC_PRIV:FORM:SAPC_DISPLAY_GROUP_COMPLETE_DATA;Access to Form SAPC Display Group - Complete Data;Access to Form SAPC Display Group - Complete Data
+SAPC_PRIV:FORM:SAPC_CHANGE_IDENTITY_BASIC;Access to Form SAPC Change Identity - Basic;Access to Form SAPC Change Identity - Basic
+SAPC_PRIV:FORM:SAPC_DISPLAY_IDENTITY_BASIC;Access to Form SAPC Display Identity - Basic;Access to Form SAPC Display Identity - Basic
+SAPC_PRIV:FORM:SAPC_REPAIR_USERS_AT_ROLE;Access to Form SAPC Repair Users At Role;Access to Form SAPC Repair Users At Role
+SAPC_PRIV:FORM:SAPC_CHANGE_IDENTITY_EXTENDED;Access to Form SAPC Change Identity - Extended;Access to Form SAPC Change Identity - Extended
+SAPC_PRIV:FORM:SAPC_USER_AUTHORIZATION_REPORT;Access to Form SAPC User Authorization Report;Access to Form SAPC User Authorization Report
+SAPC_PRIV:FORM:SAPC_CREATE_DYNAMIC_GROUP;Access to Form SAPC Create Dynamic Group;Access to Form SAPC Create Dynamic Group
+SAPC_PRIV:FORM:SAPC_DISABLE_ENABLE_IDENTITY;Access to Form SAPC Disable Enable Identity;Access to Form SAPC Disable Enable Identity
+SAPC_PRIV:FORM:SAPC_COPY_IDENTITY_BASIC_(CREATE);Access to Form SAPC Copy Identity - Basic (Create);Access to Form SAPC Copy Identity - Basic (Create)
+SAPC_PRIV:FORM:SAPC_DISPLAY_GROUP_BASIC;Access to Form SAPC Display Group - Basic;Access to Form SAPC Display Group - Basic
+SAPC_PRIV:FORM:SAPC_CHANGE_DYNAMIC_GROUP;Access to Form SAPC Change Dynamic Group;Access to Form SAPC Change Dynamic Group
+SAPC_PRIV:FORM:SAPC_MODIFY_PRIVILEGE;Access to Form SAPC Modify Privilege;Access to Form SAPC Modify Privilege
+SAPC_PRIV:FORM:SAPC_RULEENGINE_UPLOAD_RULE_FILE;Access to Form SAPC RuleEngine: Upload Rule File;Access to Form SAPC RuleEngine: Upload Rule File
+SAPC_PRIV:FORM:SAPC_USER_LIST_PER_PRIVILEGE_REPORT;Access to Form SAPC User List per Privilege Report;Access to Form SAPC User List per Privilege Report
+SAPC_PRIV:FORM:SAPC_RESET_PASSWORD;Access to Form SAPC Reset Password;Access to Form SAPC Reset Password
+SAPC_PRIV:FORM:SAPC_USER_HISTORY_REPORT;Access to Form SAPC User History Report;Access to Form SAPC User History Report
+SAPC_PRIV:FORM:SAPC_RULEENGINE_UPDATE_DYNAMIC_GROUP;Access to Form SAPC RuleEngine: Update Dynamic Group;Access to Form SAPC RuleEngine: Update Dynamic Group
+SAPC_PRIV:FORM:SAPC_USER_DETAILS_REPORT;Access to Form SAPC User Details Report;Access to Form SAPC User Details Report
+SAPC_PRIV:FORM:SAPC_MX_ROLE_SEARCH;Access to Form SAPC_MX_ROLE_Search;Access to Form SAPC_MX_ROLE_Search
+SAPC_PRIV:FORM:SAPC_DISPLAY_DYNAMIC_GROUP_COMPLETE_DATA;Access to Form SAPC Display Dynamic Group - Complete Data;Access to Form SAPC Display Dynamic Group - Complete Data
+SAPC_PRIV:FORM:SAPC_DISPLAY_ROLE_COMPLETE_DATA;Access to Form SAPC Display Role - Complete Data;Access to Form SAPC Display Role - Complete Data
+SAPC_PRIV:FORM:SAPC_DISPLAY_COMPANY_ADDRESS;Access to Form SAPC_Display_Company_Address;Access to Form SAPC_Display_Company_Address
+SAPC_PRIV:FORM:SAPC_CREATE_BUSINESS_ROLE;Access to Form SAPC Create Business Role;Access to Form SAPC Create Business Role
+SAPC_PRIV:FORM:SAPC_RULEENGINE_CREATE_DYNAMIC_GROUP;Access to Form SAPC RuleEngine: Create Dynamic Group;Access to Form SAPC RuleEngine: Create Dynamic Group
+SAPC_PRIV:FORM:SAPC_USER_LIST_PER_BUSINESS_ROLE_REPORT;Access to Form SAPC User List per Business Role Report;Access to Form SAPC User List per Business Role Report
+SAPC_PRIV:FORM:SAPC_REPAIR_PRIVILEGE_MEMBERS;Access to Form SAPC Repair Privilege Members;Access to Form SAPC Repair Privilege Members
+SAPC_PRIV:FORM:SAPC_USER_LIST_PER_PRIVILEGE_HISTORICAL_REPORT;Access to Form SAPC User List per Privilege Historical Report;Access to Form SAPC User List per Privilege Historical Report
+SAPC_PRIV:FORM:SAPC_DISPLAY_PRIVILEGE;Access to Form SAPC Display Privilege;Access to Form SAPC Display Privilege
+SAPC_PRIV:FORM:SAPC_CHANGE_COMPANY_ADDRESS;Access to Form SAPC Change Company Address;Access to Form SAPC Change Company Address
+SAPC_PRIV:FORM:SAPC_CHANGE_GROUP;Access to Form SAPC Change Group;Access to Form SAPC Change Group
+SAPC_PRIV:FORM:SAPC_RULEENGINE_DELETE_DYNAMIC_GROUP;Access to Form SAPC RuleEngine: Delete Dynamic Group;Access to Form SAPC RuleEngine: Delete Dynamic Group
+SAPC_PRIV:FORM:SAPC_READ_DSE.LOG_FROM_RT_HOST;Access to Form SAPC Read DSE.log from RT Host;Access to Form SAPC Read DSE.log from RT Host
+SAPC_PRIV:FORM:SAPC_CREATE_IDENTITY_BASIC;Access to Form SAPC Create Identity - Basic;Access to Form SAPC Create Identity - Basic
+SAPC_PRIV:FORM:SAPC_DISPLAY_PRIVILEGE_COMPLETE_DATA;Access to Form SAPC Display Privilege - Complete Data;Access to Form SAPC Display Privilege - Complete Data
+SAPC_PRIV:FORM:SAPC_MODIFY_BUSINESS_ROLE;Access to Form SAPC Modify Business Role;Access to Form SAPC Modify Business Role
+SAPC_PRIV:FORM:SAPC_CREATE_GROUP;Access to Form SAPC Create Group;Access to Form SAPC Create Group
+SAPC_PRIV:FORM:SAPC_REPAIR_ENTRY;Access to Form SAPC Repair Entry;Access to Form SAPC Repair Entry
+SAPC_PRIV:FORM:SAPC_USER_LIST_PER_BUSINESS_ROLE_HISTORICAL_REPORT;Access to Form SAPC User List per Business Role Historical Report;Access to Form SAPC User List per Business Role Historical Report
+SAPC_PRIV:FORM:SAPC_DISPLAY_IDENTITY_COMPLETE_DATA;Access to Form SAPC Display Identity - Complete Data;Access to Form SAPC Display Identity - Complete Data
+SAPC_PRIV:FORM:SAPC_DISPLAY_DYNAMIC_GROUP_BASIC;Access to Form SAPC Display Dynamic Group - Basic;Access to Form SAPC Display Dynamic Group - Basic
+SAPC_PRIV:FORM:SAPC_DISPLAY_COMPANY_ADDRESS_BASIC;Access to Form SAPC Display Company Address - Basic;Access to Form SAPC Display Company Address - Basic
+SAPC_PRIV:FORM:SAPC_CREATE_IDENTITY_EXTENDED;Access to Form SAPC Create Identity - Extended;Access to Form SAPC Create Identity - Extended
+SAPC_PRIV:FORM:SAPC_DISPLAY_ROLE_BASIC;Access to Form SAPC Display Role - Basic;Access to Form SAPC Display Role - Basic
+SAPC_PRIV:FORM:SAPC_CHANGE_IDENTITY_SYSTEM_SPECIFIC_DATA;Access to Form SAPC Change Identity - System Specific Data;Access to Form SAPC Change Identity - System Specific Data
+SAPC_PRIV:FORM:SAPC_DISPLAY_IDENTITY_SYSTEM_SPECIFIC_DATA;Access to Form SAPC Display Identity - System Specific Data;Access to Form SAPC Display Identity - System Specific Data
+SAPC_PRIV:FORM:SAPC_MASS_USER_ASSIGNMENT;Access to Form SAPC Mass User Assignment;Access to Form SAPC Mass User Assignment
+SAPC_PRIV:FORM:SAPC_REQUEST_CANCEL;Access to Form SAPC_REQUEST_Cancel;Access to Form SAPC_REQUEST_Cancel

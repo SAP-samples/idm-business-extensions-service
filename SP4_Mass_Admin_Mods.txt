@@ -1,0 +1,94 @@
+
+
+Request
+ - mskey of user
+ - job guid
+ - file name
+ - state
+
+Value Help
+ - guid - name
+ 
+Config Item:
+
+Forms:
+ - New Request
+ - Modify Request
+ - Cancel Request (Set State Canceled)
+
+
+Setup:
+ - new job
+ - new value help
+
+Story:
+ 1. Start request with guid
+ 2. Request uploading file and starting job (file name on request)
+ 3. Job getting file from request -> executing
+ 4. Job setting request state finished
+ 
+Update:
+ - Change existing value help
+ - Delete constants
+ 
+! Multiple execution of scripts in to passes
+
+Actions:
+ - deleted attributes SAPC_REQ_DESCRIPTION2 & SAPC_REQ_DESCRIPTION2_
+ - Modification of Valuehelp
+ - Modification of Job  for Valuehelp-Creation
+ - New form: SAPC_REQUEST_Cancel
+ - Added Form Privilege to file SAPC_Form_Privileges.csv
+ - Deleted attribute SAPC_REQ_JOB_GUID (SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY already holding value)
+ - Deleted attribute SAPC_REQ_TEMP_TRIGGER_MASS_ADMIN_JOB - dont see where we need it
+ - Creation of Attribute SAPC_REQ_TRIGGER_MASS_CHANGE_FILE_PATH to hold file path
+ - Adaptation of scripts
+	sapc_updateConfigItemState
+	sapc_copyFileToShare
+	sapc_setRunningAndMSKEYVALUEandContext
+	sapc_getRequestMSKEY
+	sapc_setFileAttributeContentForRequest SAPC_%$ddm.mcjob%_FILEPATH -> SAPC_REQ_TRIGGER_MASS_CHANGE_FILE_PATH
+	sapc_setJobState
+ - Deletion of sapc_updateConfigItemState, sapc_getFileNameForMassOperation
+ - Deletion of SAPC_PRIV:FORM:SAPC_REQUEST_SEARCH
+ - New Form to Set Request to Error with new priv in upload file
+ 
+ 
+ 
+For Update:
+___________
+update mxi_AttrValueHelp set ValKey = '6B71B973-7C19-4D04-AF59-D8FA8EFE20A1' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_CONFIGITEM_UPLOAD'
+update mxi_AttrValueHelp set ValKey = 'B6F71340-C183-4A88-8E01-0D989D83D5F8' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_ROLE_CATEGORIES_UPLOAD'
+update mxi_AttrValueHelp set ValKey = 'AC7B57E9-BFD2-4DF8-8030-FCC07B2F6712' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_ROLE_CREATION'
+update mxi_AttrValueHelp set ValKey = '56BE8105-BF6D-45A5-82C4-D201F34596AA' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_IDENTITY_DOWNLOAD'
+update mxi_AttrValueHelp set ValKey = '99ACED47-BA68-41EE-9B3C-80B5EF8BAA88' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_IDENTITY_ROLEPRIVASSIGN'
+update mxi_AttrValueHelp set ValKey = '9EC00C96-2A76-4387-9DC3-0C384BB11DCF' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_IDENTITY_MODIFY'
+update mxi_AttrValueHelp set ValKey = 'EB3F2C19-D211-4AA1-9572-7F9FF28DDDCA' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_IDENTITY_UPLOAD_CREATION'
+update mxi_AttrValueHelp set ValKey = '0A7718B0-B960-43B1-911E-ECB23A3498EC' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_IDENTITY_RESETPASSWORD'
+update mxi_AttrValueHelp set ValKey = '05ED3DA9-A8BB-4CF5-BFFD-765CF6DADC87' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_ROLE_CATEGORIES_DOWNLOAD'
+update mxi_AttrValueHelp set ValKey = '10DFFFD5-749F-452A-AA98-33B642EDC8D0' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_IDENTTIY_PROVISION'
+update mxi_AttrValueHelp set ValKey = '5F5FBD4B-621E-49C4-A631-01B9B30CEBA0' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_IDENTITY_UPLOAD_DISABLEENABLE'
+update mxi_AttrValueHelp set ValKey = '64A51D46-8549-42D5-93AC-1984760E689A' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_ROLE_ROLEPRIVASSIGN'
+update mxi_AttrValueHelp set ValKey = '867A725B-3C3F-4EF6-A79C-15293AC04B11' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_VALUEHELP_UPLOAD'
+update mxi_AttrValueHelp set ValKey = '153E448C-2D1B-4083-97E4-9FE7AB0DDF7E' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_TRANSLATION_DOWNLOAD'
+update mxi_AttrValueHelp set ValKey = 'DAAE440A-BA1A-41C6-AD83-A6E242D05544' where valid like 'SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY' and valKey = 'SAPC_JOB_TRANSLATION_UPLOAD'
+
+insert into mxi_AttrValueHelp values ('SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY', '205BDC4A-2E2E-4652-97DA-1779A55C0945', 'SAPC Multivalue ConfigItem - Download', NULL)
+
+New Priv SAPC_PRIV:FORM:SAPC_REQUEST_CANCEL;Access to Form SAPC_REQUEST_Cancel;Access to Form SAPC_REQUEST_Cancel
+#Add custom Jobs
+
+If Cancel form is required: Exec Job to create internal privs again
+
+Import package
+
+Delete all obsolete config items (all stored on request)
+Job: Delete Request Config Items (SP4 patching)
+select mcMSKEYVALUE from idmv_entry_simple where mcEntryType like 'SAPC_CONFIGURATION_ITEM' and mcMSKEYVALUE like 'SAPC_CONFIGITEM:SAPC_JOB%'
+
+Remove deleted scripts from custom jobs (sapc_updateConfigItemState, sapc_getFileNameForMassOperation)
+Add script and pass for sapc_setInitialJobConstants to custom jobs and copy first pass from RDS jobs to custom jobs
+Check usage of job variables in custom jobs
+Delete of SAPC_PRIV:FORM:SAPC_REQUEST_SEARCH
+Create Form SAPC_PRIV:FORM:SAPC_REQUEST_TO_ERROR
+

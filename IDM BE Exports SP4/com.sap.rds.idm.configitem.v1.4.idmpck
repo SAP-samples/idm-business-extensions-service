@@ -1,0 +1,2604 @@
+<IDM EXPORTED_ON="2020-11-25 16:19:50.623" IS_PACKAGE_FOLDER_EXPORT="0" PACKAGE_TRANSPORT_VERSION="8#0#7#2019#0#1#800SP7#1805#1805#1801" SCHEMA_VERSION="1805">
+<PACKAGES>
+<PACKAGE MCQUALIFIEDNAME="com.sap.rds.idm.configitem">
+<MCDISPLAYNAME>com.sap.consulting.configitem</MCDISPLAYNAME>
+<MCLASTMODIFIED>1605553401323</MCLASTMODIFIED>
+<MCMAJORVERSION>1</MCMAJORVERSION>
+<MCMINORVERSION>4</MCMINORVERSION>
+<MCPACKAGELEVEL>1707</MCPACKAGELEVEL>
+<MCPACKAGETYPE>0</MCPACKAGETYPE>
+<MCQUALIFIEDNAME>com.sap.rds.idm.configitem</MCQUALIFIEDNAME>
+<PACKAGE_VARS>
+<VARIABLE>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>-1</VARCATEGORY>
+<VARDESCRIPTION>Optional input: The job SAPC_CreateMinimumData will add the administrator privilege to this role. This will enable to work with configuration items. 
+</VARDESCRIPTION>
+<VARNAME>ADMINISTRATOR_ROLE</VARNAME>
+<VARTYPE>0</VARTYPE>
+<VARVALUE>SAPC_IDM_ADMINISTRATORS</VARVALUE>
+</VARIABLE>
+<VARIABLE>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>-1</VARCATEGORY>
+<VARDESCRIPTION>Optional input: The job SAPC_CreateMinimumData will add the administrator privilege to this user. This will enable to work with configuration items.</VARDESCRIPTION>
+<VARNAME>ADMINISTRATOR_USER</VARNAME>
+<VARTYPE>0</VARTYPE>
+</VARIABLE>
+</PACKAGE_VARS>
+<USES>
+<USE>
+<MCFROMREFERENCE>205BDC4A-2E2E-4652-97DA-1779A55C0945</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_core_getNolock</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>8</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>205BDC4A-2E2E-4652-97DA-1779A55C0945</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_core_script_functions</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>8</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>205BDC4A-2E2E-4652-97DA-1779A55C0945</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.mass.administration:jscript.sapc_getRequestMSKEY</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>3</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>205BDC4A-2E2E-4652-97DA-1779A55C0945</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.mass.administration:jscript.sapc_setInitialJobConstants</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>3</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>205BDC4A-2E2E-4652-97DA-1779A55C0945</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.mass.administration:jscript.sapc_setJobState</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>3</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>205BDC4A-2E2E-4652-97DA-1779A55C0945</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_getMskeyvalueFromMskey</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>8</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>205BDC4A-2E2E-4652-97DA-1779A55C0945</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.mass.administration:jscript.sapc_setFileAttributeContentForRequest</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>3</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>205BDC4A-2E2E-4652-97DA-1779A55C0945</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_getJobVar</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>8</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>6B71B973-7C19-4D04-AF59-D8FA8EFE20A1</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_core_script_functions</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>8</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>6B71B973-7C19-4D04-AF59-D8FA8EFE20A1</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.mass.administration:jscript.sapc_getRequestMSKEY</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>3</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>6B71B973-7C19-4D04-AF59-D8FA8EFE20A1</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.mass.administration:jscript.sapc_setJobState</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>3</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>6B71B973-7C19-4D04-AF59-D8FA8EFE20A1</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_core_getNolock</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>8</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>6B71B973-7C19-4D04-AF59-D8FA8EFE20A1</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.mass.administration:jscript.sapc_setInitialJobConstants</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>3</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>6B71B973-7C19-4D04-AF59-D8FA8EFE20A1</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>3</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_getJobVar</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>8</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>94B115FD-FA45-43A1-9BA3-27752B73EE1B</MCFROMREFERENCE>
+<MCFROMTYPE>7</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>entrytype.displaytask.SAPC_CONFIGURATION_ITEM</MCTOQUALIFIEDNAME>
+<MCTOTYPE>9</MCTOTYPE>
+<MCVERSION>0</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>CD509E1D-BF21-4267-ABF6-6590E42C1765</MCFROMREFERENCE>
+<MCFROMTYPE>7</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>entrytype.searchtask.SAPC_CONFIGURATION_ITEM</MCTOQUALIFIEDNAME>
+<MCTOTYPE>9</MCTOTYPE>
+<MCVERSION>0</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>1DC82D67-0FC7-4A6B-9C5A-83A4AE319F27</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_logCurrentValue</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>9</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>1DC82D67-0FC7-4A6B-9C5A-83A4AE319F27</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_core_script_functions</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>9</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>64101A99-0B9A-4E3C-B641-83EA8533528F</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_uIS_SetValue</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>14</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>64101A99-0B9A-4E3C-B641-83EA8533528F</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_core_script_functions</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>14</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>64101A99-0B9A-4E3C-B641-83EA8533528F</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_toUpperCase</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>14</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+</USES>
+<PUBLIC_REFERENCES>
+<PUBLIC_REFERENCE>
+<MCNAME>sapc_getConfigItemValue</MCNAME>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCREFERENCE>sapc_getConfigItemValue</MCREFERENCE>
+<MCTYPE>12</MCTYPE>
+</PUBLIC_REFERENCE>
+<PUBLIC_REFERENCE>
+<MCNAME>sapc_setConfigItem</MCNAME>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCREFERENCE>sapc_setConfigItem</MCREFERENCE>
+<MCTYPE>12</MCTYPE>
+</PUBLIC_REFERENCE>
+<PUBLIC_REFERENCE>
+<MCNAME>SAPC_Configitem_Display</MCNAME>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCREFERENCE>94B115FD-FA45-43A1-9BA3-27752B73EE1B</MCREFERENCE>
+<MCTYPE>24</MCTYPE>
+</PUBLIC_REFERENCE>
+<PUBLIC_REFERENCE>
+<MCNAME>SAPC_Configitem_Search</MCNAME>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCREFERENCE>CD509E1D-BF21-4267-ABF6-6590E42C1765</MCREFERENCE>
+<MCTYPE>24</MCTYPE>
+</PUBLIC_REFERENCE>
+</PUBLIC_REFERENCES>
+<PACKAGE_SCRIPTS>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>/*
+ * Description: Script loads configuration item from idstore if exists 
+ * 
+ * Example input:  SAPC_JOB_STATE!!SAPC_JOB_IDENTITY_MODIFY
+ * Example output: IDLE
+ * Remark: output could be multivalue - process must handle this!
+ * 
+ * Dependencies: sapc_core_script_functions
+ */
+function sapc_getConfigItemValue(Par) {
+
+    var params = Par.split("!!");
+    var type = params[0];
+    var key = params[1];
+    var value = "";
+    var core = sapc_core_scriptHeader("sapc_getConfigItemValue", Par);
+    var log = core.logLevel;
+
+    var confMSKEYVALUE = "SAPC_CONFIGITEM:" + type + ":" + key;
+    uInfo(core.outPrefix + "confMSKEYVALUE: [" + confMSKEYVALUE + "]");
+    var confMSKEY = uIS_Get(core.masterIDS, confMSKEYVALUE);
+    uInfo(core.outPrefix + "confMSKEY: [" + confMSKEY + "]");
+    value = uIS_nGetValues(confMSKEY, "SAPC_CONFIGITEM_VALUE", "|");
+
+    if (!value) {
+        //No value
+        uWarning(core.outPrefix + "No item or no values defined for given type [" + type + "] and key [" + key + "].");
+        return "";
+    } else if (value.indexOf("|") &gt; -1) {
+        //Multivalue
+        sapc_uInfo(core.outPrefix + "Multivalue found for given type [" + type + "] and key [" + key + "]. Returning:[" + value + "]");
+    } else {
+        //SingleValue
+        sapc_uInfo(core.outPrefix + "Singlevalue found for given type [" + type + "] and key [" + key + "]. Returning:[" + value + "]");
+    }
+    return value;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sapc_getConfigItemValue</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>/*
+ * Description: Script updates all values or creates new configuration item in current idstore 
+ * Remark config item will be created if it does not exist.
+ * Remark input could be multivalue!
+ * 
+ * Input: &lt;Config Item Type&gt;!!&lt;Config Item Id&gt;!!&lt;Config Item Value(s)&gt;
+ * Example input single value:  SAPC_JOB_STATE!!SAPC_JOB_IDENTITY_PROVISION!!RUNNING
+ * Example input multi value:   Z_ALLOWED_VALUES!!Z_ROLE_TYPE!!JOB!!POSITION!!SUBSTITUTION!!ADMIN
+ *
+ * Output: Audit IDs of uIS_SetValue
+ * Example output: 12345
+ * Remark: auditid if process on  SAPC_CONFIGITEM_VALUE attribute, empty string if not or !ERROR...
+ *
+ * Dependencies: sapc_core_script_functions
+ */
+
+function sapc_setConfigItem(Par) {
+    var core = sapc_core_scriptHeader("sapc_setConfigItem", Par);
+    var log = core.logLevel;
+    var params = Par.split("!!");
+    var type = params[0];
+    var key = params[1];
+    var values = params[2];
+    var retVal = "";
+
+
+    //SAPC_CONFIGITEM:SAPC_JOB_STATE:9502AADA-10ED-4E05-BFE9-8D21D8884FD5
+    var mskeyvalue = "SAPC_CONFIGITEM:" + type + ":" + key;
+
+    var mskey = uIS_Get(core.masterIDS, mskeyvalue);
+    sapc_uInfo(core.outPrefix + " mskeyvalue:[" + mskeyvalue + "] mskey:[" + mskey + "]");
+    if (mskey == "" || mskey.indexOf("!ERROR") &gt; -1) {
+        mskey = uIS_Create(core.masterIDS, mskeyvalue);
+        if (!mskey || mskey.indexOf("!ERROR") &gt; -1) {
+            uErrMsg(2, core.outPrefix + " Unable to get SAPC_CONFIGITEM information from database.Result was empty.");
+            uSkip(1, 2, "Unable to get SAPC_CONFIGITEM information from database. Result was empty.");
+            uStop("Unable to get SAPC_CONFIGITEM information from database. Result was empty.");
+        }
+        uIS_SetValue(mskey, core.masterIDS, "MX_ENTRYTYPE", "SAPC_CONFIGURATION_ITEM");
+        uIS_SetValue(mskey, core.masterIDS, "SAPC_CONFIGITEM_TYPE", type);
+        uIS_SetValue(mskey, core.masterIDS, "SAPC_CONFIGITEM_KEY", key);
+    }
+
+    //delete old value (required for multivalue)
+    uIS_SetValue(mskey, core.masterIDS, "SAPC_CONFIGITEM_VALUE", "");
+
+    //write new value(s)
+    values = uReplaceString(values, "|", "!!").split("|");
+    for (iva = 0; iva &lt; values.length; iva++) {
+        if (retVal != "") retVal += "|";
+        retVal += uIS_SetValue(mskey, core.masterIDS, "SAPC_CONFIGITEM_VALUE", values);
+    }
+    sapc_uInfo(core.outPrefix + " retVal: [" + retVal + "]");
+    return retVal;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sapc_setConfigItem</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+</PACKAGE_SCRIPTS>
+<JOBS>
+<JOB JOBGUID="115E7CB6-792A-4AC4-9F0D-D7FBF98A4407" MCPACKAGEID="com.sap.rds.idm.configitem">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1579793509687</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>e7d607f9c4e94a9cb771fbec7dbee72b</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="DeleteItem"/>
+</mx:Sequence>
+<mx:Job name="DeleteItem">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="09d69361-280d-4eba-b1be-5daa5ba22781"/>
+</mx:Sequence>
+<mx:Globals/>
+<mx:Functions/>
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>JScript</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+</mx:Common>
+<mx:Pass name="09d69361-280d-4eba-b1be-5daa5ba22781">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>SAPC_DeleteItem</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<IDSTORE>null</IDSTORE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>-- Self --</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>%MSKEYVALUE%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>SAPC_CONFIGURATION_ITEM</mx:value>
+</mx:attr>
+<mx:attr name="changetype">
+<mx:value>delete</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>115E7CB6-792A-4AC4-9F0D-D7FBF98A4407</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC_DeleteItem</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="1DC82D67-0FC7-4A6B-9C5A-83A4AE319F27" MCPACKAGEID="com.sap.rds.idm.configitem">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1579793509597</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>fe21b418139d462cb7e0fbec7dbee72b</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="Action Task384"/>
+</mx:Sequence>
+<mx:Job name="Action Task384">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="20ac6d5c-0426-4557-a9d1-5523a468328d"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>JScript</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+</mx:Common>
+<mx:Pass name="20ac6d5c-0426-4557-a9d1-5523a468328d">
+            <TYPE>ToIDStore</TYPE>
+            <DESCRIPTION>SAPC Set Last Changed By &amp; Last Changed At</DESCRIPTION>
+            <REPOSITORY>0</REPOSITORY>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>1</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>1</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<IDSTORE>1</IDSTORE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>-- Self --</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>$FUNCTION.sapc_logCurrentValue(%MSKEYVALUE%)$$</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>SAPC_CONFIGURATION_ITEM</mx:value>
+</mx:attr>
+<mx:attr name="changetype">
+<mx:value>modify</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_LAST_CHANGED_BY">
+<mx:value>%SAPC_TEMP_REQUESTED_BY%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_LAST_CHANGED_AT">
+<mx:value>%$ddm.datetime8601%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+<mx:Functions>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_logCurrentValue" Script="JScript" name="sapc_logCurrentValue"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_core_script_functions" Script="JScript" name="sapc_core_script_functions"/>
+</mx:Functions>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>1DC82D67-0FC7-4A6B-9C5A-83A4AE319F27</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC Set Last Changed By &amp; Last Changed At</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="205BDC4A-2E2E-4652-97DA-1779A55C0945" MCPACKAGEID="com.sap.rds.idm.configitem">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1605549969690</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<GROUP_ID>C946647D-E7FB-4C6B-83AF-38FED4A50B8B</GROUP_ID>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>d392161e34e245888834fbec7dbee72b</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="New Job 738"/>
+</mx:Sequence>
+<mx:Job name="New Job 738">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="b9ab36ff-bc3e-4eea-a19c-7d7ecfd8ba88"/>
+<mx:Step Enabled="TRUE" Key="51e9d5f8-ac59-4c23-8b67-99a6e43413c8"/>
+<mx:Step Enabled="TRUE" Key="11629a78-e810-4012-82d7-c8f001a6b9bf"/>
+<mx:Step Enabled="TRUE" Key="9d450077-5220-4f13-9e67-a52cd4de33ce"/>
+<mx:Step Enabled="TRUE" Key="eabb908a-040a-4135-acba-3f58c1dc769a"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>null</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+<PASSDOC>Job for downloading entry type LX_CONFIG entries.</PASSDOC>
+<SNMPTRAPLEVEL>0</SNMPTRAPLEVEL>
+<MAXERROR>0</MAXERROR>
+<LOGLIMIT>25</LOGLIMIT>
+<RIGHT_TRIM>0</RIGHT_TRIM>
+<MCLOGLEVEL>1</MCLOGLEVEL>
+</mx:Common>
+<mx:Pass name="b9ab36ff-bc3e-4eea-a19c-7d7ecfd8ba88">
+<TYPE>To Generic</TYPE>
+<DESCRIPTION>Set Job Vars</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<SCRIPTNEXT>sapc_setInitialJobConstants</SCRIPTNEXT>
+<mx:Class>
+<mx:attr name="nada">
+<mx:value>nada</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="51e9d5f8-ac59-4c23-8b67-99a6e43413c8">
+<TYPE>ToASCII</TYPE>
+<DESCRIPTION>SAPC_WriteConfigitemToAscii</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select mcmskey mskey from idmv_entry_simple $FUNCTION.sapc_core_getNolock()$$ where mcEntryType = 'SAPC_CONFIGURATION_ITEM'</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<IDSTORE>-- Self --</IDSTORE>
+<ASCIIF>$FUNCTION.sapc_getJobVar(SAPC_REQ_TRIGGER_MASS_CHANGE_FILE_PATH)$$</ASCIIF>
+<BINARYOUTPUT>0</BINARYOUTPUT>
+<ADDQUOTES>0</ADDQUOTES>
+<CSV>1</CSV>
+<CSVHEAD>1</CSVHEAD>
+<ARESET>1</ARESET>
+<SECURITYOPTION>-1</SECURITYOPTION>
+<CHARSET>UTF-8</CHARSET>
+<PORT>389</PORT>
+<MAXERR>300</MAXERR>
+<GENEMPTY>1</GENEMPTY>
+<LDIFSPLITLINE>|</LDIFSPLITLINE>
+<RESET>0</RESET>
+<DSML>0</DSML>
+<CSVDELIM>;</CSVDELIM>
+<mx:Class>
+<mx:attr name="DeltaKey">
+<mx:value>No_DeltaKey</mx:value>
+</mx:attr>
+<mx:attr name="MSKEYVALUE">
+<mx:value>%MSKEYVALUE%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_TYPE">
+<mx:value>%SAPC_CONFIGITEM_TYPE%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_KEY">
+<mx:value>%SAPC_CONFIGITEM_KEY%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_VALUE">
+<mx:value>%SAPC_CONFIGITEM_VALUE%</mx:value>
+</mx:attr>
+<mx:attr name="DESCRIPTION">
+<mx:value>%DESCRIPTION%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="11629a78-e810-4012-82d7-c8f001a6b9bf">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>Set File Property on the Request</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>-- Self --</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>$FUNCTION.sapc_getMskeyvalueFromMskey($FUNCTION.sapc_getRequestMSKEY()$$)$$</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>SAPC_REQUEST</mx:value>
+</mx:attr>
+<mx:attr name="changetype">
+<mx:value>modify</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_REQ_TRIGGER_MASS_CHANGE_FILE">
+<mx:value>$FUNCTION.sapc_setFileAttributeContentForRequest()$$</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="9d450077-5220-4f13-9e67-a52cd4de33ce">
+<TYPE>ToODBC</TYPE>
+<DESCRIPTION>SAPC_WriteConfigitemsToTempDB</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select mcmskey mskey from idmv_entry_simple $FUNCTION.sapc_core_getNolock()$$ where mcEntryType = 'SAPC_CONFIGURATION_ITEM'</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<IDSTORE>-- Self --</IDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<TODB>%$ddm.identitycenter%</TODB>
+<SQLTABLE>CONFIG_ITEM_DOWNLOAD</SQLTABLE>
+<SQLUPDATE>0</SQLUPDATE>
+<mx:Class>
+<mx:attr name="MSKEYVALUE:VARCHAR(255)">
+<mx:value>%MSKEYVALUE%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_TYPE:VARCHAR(255)">
+<mx:value>%SAPC_CONFIGITEM_TYPE%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_KEY:VARCHAR(255)">
+<mx:value>%SAPC_CONFIGITEM_KEY%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_VALUE:VARCHAR(255)">
+<mx:value>%SAPC_CONFIGITEM_VALUE%</mx:value>
+</mx:attr>
+<mx:attr name="DESCRIPTION:VARCHAR(2000)">
+<mx:value>%DESCRIPTION%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+
+
+
+
+<mx:Pass name="eabb908a-040a-4135-acba-3f58c1dc769a">
+<TYPE>To Generic</TYPE>
+<DESCRIPTION>Set Job State Finished</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<SCRIPTNEXT>sapc_setJobState</SCRIPTNEXT>
+<mx:Class>
+<mx:attr name="nada">
+<mx:value>nada</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+
+<mx:Functions>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_core_getNolock" Script="JScript" name="sapc_core_getNolock"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_core_script_functions" Script="JScript" name="sapc_core_script_functions"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.mass.administration:jscript.sapc_getRequestMSKEY" Script="JScript" name="sapc_getRequestMSKEY"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.mass.administration:jscript.sapc_setInitialJobConstants" Script="JScript" name="sapc_setInitialJobConstants"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.mass.administration:jscript.sapc_setJobState" Script="JScript" name="sapc_setJobState"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_getMskeyvalueFromMskey" Script="JScript" name="sapc_getMskeyvalueFromMskey"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.mass.administration:jscript.sapc_setFileAttributeContentForRequest" Script="JScript" name="sapc_setFileAttributeContentForRequest"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_getJobVar" Script="JScript" name="sapc_getJobVar"/>
+</mx:Functions>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>205BDC4A-2E2E-4652-97DA-1779A55C0945</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC Multivalue ConfigItem - Download</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>0</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>On demand</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="64101A99-0B9A-4E3C-B641-83EA8533528F" MCPACKAGEID="com.sap.rds.idm.configitem">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1579793509650</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>64101A99-0B9A-4E3C-B641-83EA8533528F</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="Action Task419"/>
+</mx:Sequence>
+<mx:Job name="Action Task419">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="8245baee-fb66-44d9-a86f-34b3b9b7bf7d"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>JScript</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+</mx:Common>
+<mx:Pass name="8245baee-fb66-44d9-a86f-34b3b9b7bf7d">
+<TYPE>To Generic</TYPE>
+<DESCRIPTION>setMSKEYVALUE</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<SCRIPTNEXT>sapc_uIS_SetValue</SCRIPTNEXT>
+<mx:Class>
+<mx:attr name="ATTRNAME">
+<mx:value>MSKEYVALUE</mx:value>
+</mx:attr>
+<mx:attr name="ATTRVALUE">
+<mx:value>$FUNCTION.sapc_toUpperCase(SAPC_CONFIGITEM:%SAPC_CONFIGITEM_TYPE%:%SAPC_CONFIGITEM_KEY%)$$</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+
+<mx:Functions>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_uIS_SetValue" Script="JScript" name="sapc_uIS_SetValue"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_core_script_functions" Script="JScript" name="sapc_core_script_functions"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_toUpperCase" Script="JScript" name="sapc_toUpperCase"/>
+</mx:Functions>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>64101A99-0B9A-4E3C-B641-83EA8533528F</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC Set MSKEYVALUE</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="64DB1B0D-E20A-4F73-BDF4-019317A80162" MCPACKAGEID="com.sap.rds.idm.configitem">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1579793509617</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>64DB1B0D-E20A-4F73-BDF4-019317A80162</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="Action Task60"/>
+</mx:Sequence>
+<mx:Job name="Action Task60">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="6d753a36-f469-4a15-b496-a5ab535dbad6"/>
+</mx:Sequence>
+<mx:Globals/>
+<mx:Functions/>
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>JScript</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+</mx:Common>
+<mx:Pass name="6d753a36-f469-4a15-b496-a5ab535dbad6">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>SAPC Set Created By &amp; Created At</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<IDSTORE>null</IDSTORE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>-- Self --</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>%MSKEYVALUE%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>SAPC_CONFIGURATION_ITEM</mx:value>
+</mx:attr>
+<mx:attr name="changetype">
+<mx:value>modify</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_CREATED_BY">
+<mx:value>%SAPC_TEMP_REQUESTED_BY%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_CREATED_AT">
+<mx:value>%$ddm.datetime8601%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_TEMP_REQUESTED_BY">
+<mx:value>{R}</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>64DB1B0D-E20A-4F73-BDF4-019317A80162</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC Set Created By &amp; Created At</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="6B71B973-7C19-4D04-AF59-D8FA8EFE20A1" MCPACKAGEID="com.sap.rds.idm.configitem">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1605553267813</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<GROUP_ID>C946647D-E7FB-4C6B-83AF-38FED4A50B8B</GROUP_ID>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>81d5a519958d46e9a8d7fbec7dbee72b</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="New Job 397"/>
+</mx:Sequence>
+<mx:Job name="New Job 397">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="ac834eb7-03df-4875-b04a-756a24febc76"/>
+<mx:Step Enabled="TRUE" Key="658fed0e-2c42-4110-9824-a9b45e8a8d70"/>
+<mx:Step Enabled="TRUE" Key="eaab6b49-f08b-47a7-bff0-c16ed1aada76"/>
+<mx:Step Enabled="TRUE" Key="49b5034d-955f-480d-a832-a7c1ac9305c3"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>null</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+<SNMPTRAPLEVEL>0</SNMPTRAPLEVEL>
+<MAXERROR>0</MAXERROR>
+<LOGLIMIT>25</LOGLIMIT>
+<RIGHT_TRIM>0</RIGHT_TRIM>
+<MCLOGLEVEL>1</MCLOGLEVEL>
+</mx:Common>
+<mx:Pass name="ac834eb7-03df-4875-b04a-756a24febc76">
+<TYPE>To Generic</TYPE>
+<DESCRIPTION>Set Job Vars</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<SCRIPTNEXT>sapc_setInitialJobConstants</SCRIPTNEXT>
+<mx:Class>
+<mx:attr name="nada">
+<mx:value>nada</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="658fed0e-2c42-4110-9824-a9b45e8a8d70">
+<TYPE>Fromsource ASCII</TYPE>
+<DESCRIPTION>SAPC_ReadConfigitems</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<TODB>%$ddm.identitycenter%</TODB>
+<DBTABLE>TMP_%$ddm.mcjob%</DBTABLE>
+<READFROMPVO>0</READFROMPVO>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<DELTABLE>1</DELTABLE>
+<HEADER>1</HEADER>
+<FIXEDRECORD>0</FIXEDRECORD>
+<SEPFIELD>;</SEPFIELD>
+<PATH>$FUNCTION.sapc_getJobVar(SAPC_REQ_TRIGGER_MASS_CHANGE_FILE_PATH)$$</PATH>
+<CHARSET>Auto</CHARSET>
+<mx:Class>
+<mx:attr name="CONFIG_TYPE">
+<mx:value>NVARCHAR,255,CONFIG_TYPE</mx:value>
+</mx:attr>
+<mx:attr name="CONFIG_KEY">
+<mx:value>NVARCHAR,255,CONFIG_KEY</mx:value>
+</mx:attr>
+<mx:attr name="CONFIG_VALUE">
+<mx:value>TEXT,,CONFIG_VALUE</mx:value>
+</mx:attr>
+<mx:attr name="DESCRIPTION">
+<mx:value>TEXT,,DESCRIPTION</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="eaab6b49-f08b-47a7-bff0-c16ed1aada76">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>SAPC_WriteConfigitems</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<ENTRYSCRIPT>sapc_logValue</ENTRYSCRIPT>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select * from TMP_%$ddm.mcjob%</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<IDSTORE>null</IDSTORE>
+<USERINFO>$FUNCTION.sapc_getJobVar(SAPC_REQ_REQUESTOR)$$</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>-- Self --</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>SAPC_CONFIGITEM:%CONFIG_TYPE%:%CONFIG_KEY%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>SAPC_CONFIGURATION_ITEM</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_TYPE">
+<mx:value>%CONFIG_TYPE%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_KEY">
+<mx:value>%CONFIG_KEY%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_VALUE">
+<mx:value>{A}%CONFIG_VALUE%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_LAST_CHANGED_AT">
+<mx:value>%$ddm.datetime8601%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_CONFIGITEM_LAST_CHANGED_BY">
+<mx:value>$FUNCTION.sapc_getJobVar(SAPC_REQ_REQUESTOR)$$</mx:value>
+</mx:attr>
+<mx:attr name="DESCRIPTION">
+<mx:value>%DESCRIPTION%</mx:value>
+</mx:attr>
+<mx:attr name=".SAPC_CONFIGITEM_CREATED_BY">
+<mx:value>$FUNCTION.sapc_getJobVar(SAPC_REQ_REQUESTOR)$$</mx:value>
+</mx:attr>
+<mx:attr name=".SAPC_CONFIGITEM_CREATED_AT">
+<mx:value>%$ddm.datetime8601%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+
+
+<mx:Pass name="49b5034d-955f-480d-a832-a7c1ac9305c3">
+<TYPE>To Generic</TYPE>
+<DESCRIPTION>Set Job State Finished</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<SCRIPTNEXT>sapc_setJobState</SCRIPTNEXT>
+<mx:Class>
+<mx:attr name="nada">
+<mx:value>nada</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+
+
+
+
+
+
+
+
+<mx:Functions>
+<mx:Function Enabled="TRUE" ErrorStatus="0" Script="JScript" name="sapc_logValue">
+<mx:Code>// Main function: z_logValue
+
+function sapc_logValue(Par) {
+    uWarning(Par);
+    return Par;
+}</mx:Code>
+</mx:Function>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_core_script_functions" Script="JScript" name="sapc_core_script_functions"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapc_getConfigItemValue"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapc_setConfigItem"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.mass.administration:jscript.sapc_getRequestMSKEY" Script="JScript" name="sapc_getRequestMSKEY"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.mass.administration:jscript.sapc_setJobState" Script="JScript" name="sapc_setJobState"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_core_getNolock" Script="JScript" name="sapc_core_getNolock"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.mass.administration:jscript.sapc_setInitialJobConstants" Script="JScript" name="sapc_setInitialJobConstants"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_getJobVar" Script="JScript" name="sapc_getJobVar"/>
+</mx:Functions>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>6B71B973-7C19-4D04-AF59-D8FA8EFE20A1</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC Multivalue ConfigItem - Upload</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>0</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>On demand</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="992D2585-7951-4569-8A17-E43611520331" MCPACKAGEID="com.sap.rds.idm.configitem">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1579793509610</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<GROUP_ID>C946647D-E7FB-4C6B-83AF-38FED4A50B8B</GROUP_ID>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>2c665069993e4c0d9e24b9dffdfaa6c3</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="New Job 132"/>
+</mx:Sequence>
+<mx:Job name="New Job 132">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="f16635fd-60f7-45cc-9fe8-82c4ee66a48b"/>
+<mx:Step Enabled="TRUE" Key="a79c6330-01f0-430e-9779-47c99cc5c37f"/>
+<mx:Step Enabled="FALSE" Key="4afd4315-2bb6-4845-bc3e-54c3f1b8d613"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>JScript</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+</mx:Common>
+<mx:Pass name="f16635fd-60f7-45cc-9fe8-82c4ee66a48b">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>SAPC_createAuthPrivilege</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>-- Self --</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSEKYVALUE">
+<mx:value>PRIV:AUTH:SAPC_CONFIG_ITEM_ADMIN</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>MX_PRIVILEGE</mx:value>
+</mx:attr>
+<mx:attr name="#changetype">
+<mx:value>addmod</mx:value>
+</mx:attr>
+<mx:attr name="DISPLAYNAME">
+<mx:value>SAPC_CONFIG_ITEM_ADMIN</mx:value>
+</mx:attr>
+<mx:attr name="DESCRIPTION">
+<mx:value>Privilge to grant access to work with configuration items</mx:value>
+</mx:attr>
+<mx:attr name="MX_MODIFYTASK">
+<mx:value>-1</mx:value>
+</mx:attr>
+<mx:attr name="MX_PRIVILEGE_TYPE">
+<mx:value>ROLE</mx:value>
+</mx:attr>
+<mx:attr name="MX_GROUP_INHERITANCE">
+<mx:value>SUB</mx:value>
+</mx:attr>
+<mx:attr name="MX_IS_ACCOUNT">
+<mx:value>0</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="a79c6330-01f0-430e-9779-47c99cc5c37f">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>SAPC_addAuthPrivilegeToRole</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<ENTRYSCRIPT>sapc_stopJobEmptyParameter(%$pck.ADMINISTRATOR_ROLE%)</ENTRYSCRIPT>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>-- Self --</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>%$pck.ADMINISTRATOR_ROLE%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>MX_ROLE</mx:value>
+</mx:attr>
+<mx:attr name="changetype">
+<mx:value>addmod</mx:value>
+</mx:attr>
+<mx:attr name="MXMEMBER_MX_PRIVILEGE">
+<mx:value>{A}&lt;PRIV:AUTH:SAPC_CONFIG_ITEM_ADMIN&gt;</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+<mx:Functions>
+<mx:Function Enabled="TRUE" ErrorStatus="0" Script="JScript" name="sapc_stopJobEmptyParameter">
+<mx:Code>// Main function: sapc_stopJobEmptyParameter
+
+function sapc_stopJobEmptyParameter(Par) {
+
+    var script = 'sapc_stopJobEmptyParameter';
+    var message = "";
+
+    if (Par == null &amp;&amp; Par == '') {
+        message = script + ":: Stopping job due of an empty parameter";
+        uStop(message);
+    } else {
+        //do nothing      
+    }
+}</mx:Code>
+</mx:Function>
+</mx:Functions>
+<mx:Pass name="4afd4315-2bb6-4845-bc3e-54c3f1b8d613">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>SAPC_addAuthPrivilegeToUser</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<ENTRYSCRIPT>sapc_stopJobEmptyParameter(%$pck.ADMINISTRATOR_USER%)</ENTRYSCRIPT>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>-- Self --</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>%$pck.ADMINISTRATOR_USER%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>MX_PERSON</mx:value>
+</mx:attr>
+<mx:attr name="changetype">
+<mx:value>mod</mx:value>
+</mx:attr>
+<mx:attr name="MXREF_MX_PRIVILEGE">
+<mx:value>{A}&lt;PRIV:AUTH:SAPC_CONFIG_ITEM_ADMIN&gt;</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>992D2585-7951-4569-8A17-E43611520331</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC_CreateMinimumData</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>0</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>On demand</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+</JOBS>
+<TASKS>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="2683D976-E704-4AEA-B7A8-190944F100B7">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>1DC82D67-0FC7-4A6B-9C5A-83A4AE319F27</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>004C14F5-8911-4C83-ABAC-A8808006F5BD</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1477395566000</TASKCHANGED>
+<TASKNAME>SAPC Set Last Changed By &amp; Last Changed At</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="59677C62-E2F9-4017-912E-4D1F4C062F34" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<DISPLAYNAME>#MX_TASK_SAPC_CONFIGITEM_DELETE_DN</DISPLAYNAME>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>CB9F52E3-D3B9-476A-8CD3-BC7B8806989C</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<OBJECTCLASS>SAPC_CONFIGURATION_ITEM</OBJECTCLASS>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>0</RETRIES>
+<RETRYDELAY>0</RETRYDELAY>
+<SEMAPHORESKIPIFCLEAR>0</SEMAPHORESKIPIFCLEAR>
+<TASKCHANGED>1605549563143</TASKCHANGED>
+<TASKGROUP>EEBAD84B-7813-4149-B5AE-36B23072F08C</TASKGROUP>
+<TASKNAME>SAPC_Configitem_Delete</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>1</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>3</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVECAPTION>#MX_TASK_SAPC_CONFIGITEM_DELETE_SUBMIT</WFSAVECAPTION>
+<WFSAVEOPTION>1</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<ATTRIBUTES>
+<ATTRIBUTE ATTR_ID="MSKEYVALUE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>1</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>59677C62-E2F9-4017-912E-4D1F4C062F34</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="DESCRIPTION" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>2</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>59677C62-E2F9-4017-912E-4D1F4C062F34</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>3</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>2</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>59677C62-E2F9-4017-912E-4D1F4C062F34</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_KEY" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>4</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>59677C62-E2F9-4017-912E-4D1F4C062F34</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_VALUE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>5</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>59677C62-E2F9-4017-912E-4D1F4C062F34</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_TYPE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>6</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>59677C62-E2F9-4017-912E-4D1F4C062F34</TASKID>
+</ATTRIBUTE>
+</ATTRIBUTES>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>5AA40330-6838-4460-9521-63207B0E7B0A</TASKLNK>
+<TASKREF>59677C62-E2F9-4017-912E-4D1F4C062F34</TASKREF>
+</LINK>
+</LINKS>
+<ACCESS_CONTROLS>
+<ACCESS_CONTROL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<MEMBERTYPE>1</MEMBERTYPE>
+<MSKEY>SAPC_PRIV:FORM:SAPC_CONFIGITEM_DELETE</MSKEY>
+<TARGETFILTEREDITSTATUS>0</TARGETFILTEREDITSTATUS>
+<TARGETMEMBERTYPE>0</TARGETMEMBERTYPE>
+<TARGETMSKEY>0</TARGETMSKEY>
+<TASKID>59677C62-E2F9-4017-912E-4D1F4C062F34</TASKID>
+</ACCESS_CONTROL>
+</ACCESS_CONTROLS>
+<LANGUAGE_KEYS MCREFERENCE="59677C62-E2F9-4017-912E-4D1F4C062F34" MCTYPE="7">
+<LANGUAGE_KEY LANGCODE="DE" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_DELETE_DN" LANGVALUE="Konfigurationsobjekt Löschen"/>
+<LANGUAGE_KEY LANGCODE="EN" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_DELETE_DN" LANGVALUE="Delete Configuration Item"/>
+<LANGUAGE_KEY LANGCODE="DE" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_DELETE_SUBMIT" LANGVALUE="Löschen"/>
+<LANGUAGE_KEY LANGCODE="EN" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_DELETE_SUBMIT" LANGVALUE="Delete"/>
+</LANGUAGE_KEYS>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="5AA40330-6838-4460-9521-63207B0E7B0A" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>7C5F4476-22AE-4BA3-AC74-F3C99CF71B9C</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>20</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1481020875000</TASKCHANGED>
+<TASKGROUP>653D8A62-8826-4C1B-93B1-F5351C0D0734</TASKGROUP>
+<TASKNAME>SAPC_Configitem_Deletion_FAP</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>2</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>245,0,20,20:245,200,20,20|170,80,171,60:</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>C473DD26-1752-4ABA-83CD-0C0F6C8EB323</TASKLNK>
+<TASKREF>5AA40330-6838-4460-9521-63207B0E7B0A</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="64527771-BC1A-4B65-B56A-420CE91827E0">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>64101A99-0B9A-4E3C-B641-83EA8533528F</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>64527771-BC1A-4B65-B56A-420CE91827E0</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1517848477067</TASKCHANGED>
+<TASKNAME>SAPC Set MSKEYVALUE</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="7DFB4F24-AB00-43C7-800A-ECC846CB4E01" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<DISPLAYNAME>#MX_TASK_SAPC_CONFIGITEM_CREATE_DN</DISPLAYNAME>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>7A3FD1C9-5EA9-4067-9396-F610242D1515</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<OBJECTCLASS>SAPC_CONFIGURATION_ITEM</OBJECTCLASS>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>0</RETRIES>
+<RETRYDELAY>0</RETRYDELAY>
+<SEMAPHORESKIPIFCLEAR>0</SEMAPHORESKIPIFCLEAR>
+<TASKCHANGED>1605549459933</TASKCHANGED>
+<TASKGROUP>EEBAD84B-7813-4149-B5AE-36B23072F08C</TASKGROUP>
+<TASKNAME>SAPC_Configitem_Create</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>1</TASK_FLAGS>
+<UITASKTYPE>1</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVECAPTION>#MX_TASK_SAPC_CONFIGITEM_CREATE_SUBMIT</WFSAVECAPTION>
+<WFSAVEOPTION>1</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<ATTRIBUTES>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_TYPE" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>1</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>7DFB4F24-AB00-43C7-800A-ECC846CB4E01</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_KEY" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>2</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>7DFB4F24-AB00-43C7-800A-ECC846CB4E01</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_VALUE" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>3</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>7DFB4F24-AB00-43C7-800A-ECC846CB4E01</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>4</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>2</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>7DFB4F24-AB00-43C7-800A-ECC846CB4E01</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="DESCRIPTION" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>5</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>7DFB4F24-AB00-43C7-800A-ECC846CB4E01</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>6</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>2</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>7DFB4F24-AB00-43C7-800A-ECC846CB4E01</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_TEMP_REQUESTED_BY" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DEFAULTVALUE>%ADMINMSKEY%</DEFAULTVALUE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>7</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>7DFB4F24-AB00-43C7-800A-ECC846CB4E01</TASKID>
+</ATTRIBUTE>
+</ATTRIBUTES>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>89E38133-5F7D-4C99-A578-8CFE32F46331</TASKLNK>
+<TASKREF>7DFB4F24-AB00-43C7-800A-ECC846CB4E01</TASKREF>
+</LINK>
+</LINKS>
+<ACCESS_CONTROLS>
+<ACCESS_CONTROL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<MEMBERTYPE>1</MEMBERTYPE>
+<MSKEY>SAPC_PRIV:FORM:SAPC_CONFIGITEM_CREATE</MSKEY>
+<TARGETFILTEREDITSTATUS>0</TARGETFILTEREDITSTATUS>
+<TARGETMEMBERTYPE>0</TARGETMEMBERTYPE>
+<TARGETMSKEY>0</TARGETMSKEY>
+<TASKID>7DFB4F24-AB00-43C7-800A-ECC846CB4E01</TASKID>
+</ACCESS_CONTROL>
+</ACCESS_CONTROLS>
+<LANGUAGE_KEYS MCREFERENCE="7DFB4F24-AB00-43C7-800A-ECC846CB4E01" MCTYPE="7">
+<LANGUAGE_KEY LANGCODE="DE" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_CREATE_DN" LANGVALUE="Konfigurationsobjekt Anlegen"/>
+<LANGUAGE_KEY LANGCODE="EN" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_CREATE_DN" LANGVALUE="Create Configuration Item"/>
+<LANGUAGE_KEY LANGCODE="DE" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_CREATE_SUBMIT" LANGVALUE="Neue Konfiguration speichern"/>
+<LANGUAGE_KEY LANGCODE="EN" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_CREATE_SUBMIT" LANGVALUE="Save new config item"/>
+</LANGUAGE_KEYS>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="89E38133-5F7D-4C99-A578-8CFE32F46331" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>89E38133-5F7D-4C99-A578-8CFE32F46331</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>20</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1517855984940</TASKCHANGED>
+<TASKGROUP>653D8A62-8826-4C1B-93B1-F5351C0D0734</TASKGROUP>
+<TASKNAME>SAPC_ConfigItem_Create_FAP</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>3</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>296,0,40,40:|206,200,200,60:</CHILDLAYOUT>
+<CHILDORDER>2</CHILDORDER>
+<TASKLNK>CCF91EA3-3B8E-42C3-9EEC-4FCD1C4A7CDD</TASKLNK>
+<TASKREF>89E38133-5F7D-4C99-A578-8CFE32F46331</TASKREF>
+</LINK>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>296,0,40,40:296,320,40,40|205,80,202,60:</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>64527771-BC1A-4B65-B56A-420CE91827E0</TASKLNK>
+<TASKREF>89E38133-5F7D-4C99-A578-8CFE32F46331</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="94B115FD-FA45-43A1-9BA3-27752B73EE1B" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<DISPLAYNAME>#MX_TASK_SAPC_CONFIGITEM_DISPLAY_DN</DISPLAYNAME>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>48E72B18-DBE7-4847-A2F4-93CF975BB1F8</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<OBJECTCLASS>SAPC_CONFIGURATION_ITEM</OBJECTCLASS>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>101</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>0</RETRIES>
+<RETRYDELAY>0</RETRYDELAY>
+<SEMAPHORESKIPIFCLEAR>0</SEMAPHORESKIPIFCLEAR>
+<TASKCHANGED>1605549584130</TASKCHANGED>
+<TASKGROUP>EEBAD84B-7813-4149-B5AE-36B23072F08C</TASKGROUP>
+<TASKNAME>SAPC_Configitem_Display</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>1</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>4</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>0</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<ATTRIBUTES>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_NAME>#MX_TASK_SAPC_CONFIGITEM_DISPLAY_CAPTION87</DISPLAY_NAME>
+<DISPLAY_ORDER>1</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>3</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>2</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>5</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>3</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>6</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="MSKEYVALUE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>4</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="DISPLAYNAME" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>5</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>6</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>6</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_TYPE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>7</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_KEY" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>8</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>9</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>5</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_VALUE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>10</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>11</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>2</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="DESCRIPTION" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>12</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_NAME>#MX_TASK_SAPC_CONFIGITEM_DISPLAY_CAPTION94</DISPLAY_NAME>
+<DISPLAY_ORDER>13</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>3</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_CREATED_BY" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>14</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_CREATED_AT" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>15</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>16</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>2</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_LAST_CHANGED_BY" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>17</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_LAST_CHANGED_AT" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>18</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ATTRIBUTE>
+</ATTRIBUTES>
+<ACCESS_CONTROLS>
+<ACCESS_CONTROL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<MEMBERTYPE>1</MEMBERTYPE>
+<MSKEY>SAPC_PRIV:FORM:SAPC_CONFIGITEM_DISPLAY</MSKEY>
+<TARGETFILTEREDITSTATUS>0</TARGETFILTEREDITSTATUS>
+<TARGETMEMBERTYPE>0</TARGETMEMBERTYPE>
+<TARGETMSKEY>0</TARGETMSKEY>
+<TASKID>94B115FD-FA45-43A1-9BA3-27752B73EE1B</TASKID>
+</ACCESS_CONTROL>
+</ACCESS_CONTROLS>
+<LANGUAGE_KEYS MCREFERENCE="94B115FD-FA45-43A1-9BA3-27752B73EE1B" MCTYPE="7">
+<LANGUAGE_KEY LANGCODE="DE" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_DISPLAY_CAPTION87" LANGVALUE="Allgemein"/>
+<LANGUAGE_KEY LANGCODE="EN" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_DISPLAY_CAPTION87" LANGVALUE="General"/>
+<LANGUAGE_KEY LANGCODE="DE" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_DISPLAY_CAPTION94" LANGVALUE="Audit Information"/>
+<LANGUAGE_KEY LANGCODE="EN" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_DISPLAY_CAPTION94" LANGVALUE="Audit Information"/>
+<LANGUAGE_KEY LANGCODE="DE" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_DISPLAY_DN" LANGVALUE="Konfigurationsobjekt Anzeigen"/>
+<LANGUAGE_KEY LANGCODE="EN" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_DISPLAY_DN" LANGVALUE="Display Configuration Item"/>
+</LANGUAGE_KEYS>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="9E5510B2-4A05-4ED6-A004-D3A1EEAAB55E" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>274B724C-74C4-4948-914B-B8EC9F729F04</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>20</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1477396737000</TASKCHANGED>
+<TASKGROUP>653D8A62-8826-4C1B-93B1-F5351C0D0734</TASKGROUP>
+<TASKNAME>SAPC_Configitem_Change_FAP</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>323,0,40,40:323,200,40,40|205,80,256,60:</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>2683D976-E704-4AEA-B7A8-190944F100B7</TASKLNK>
+<TASKREF>9E5510B2-4A05-4ED6-A004-D3A1EEAAB55E</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="C473DD26-1752-4ABA-83CD-0C0F6C8EB323">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>115E7CB6-792A-4AC4-9F0D-D7FBF98A4407</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>7A05E74C-2247-482E-A3CB-3184D65D0C3E</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1481021288000</TASKCHANGED>
+<TASKNAME>SAPC_DeleteItem</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="CCF91EA3-3B8E-42C3-9EEC-4FCD1C4A7CDD">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>64DB1B0D-E20A-4F73-BDF4-019317A80162</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>CCF91EA3-3B8E-42C3-9EEC-4FCD1C4A7CDD</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1517848556033</TASKCHANGED>
+<TASKNAME>SAPC Set Created By &amp; Created At</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="CD509E1D-BF21-4267-ABF6-6590E42C1765" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>2938BFA7-48E6-4450-BDD9-59D97057BA03</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<OBJECTCLASS>SAPC_CONFIGURATION_ITEM</OBJECTCLASS>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>102</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>0</RETRIES>
+<RETRYDELAY>0</RETRYDELAY>
+<SEMAPHORESKIPIFCLEAR>0</SEMAPHORESKIPIFCLEAR>
+<TASKCHANGED>1605549615403</TASKCHANGED>
+<TASKGROUP>EEBAD84B-7813-4149-B5AE-36B23072F08C</TASKGROUP>
+<TASKNAME>SAPC_Configitem_Search</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>1</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>5</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>0</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<ATTRIBUTES>
+<ATTRIBUTE ATTR_ID="MSKEYVALUE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>1</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>CD509E1D-BF21-4267-ABF6-6590E42C1765</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="DISPLAYNAME" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>2</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>CD509E1D-BF21-4267-ABF6-6590E42C1765</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_KEY" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>3</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>CD509E1D-BF21-4267-ABF6-6590E42C1765</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_TYPE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>4</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>CD509E1D-BF21-4267-ABF6-6590E42C1765</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_VALUE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>5</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>CD509E1D-BF21-4267-ABF6-6590E42C1765</TASKID>
+</ATTRIBUTE>
+</ATTRIBUTES>
+<ACCESS_CONTROLS>
+<ACCESS_CONTROL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<MEMBERTYPE>1</MEMBERTYPE>
+<MSKEY>SAPC_PRIV:FORM:SAPC_CONFIGITEM_SEARCH</MSKEY>
+<TARGETFILTEREDITSTATUS>0</TARGETFILTEREDITSTATUS>
+<TARGETMEMBERTYPE>0</TARGETMEMBERTYPE>
+<TARGETMSKEY>0</TARGETMSKEY>
+<TASKID>CD509E1D-BF21-4267-ABF6-6590E42C1765</TASKID>
+</ACCESS_CONTROL>
+</ACCESS_CONTROLS>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.configitem" TASKGUID="EABB68DB-419C-4F44-AA36-D19E1DB7F81C" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<DISPLAYNAME>#MX_TASK_SAPC_CONFIGITEM_MODIFY_DN</DISPLAYNAME>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>E407376D-D67C-423C-AEEF-3BF78BBB22C1</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<OBJECTCLASS>SAPC_CONFIGURATION_ITEM</OBJECTCLASS>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>0</RETRIES>
+<RETRYDELAY>0</RETRYDELAY>
+<SEMAPHORESKIPIFCLEAR>0</SEMAPHORESKIPIFCLEAR>
+<TASKCHANGED>1605549544153</TASKCHANGED>
+<TASKGROUP>EEBAD84B-7813-4149-B5AE-36B23072F08C</TASKGROUP>
+<TASKNAME>SAPC_Configitem_Modify</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>1</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>2</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFMODIFYCAPTION>#MX_TASK_SAPC_CONFIGITEM_MODIFY_MODIFY</WFMODIFYCAPTION>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVECAPTION>#MX_TASK_SAPC_CONFIGITEM_MODIFY_SUBMIT</WFSAVECAPTION>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<ATTRIBUTES>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_TYPE" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>1</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>EABB68DB-419C-4F44-AA36-D19E1DB7F81C</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_KEY" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>2</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>EABB68DB-419C-4F44-AA36-D19E1DB7F81C</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPC_CONFIGITEM_VALUE" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>3</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>EABB68DB-419C-4F44-AA36-D19E1DB7F81C</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="" isLayoutAttr="1">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>4</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LAYOUTATTR>2</LAYOUTATTR>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>EABB68DB-419C-4F44-AA36-D19E1DB7F81C</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="MSKEYVALUE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>5</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>EABB68DB-419C-4F44-AA36-D19E1DB7F81C</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="DESCRIPTION" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>6</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>EABB68DB-419C-4F44-AA36-D19E1DB7F81C</TASKID>
+</ATTRIBUTE>
+</ATTRIBUTES>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>9E5510B2-4A05-4ED6-A004-D3A1EEAAB55E</TASKLNK>
+<TASKREF>EABB68DB-419C-4F44-AA36-D19E1DB7F81C</TASKREF>
+</LINK>
+</LINKS>
+<ACCESS_CONTROLS>
+<ACCESS_CONTROL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<MEMBERTYPE>1</MEMBERTYPE>
+<MSKEY>SAPC_PRIV:FORM:SAPC_CONFIGITEM_MODIFY</MSKEY>
+<TARGETFILTEREDITSTATUS>0</TARGETFILTEREDITSTATUS>
+<TARGETMEMBERTYPE>0</TARGETMEMBERTYPE>
+<TARGETMSKEY>0</TARGETMSKEY>
+<TASKID>EABB68DB-419C-4F44-AA36-D19E1DB7F81C</TASKID>
+</ACCESS_CONTROL>
+</ACCESS_CONTROLS>
+<LANGUAGE_KEYS MCREFERENCE="EABB68DB-419C-4F44-AA36-D19E1DB7F81C" MCTYPE="7">
+<LANGUAGE_KEY LANGCODE="DE" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_MODIFY_DN" LANGVALUE="Konfigrationsobjekt Ändern"/>
+<LANGUAGE_KEY LANGCODE="EN" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_MODIFY_DN" LANGVALUE="Change Configuration Item"/>
+<LANGUAGE_KEY LANGCODE="DE" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_MODIFY_MODIFY" LANGVALUE="Ändern"/>
+<LANGUAGE_KEY LANGCODE="EN" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_MODIFY_MODIFY" LANGVALUE="Change"/>
+<LANGUAGE_KEY LANGCODE="DE" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_MODIFY_SUBMIT" LANGVALUE="Änderung speichern"/>
+<LANGUAGE_KEY LANGCODE="EN" LANGKEY="#MX_TASK_SAPC_CONFIGITEM_MODIFY_SUBMIT" LANGVALUE="Save change"/>
+</LANGUAGE_KEYS>
+</TASK>
+</TASKS>
+<FOLDERS>
+<FOLDER GROUPGUID="653D8A62-8826-4C1B-93B1-F5351C0D0734">
+<ACTIVATEDATE>1505302346000</ACTIVATEDATE>
+<GROUP_NAME>Processes</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCSOURCEGUID>3696061cd45d4596bccbb9dffdfaa6c3</MCSOURCEGUID>
+<PROVISION_GROUP>1</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>0</WFSHOWGROUP>
+</FOLDER>
+<FOLDER GROUPGUID="C946647D-E7FB-4C6B-83AF-38FED4A50B8B">
+<ACTIVATEDATE>1505302346000</ACTIVATEDATE>
+<GROUP_NAME>Jobs</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCSOURCEGUID>d2b49658a68b4d5a831fb9dffdfaa6c3</MCSOURCEGUID>
+<PROVISION_GROUP>0</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>0</WFSHOWGROUP>
+</FOLDER>
+<FOLDER GROUPGUID="EEBAD84B-7813-4149-B5AE-36B23072F08C">
+<ACTIVATEDATE>1505302346000</ACTIVATEDATE>
+<DISPLAYNAME>#MX_FOLDER_CONFIGITEMFORMS_DN</DISPLAYNAME>
+<GROUP_NAME>Forms</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+<MCSOURCEGUID>248409610a8942ae9b1cb9dffdfaa6c3</MCSOURCEGUID>
+<PROVISION_GROUP>5</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>1</WFSHOWGROUP>
+<LANGUAGE_KEYS MCREFERENCE="EEBAD84B-7813-4149-B5AE-36B23072F08C" MCTYPE="6">
+<LANGUAGE_KEY LANGCODE="DE" LANGKEY="#MX_FOLDER_CONFIGITEMFORMS_DN" LANGVALUE="Aufgaben für Konfigurationsobjekte"/>
+<LANGUAGE_KEY LANGCODE="EN" LANGKEY="#MX_FOLDER_CONFIGITEMFORMS_DN" LANGVALUE="Tasks for configuration items"/>
+</LANGUAGE_KEYS>
+</FOLDER>
+</FOLDERS>
+</PACKAGE>
+</PACKAGES>
+<ENTRIES>
+<ENTRY>
+<MCDISPLAYNAME>Access to Form SAPC_Configitem_Create</MCDISPLAYNAME>
+<MCENTRYTYPE>MX_PRIVILEGE</MCENTRYTYPE>
+<MCMSKEYVALUE>SAPC_PRIV:FORM:SAPC_CONFIGITEM_CREATE</MCMSKEYVALUE>
+</ENTRY>
+<ENTRY>
+<MCDISPLAYNAME>Access to Form SAPC_Configitem_Delete</MCDISPLAYNAME>
+<MCENTRYTYPE>MX_PRIVILEGE</MCENTRYTYPE>
+<MCMSKEYVALUE>SAPC_PRIV:FORM:SAPC_CONFIGITEM_DELETE</MCMSKEYVALUE>
+</ENTRY>
+<ENTRY>
+<MCDISPLAYNAME>Access to Form SAPC_Configitem_Display</MCDISPLAYNAME>
+<MCENTRYTYPE>MX_PRIVILEGE</MCENTRYTYPE>
+<MCMSKEYVALUE>SAPC_PRIV:FORM:SAPC_CONFIGITEM_DISPLAY</MCMSKEYVALUE>
+</ENTRY>
+<ENTRY>
+<MCDISPLAYNAME>Access to Form SAPC_Configitem_Modify</MCDISPLAYNAME>
+<MCENTRYTYPE>MX_PRIVILEGE</MCENTRYTYPE>
+<MCMSKEYVALUE>SAPC_PRIV:FORM:SAPC_CONFIGITEM_MODIFY</MCMSKEYVALUE>
+</ENTRY>
+<ENTRY>
+<MCDISPLAYNAME>Access to Form SAPC_Configitem_Search</MCDISPLAYNAME>
+<MCENTRYTYPE>MX_PRIVILEGE</MCENTRYTYPE>
+<MCMSKEYVALUE>SAPC_PRIV:FORM:SAPC_CONFIGITEM_SEARCH</MCMSKEYVALUE>
+</ENTRY>
+</ENTRIES>
+<DISPATCHERS>
+<DISPATCHER MACHINE="idmdisptacher">
+<JOBID>1DC82D67-0FC7-4A6B-9C5A-83A4AE319F27</JOBID>
+<JOBID>992D2585-7951-4569-8A17-E43611520331</JOBID>
+<JOBID>64DB1B0D-E20A-4F73-BDF4-019317A80162</JOBID>
+<JOBID>205BDC4A-2E2E-4652-97DA-1779A55C0945</JOBID>
+<JOBID>64101A99-0B9A-4E3C-B641-83EA8533528F</JOBID>
+<JOBID>6B71B973-7C19-4D04-AF59-D8FA8EFE20A1</JOBID>
+<JOBID>115E7CB6-792A-4AC4-9F0D-D7FBF98A4407</JOBID>
+</DISPATCHER>
+</DISPATCHERS>
+<PACKAGE_HISTORY>
+<MCDESCRIPTION>NN: mass admin adaptation for SP4, setting of ac-privs on forms</MCDESCRIPTION>
+<MCMODIFIEDBYUSERNAME>ADMINISTRATOR</MCMODIFIEDBYUSERNAME>
+<MCMODIFIEDDATE>1605553401000</MCMODIFIEDDATE>
+<MCPACKAGEID>com.sap.rds.idm.configitem</MCPACKAGEID>
+</PACKAGE_HISTORY>
+</IDM>

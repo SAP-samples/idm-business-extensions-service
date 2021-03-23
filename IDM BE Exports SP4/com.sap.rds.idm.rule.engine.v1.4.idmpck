@@ -1,0 +1,1054 @@
+<IDM EXPORTED_ON="2018-03-20 16:46:06.91" IS_PACKAGE_FOLDER_EXPORT="0" PACKAGE_TRANSPORT_VERSION="8#0#5#2017#0#1#800SP5#1707#1707#1704" SCHEMA_VERSION="1707">
+<PACKAGES>
+<PACKAGE MCQUALIFIEDNAME="com.sap.rds.idm.rule.engine">
+<MCDISPLAYNAME>com.sap.rds.idm.rule.engine</MCDISPLAYNAME>
+<MCLASTMODIFIED>1521558355737</MCLASTMODIFIED>
+<MCMAJORVERSION>1</MCMAJORVERSION>
+<MCMINORVERSION>4</MCMINORVERSION>
+<MCPACKAGELEVEL>1601</MCPACKAGELEVEL>
+<MCPACKAGETYPE>0</MCPACKAGETYPE>
+<MCQUALIFIEDNAME>com.sap.rds.idm.rule.engine</MCQUALIFIEDNAME>
+<PACKAGE_VARS>
+<VARIABLE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>-1</VARCATEGORY>
+<VARDESCRIPTION>(SAPC) Job to cache filter attributes</VARDESCRIPTION>
+<VARNAME>SAPC_JOB_CACHE_FILTER_ATTRIBUTES</VARNAME>
+<VARTYPE>13</VARTYPE>
+<VARVALUE>4B001061-0107-4823-8ADB-7C09EB5267C3</VARVALUE>
+</VARIABLE>
+<VARIABLE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>-1</VARCATEGORY>
+<VARDESCRIPTION>(SAPC) Job to recalculate dynamic groups</VARDESCRIPTION>
+<VARNAME>SAPC_JOB_RECALCULATE_DG</VARNAME>
+<VARTYPE>13</VARTYPE>
+<VARVALUE>7F2282DE-D1B5-423E-9839-D0443CD9014E</VARVALUE>
+</VARIABLE>
+<VARIABLE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>-1</VARCATEGORY>
+<VARDESCRIPTION>(SAPC) Job to upload rules</VARDESCRIPTION>
+<VARNAME>SAPC_JOB_RULE_UPLOAD</VARNAME>
+<VARTYPE>13</VARTYPE>
+<VARVALUE>520AD060-FDD5-4E94-8E54-7ED99C86D506</VARVALUE>
+</VARIABLE>
+</PACKAGE_VARS>
+<USES>
+<USE>
+<MCFROMREFERENCE>7F2282DE-D1B5-423E-9839-D0443CD9014E</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_rule_resolveDynamicGroups</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>2</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>7F2282DE-D1B5-423E-9839-D0443CD9014E</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_getMskeyFromMskeyvalue</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>2</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>7F2282DE-D1B5-423E-9839-D0443CD9014E</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_core_script_functions</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>2</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>520AD060-FDD5-4E94-8E54-7ED99C86D506</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_rule_emptyStringSetAdministrator</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>11</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>520AD060-FDD5-4E94-8E54-7ED99C86D506</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_sendMailGeneric</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>11</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>520AD060-FDD5-4E94-8E54-7ED99C86D506</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_jobErrorHandler</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>11</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>520AD060-FDD5-4E94-8E54-7ED99C86D506</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_getRepConstant</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>11</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>520AD060-FDD5-4E94-8E54-7ED99C86D506</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_getMskeyFromMskeyvalue</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>11</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>520AD060-FDD5-4E94-8E54-7ED99C86D506</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_rule_resolveDynamicGroups</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>11</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>520AD060-FDD5-4E94-8E54-7ED99C86D506</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_rule_createSqlFilter</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>11</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>520AD060-FDD5-4E94-8E54-7ED99C86D506</MCFROMREFERENCE>
+<MCFROMTYPE>8</MCFROMTYPE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>com.sap.rds.idm.core:jscript.sapc_core_script_functions</MCTOQUALIFIEDNAME>
+<MCTOTYPE>12</MCTOTYPE>
+<MCVERSION>11</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+</USES>
+<JOBS>
+<JOB JOBGUID="4B001061-0107-4823-8ADB-7C09EB5267C3" MCPACKAGEID="com.sap.rds.idm.rule.engine">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1469570318567</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<GROUP_ID>45485155-A0D1-4D97-8B62-A1A4323C99FB</GROUP_ID>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+   <mx:GUID>97424730-DF09-4BCB-A481-E0CF04CCFD52</mx:GUID>
+   <mx:VERSION>1.0</mx:VERSION>
+   <mx:DSEJobs>
+      <mx:Sequence>
+         <mx:Step Enabled="TRUE" Key="SAPC RULE: Cache Filter Attributes"/>
+      </mx:Sequence>
+      <mx:Job name="SAPC RULE: Cache Filter Attributes">
+         <mx:Description/>
+         <mx:Sequence>
+            <mx:Step Enabled="TRUE" Key="39AFE4FF-CB90-4249-8614-6632458B0DFD"/>
+         </mx:Sequence>
+         <mx:Globals/>
+         <mx:Functions/>
+         <mx:Common>
+            <ENGINETYPE>1</ENGINETYPE>
+            <SCRIPTENG>JScript</SCRIPTENG>
+            <EVLOG>0</EVLOG>
+            <ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+            <XLRESET>1</XLRESET>
+         </mx:Common>
+         <mx:Pass name="39AFE4FF-CB90-4249-8614-6632458B0DFD">
+            <TYPE>ToODBC</TYPE>
+            <DESCRIPTION>SAPC Cache Filter Attributes</DESCRIPTION>
+            <REPOSITORY>0</REPOSITORY>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>1</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>1</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>SELECT distinct a.mcSearchValue as 'FILTER_ATTRIBUTE', e.mcMSKEYVALUE as 'GROUP_NAME'
+FROM [idmv_entry_simple] e
+INNER JOIN [idmv_vallink_basic_active] a on a.[MSKEY] = e.[mcMSKEY] and a.mcAttrName like 'SAPC_DYNG_FILTER_ATTRIBUTE_NAME%'
+where mcMSKEYVALUE like 'DG:RULE:%' &#13;
+and a.mcIdStore = %$IDSID%
+and e.[mcMSKEY] not in (select mcMSKEY from [idmv_vallink_basic_active] where mcAttrName like 'SAPC_DYNG_DIRTY' and mcSearchValue = '1') --and a.mcIdStore = %$glb.SAP_MASTER_IDS_ID%</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<IDSTORE>1</IDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<TODB>%$ddm.identitycenter%</TODB>
+<SQLTABLE>sapc_rule_attributes</SQLTABLE>
+<SQLUPDATE>0</SQLUPDATE>
+<mx:Class>
+<mx:attr name="FILTER_ATTRIBUTE:VARCHAR(400)">
+<mx:value>%FILTER_ATTRIBUTE%</mx:value>
+</mx:attr>
+<mx:attr name="GROUP_NAME:VARCHAR(400)">
+<mx:value>%GROUP_NAME%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+      </mx:Job>
+   </mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>4B001061-0107-4823-8ADB-7C09EB5267C3</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC RULE: Cache Filter Attributes</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>0</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>On demand</SCHEDULE_RULE>
+<STATE>1</STATE>
+<TEST>0</TEST>
+</JOB>
+<JOB JOBGUID="520AD060-FDD5-4E94-8E54-7ED99C86D506" MCPACKAGEID="com.sap.rds.idm.rule.engine">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1469570246173</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<GROUP_ID>45485155-A0D1-4D97-8B62-A1A4323C99FB</GROUP_ID>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+   <mx:GUID>3A4F0CDF-58D7-415D-93F5-7212EF392466</mx:GUID>
+   <mx:VERSION>1.0</mx:VERSION>
+   <mx:DSEJobs>
+      <mx:Sequence>
+         <mx:Step Enabled="TRUE" Key="SAPC RULE: Create/Update Rules"/>
+      </mx:Sequence>
+      <mx:Job name="SAPC RULE: Create/Update Rules">
+         <mx:Description/>
+         <mx:Sequence>
+            <mx:Step Enabled="TRUE" Key="E78E7F54-0FE2-4ECF-B52B-31CA5F036705"/>
+            <mx:Step Enabled="TRUE" Key="E15D25D5-288E-4E45-97E4-DED33B8F6E63"/>
+            <mx:Step Enabled="TRUE" Key="E139944E-2EDB-47F9-8B85-F670AC4C45DF"/>
+            <mx:Step Enabled="TRUE" Key="3D810A4B-8B8D-4817-B285-C321D0AD4269"/>
+         </mx:Sequence>
+         <mx:Globals/>
+         
+         <mx:Common>
+            <ENGINETYPE>1</ENGINETYPE>
+            <SCRIPTENG>JScript</SCRIPTENG>
+            <EVLOG>0</EVLOG>
+            <ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+            <XLRESET>1</XLRESET>
+            <ERRFUNCTION>sapc_jobErrorHandler</ERRFUNCTION>
+            <SNMPTRAPLEVEL>0</SNMPTRAPLEVEL>
+            <MAXERROR>0</MAXERROR>
+            <LOGLIMIT>25</LOGLIMIT>
+            <MCLOGLEVEL>1</MCLOGLEVEL>
+            <RIGHT_TRIM>1</RIGHT_TRIM>
+         </mx:Common>
+         <mx:Pass name="E78E7F54-0FE2-4ECF-B52B-31CA5F036705">
+            <TYPE>Fromsource ASCII</TYPE>
+            <DESCRIPTION>SAPC Read rules from File</DESCRIPTION>
+            <REPOSITORY>0</REPOSITORY>
+<PASSDOC>$FUNCTION.sapc_core_getPackageConstant(SAPC_RULE_UPLOAD_FOLDER)$$\SAPC_Rule_Upload.csv&#13;
+&#13;
+&#13;
+%$pck.SAPC_PATH_UPLOAD%\%$pck.SAPC_RULE_UPLOAD_FOLDER_NAME%\%$pck.SAPC_RULE_UPLOAD_FILE_NAME%</PASSDOC>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<DELTAID>loadid</DELTAID>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>1</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>1</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<TODB>%$ddm.identitycenter%</TODB>
+<DBTABLE>SAPC_RULES</DBTABLE>
+<READFROMPVO>0</READFROMPVO>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<DELTABLE>1</DELTABLE>
+<HEADER>1</HEADER>
+<FIXEDRECORD>0</FIXEDRECORD>
+<SEPFIELD>;</SEPFIELD>
+<PATH>$FUNCTION.sapc_core_getPackageConstant(SAPC_PATH_UPLOAD!!com.sap.rds.idm.mass.administration)$$\RULE_ENGINE\SAPC_Rule_Upload.csv</PATH>
+<CHARSET>Auto</CHARSET>
+<mx:Class>
+<mx:attr name="ruleid">
+<mx:value>VARCHAR,255,ruleid</mx:value>
+</mx:attr>
+<mx:attr name="condition">
+<mx:value>VARCHAR,255,condition</mx:value>
+</mx:attr>
+<mx:attr name="rolename">
+<mx:value>VARCHAR,255,rolename</mx:value>
+</mx:attr>
+<mx:attr name="privname">
+<mx:value>VARCHAR,255,privname</mx:value>
+</mx:attr>
+<mx:attr name="ownermskeyvalue">
+<mx:value>VARCHAR,255,ownermskeyvalue</mx:value>
+</mx:attr>
+<mx:attr name="autoresolve">
+<mx:value>VARCHAR,255,autoresolve</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+         <mx:Pass name="E15D25D5-288E-4E45-97E4-DED33B8F6E63">
+            <TYPE>ToIDStore</TYPE>
+            <DESCRIPTION>SAPC Create Dynamic Groups for Rules</DESCRIPTION>
+            <REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<DELTAID>SAPCD_WRITERULES</DELTAID>
+<MAXDELETE>100%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>1</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>1</MARKDEL>
+<AUTODELETE>2</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select * from SAPC_RULES</FROMSQL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<IDSTORE>1</IDSTORE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>-- Self --</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name=".MSKEYVALUE">
+<mx:value>DG:RULE:%ruleid%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>MX_DYNAMIC_GROUP</mx:value>
+</mx:attr>
+<mx:attr name="#MXAC_ENTRY">
+<mx:value>2</mx:value>
+</mx:attr>
+<mx:attr name=".MX_OWNER">
+<mx:value>&lt;$FUNCTION.sapc_rule_emptyStringSetAdministrator(%ownermskeyvalue%)$$&gt;</mx:value>
+</mx:attr>
+<mx:attr name="#MXAC_MEMBERS">
+<mx:value>2</mx:value>
+</mx:attr>
+<mx:attr name="MX_TARGET_FILTER">
+<mx:value>$FUNCTION.sapc_rule_createSqlFilter(%condition%)$$</mx:value>
+</mx:attr>
+<mx:attr name="#MX_DG_AUTORESOLVE_INTERVAL">
+<mx:value>-1</mx:value>
+</mx:attr>
+<mx:attr name="DISPLAYNAME">
+<mx:value>RULE %ruleid%</mx:value>
+</mx:attr>
+<mx:attr name=".SAPC_DYNG_CREATED_AT">
+<mx:value>%$ddm.datetime8601%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_DYNG_LAST_CHANGED_AT">
+<mx:value>%$ddm.datetime8601%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_DYNG_LAST_CHANGED_BY">
+<mx:value>&lt;IDM_UPLOAD&gt;</mx:value>
+</mx:attr>
+<mx:attr name=".SAPC_DYNG_DIRTY">
+<mx:value>1</mx:value>
+</mx:attr>
+<mx:attr name=".SAPC_DYNG_CREATED_BY">
+<mx:value>&lt;IDM_UPLOAD&gt;</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_DYNG_FILTER_ATTRIBUTE_NAME1">
+<mx:value>$FUNCTION.sapc_rule_getConditionNamePos(0!!%condition%)$$</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_DYNG_FILTER_ATTRIBUTE_VALUE1">
+<mx:value>$FUNCTION.sapc_rule_getConditionValuePos(0!!%condition%)$$</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_DYNG_FILTER_ATTRIBUTE_NAME2">
+<mx:value>$FUNCTION.sapc_rule_getConditionNamePos(1!!%condition%)$$</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_DYNG_FILTER_ATTRIBUTE_VALUE2">
+<mx:value>$FUNCTION.sapc_rule_getConditionValuePos(1!!%condition%)$$</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_DYNG_AUTORESOLVE">
+<mx:value>%autoresolve%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_DYNG_REF_MX_PRIVILEGE">
+<mx:value>$FUNCTION.sapc_parseRolePrivs(%privname%)$$</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_DYNG_REF_MX_ROLE">
+<mx:value>$FUNCTION.sapc_parseRolePrivs(%rolename%)$$</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_DYNG_FOR_RULE_ENGINE">
+<mx:value>1</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+         <mx:Pass name="E139944E-2EDB-47F9-8B85-F670AC4C45DF">
+            <TYPE>ToIDStore</TYPE>
+            <DESCRIPTION>SAPC Create DG Business Roles for Rules (delta)</DESCRIPTION>
+            <REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<DELTAID>sapcd_rules_roles</DELTAID>
+<MAXDELETE>100%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>1</DELTAENABLED>
+<SKIP>1</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>1</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select * from SAPC_RULES</FROMSQL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<IDSTORE>1</IDSTORE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>-- Self --</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name=".MSKEYVALUE">
+<mx:value>ROLE:DG:RULE:%ruleid%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>MX_ROLE</mx:value>
+</mx:attr>
+<mx:attr name="#MXAC_ENTRY">
+<mx:value>2</mx:value>
+</mx:attr>
+<mx:attr name=".MX_OWNER">
+<mx:value>&lt;$FUNCTION.sapc_rule_emptyStringSetAdministrator(%ownermskeyvalue%)$$&gt;</mx:value>
+</mx:attr>
+<mx:attr name="#MXAC_MEMBERS">
+<mx:value>2</mx:value>
+</mx:attr>
+<mx:attr name="DISPLAYNAME">
+<mx:value>RULE %ruleid%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ROLE_AUTOASSIGN_TO">
+<mx:value>&lt;DG:RULE:%ruleid%&gt;</mx:value>
+</mx:attr>
+<mx:attr name="DESCRIPTION">
+<mx:value>Role has been created by rule engine to hold roles and privileges for rule based assignments</mx:value>
+</mx:attr>
+<mx:attr name="MXMEMBER_MX_ROLE">
+<mx:value>$FUNCTION.sapc_parseRolePrivs(%rolename%)$$</mx:value>
+</mx:attr>
+<mx:attr name="MXMEMBER_MX_PRIVILEGE">
+<mx:value>$FUNCTION.sapc_parseRolePrivs(%privname%)$$</mx:value>
+</mx:attr>
+<mx:attr name=".SAPC_ROLE_CREATED_AT">
+<mx:value>%$ddm.datetime8601%</mx:value>
+</mx:attr>
+<mx:attr name=".SAPC_ROLE_CREATED_BY">
+<mx:value>&lt;IDM_UPLOAD&gt;</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_ROLE_LAST_CHANGED_AT">
+<mx:value>%$ddm.datetime8601%</mx:value>
+</mx:attr>
+<mx:attr name="SAPC_ROLE_LAST_CHANGED_BY">
+<mx:value>&lt;IDM_UPLOAD&gt;</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+         <mx:Pass name="3D810A4B-8B8D-4817-B285-C321D0AD4269">
+            <TYPE>To Generic</TYPE>
+            <DESCRIPTION>SAPC Recalculate DG members (delta)</DESCRIPTION>
+            <REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<DELTAID>SAPCD_RULES_RESOLVE</DELTAID>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>1</DELTAENABLED>
+<SKIP>1</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>1</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select * from SAPC_RULES</FROMSQL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<IDSTORE>1</IDSTORE>
+<SCRIPTNEXT>sapc_rule_resolveDynamicGroups</SCRIPTNEXT>
+<mx:Class>
+<mx:attr name="RULE_ID">
+<mx:value>%ruleId%</mx:value>
+</mx:attr>
+<mx:attr name="GROUP_ID">
+<mx:value>$FUNCTION.sapc_getMskeyFromMskeyvalue(DG:RULE:%ruleId%)$$</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+<mx:Functions>
+            <mx:Function Enabled="TRUE" Script="JScript" name="logRuleId">
+               <mx:Code>// Main function: logRuleId
+
+function logRuleId(Par){
+	//Example calling DSE internal function
+	//uStop("Terminated by user");
+
+	return Par.toUpperCase();
+}
+</mx:Code>
+            </mx:Function>
+            <mx:Function Enabled="TRUE" Script="JScript" name="createDynamicGroupAndLinkages">
+               <mx:Code>// Main function: createDynamicGroupAndLinkages
+
+function createDynamicGroupAndLinkages (Par)
+{
+    var rolename = Par.get ("ruleid");
+    var rules  = Par.get ("rules");
+    var help1 = Par.get ("rolename");
+    
+    var arr = rules.split (",");
+    var assigned_business_role = help1;
+    
+    var op = "";
+    
+    // Generate SQL filter from rules.
+    var SQL       = "select mskey from mxiv_sentries where mskey in (";
+    var constant1 = "select mskey from mxiv_sentries where attrname='";
+    
+    for (var jj=0; jj&lt;arr.length; jj++) {
+        if (jj&gt;=1) {
+            SQL = SQL + " and mskey in (";
+        }
+        var arr2 = arr [jj].split ("=");
+        varname = arr2[0];
+        varvalue = arr2[1];
+        if (-1!=varvalue.indexOf ("%")) {
+            op = "like";
+        }
+        else {
+            op = "=";
+        }
+        var subquery = constant1 + varname + "' and searchvalue " + op + " '" + varvalue + "'";
+        Util_LogValue (subquery);
+        SQL = SQL + subquery + ")";
+        Util_LogValue (SQL);
+    }
+    
+    var dg_group_name = "RULEENGINE_DG_" + rolename;
+    var dg_group_mskey;
+    var role_name = "RULEENGINE_" + rolename;
+    var role_mskey;
+    var result = UserFunc.uSelect ("select mskey from mxiv_values where attr_id = (select attr_id from mxi_attributes where attrname='MSKEYVALUE' and is_id=%$glb.RULEENGINE_IDS%)" +
+        " and searchvalue='" + role_name + "'");
+    if (result.indexOf ("!ERROR")==-1) {
+        // 'role doesn't exist yet, so we create it and the dynamic group
+        dg_group_mskey = UserFunc.uIS_Create ("%$glb.RULEENGINE_IDS%", dg_group_name);
+		Util_LogValue ("Created dynamic group with mskey " + dg_group_mskey);
+        OutString = UserFunc.uIS_SetValue (dg_group_mskey, "%$glb.RULEENGINE_IDS%", "MX_ENTRYTYPE", "MX_DYNAMIC_GROUP");
+		Util_LogValue ("Assigning entry type returned " + OutString);
+        UserFunc.uIS_SetValue (dg_group_mskey, "%$glb.RULEENGINE_IDS%", "MX_TARGET_FILTER", SQL);
+        UserFunc.uIS_SetValue (dg_group_mskey, "%$glb.RULEENGINE_IDS%", "DISPLAYNAME", "Dynamic Group generated by IdM Rule Engine: " + rolename);
+        // Corresponding role doesn't exist either, so we create it as well
+        role_mskey = UserFunc.uIS_Create ("%$glb.RULEENGINE_IDS%", role_name);
+		Util_LogValue ("Created dynamic group with mskey " + role_mskey);
+        UserFunc.uIS_SetValue (role_mskey, "%$glb.RULEENGINE_IDS%", "MX_ENTRYTYPE", "MX_ROLE");
+        UserFunc.uIS_SetValue (role_mskey, "%$glb.RULEENGINE_IDS%", "DISPLAYNAME", "Role generated by IdM Rule Engine: " + rolename);
+        UserFunc.uIS_SetValue (role_mskey, "%$glb.RULEENGINE_IDS%", "MX_ROLE_AUTOASSIGN_TO", dg_group_mskey);        
+    }
+    else {
+        // 'Role exists already - we read the dynamic group mskey and update the filter
+        role_mskey = parseInt (result);
+        dg_group_mskey = UserFunc.uIS_GetValue (role_mskey, "%$glb.RULEENGINE_IDS%", "MX_ROLE_AUTOASSIGN_TO");
+        UserFunc.uIS_SetValue (dg_group_mskey, "%$glb.RULEENGINE_IDS%", "MX_TARGET_FILTER", SQL);        
+    }
+    
+    // 'now we set the list of business roles as parents of role_mskey so that the
+    // 'dynamic members are automatically assigned the business role
+     var br_mskey = UserFunc.uIS_Get ("%$glb.RULEENGINE_IDS%", assigned_business_role);
+     if (br_mskey.indexOf ("!ERROR")!=-1) {
+         Util_LogValue ("Business role " + assigned_business_role + " cannot be found.");
+     }
+     else {
+         // ' Set up inheritance
+         UserFunc.uIS_SetValue (br_mskey, "%$glb.RULEENGINE_IDS%", "MXREF_MX_ROLE", role_mskey);
+u    }
+}</mx:Code>
+            </mx:Function>
+            <mx:Function Enabled="TRUE" Script="JScript" name="createRuleGroupAndLinkages">
+               <mx:Code>// Main function: createDynamicGroupAndLinkages
+
+function createRuleGroupAndLinkages (Par)
+{
+    var rolename = Par.get ("ruleid");
+    var rules  = Par.get ("rules");
+    var help1 = Par.get ("rolename");
+    var assigned_business_role = help1;
+	
+	// Check if "rules" is a function
+	var beginnerok = rules.indexOf ("FUNCTION.");
+	var FUNCTION   = null;
+	var SQL        = null;
+	
+	if (beginnerok==0) { // ' This is a function
+		FUNCTION = rules;
+	}
+	else {
+    
+		var arr = rules.split (",");
+		
+		var op = "";
+		
+		// Generate SQL filter from rules.
+		SQL       = "select mskey from mxiv_sentries where mskey in (";
+		var constant1 = "select mskey from mxiv_sentries where attrname='";
+		
+		for (var jj=0; jj&lt;arr.length; jj++) {
+			if (jj&gt;=1) {
+				SQL = SQL + " and mskey in (";
+			}
+			var arr2 = arr [jj].split ("=");
+			varname = arr2[0];
+			varvalue = arr2[1];
+			if (-1!=varvalue.indexOf ("%")) {
+				op = "like";
+			}
+			else {
+				op = "=";
+			}
+			var subquery = constant1 + varname + "' and searchvalue " + op + " '" + varvalue + "'";
+			Util_LogValue (subquery);
+			SQL = SQL + subquery + ")";
+			Util_LogValue (SQL);
+		}
+	}
+    
+    var role_name = "RULEENGINE_" + rolename;
+    var role_mskey;
+    var result = UserFunc.uSelect ("select mskey from mxiv_values where attr_id = (select attr_id from mxi_attributes where attrname='MSKEYVALUE' and is_id=%$glb.RULEENGINE_IDS%)" +
+        " and searchvalue='" + role_name + "'");
+    if (result.equals ("")) {
+        // Corresponding role doesn't exist either, so we create it as well
+        role_mskey = UserFunc.uIS_Create ("%$glb.RULEENGINE_IDS%", role_name);
+        Util_LogValue ("Created role with mskey " + role_mskey);
+        UserFunc.uIS_SetValue (role_mskey, "%$glb.RULEENGINE_IDS%", "MX_ENTRYTYPE", "MX_ROLE");
+        UserFunc.uIS_SetValue (role_mskey, "%$glb.RULEENGINE_IDS%", "DISPLAYNAME", "Role generated by IdM Rule Engine: " + rolename);
+		if (SQL!=null)
+            UserFunc.uIS_SetValue (role_mskey, "%$glb.RULEENGINE_IDS%", "IRE_RULE_FILTER", SQL);
+		else
+		    UserFunc.uIS_SetValue (role_mskey, "%$glb.RULEENGINE_IDS%", "IRE_FILTER_FUNCTION", FUNCTION);
+    }
+    else {
+        // 'Role exists already - we read the dynamic group mskey and update the filter
+        role_mskey = parseInt (result);
+		if (SQL!=null)
+            UserFunc.uIS_SetValue (role_mskey, "%$glb.RULEENGINE_IDS%", "IRE_RULE_FILTER", SQL);
+		else
+		    UserFunc.uIS_SetValue (role_mskey, "%$glb.RULEENGINE_IDS%", "IRE_FILTER_FUNCTION", FUNCTION);     
+    }
+    
+    // 'now we set the list of business roles as parents of role_mskey so that the
+    // 'dynamic members are automatically assigned the business role
+     var br_mskey = UserFunc.uIS_Get ("%$glb.RULEENGINE_IDS%", assigned_business_role);
+     if (br_mskey.indexOf ("!ERROR")!=-1) {
+         Util_LogValue ("Business role " + assigned_business_role + " cannot be found.");
+     }
+     else {
+         // ' Set up inheritance
+         var entrytype_of_roleorprivilege = UserFunc.uIS_GetValue (role_mskey, "%$glb.RULEENGINE_IDS%", "MX_ENTRYTYPE");
+         if (entrytype_of_roleorprivilege.equals ("MX_ROLE")) {
+             UserFunc.uIS_SetValue (br_mskey, "%$glb.RULEENGINE_IDS%", "MXREF_MX_ROLE", role_mskey);
+         }
+         else {
+             UserFunc.uIS_SetValue (br_mskey, "%$glb.RULEENGINE_IDS%", "MXMEMBER_MX_PRIVILEGE", role_mskey);
+         }
+    }
+}</mx:Code>
+            </mx:Function>
+            <mx:Function Enabled="TRUE" Script="JScript" name="parseRoleName">
+               <mx:Code>// Main function: parseRoleName
+// Input is role or privilege name pattern
+
+function parseRoleName(Par)
+{
+    // First we split the input
+    var arr = Par.split ("!!");
+	
+	var role_or_privilege_name = arr [0];
+	
+	Util_LogValue ("Input values are " + role_or_privilege_name + " and " + personmskey);
+	
+	// Then we count the number of % characters.
+	// If it is an odd number we know there is a problem.
+	// We store the indexes in an array.
+	var idx = role_or_privilege_name.indexOf ("%");
+	var idxs = new Array ();
+	var counter = 0;
+	var help = role_or_privilege_name;
+	
+	while (parseInt (idx)&gt;=0) {
+	    idxs [counter++] = idx;
+		help = help.substr (idx+1);
+		idx = help.indexOf ("%");
+		Util_LogValue (help);
+	}
+	
+	Util_LogValue ("Counted " + idxs.length + " % characters.");
+	
+	if (idxs.length%2!=0) {
+	    return "-1";
+	}
+	
+	// Now we extract the variable names inside
+	// the % characters. if the person doesn't
+	// have the corresponding attribute, we return an error.
+	// for the replacement, we make a copy of the original value where we replace
+    var copy = role_or_privilege_name;
+	for (var j=0; j&lt;idxs.length; j+=2) {
+	    var varname = role_or_privilege_name.substr (idxs[j]+1, idxs [j+1]-idxs[j]-1);
+		Util_LogValue (varname);
+		var varvalue = UserFunc.uIS_GetValue (person_mskey, "%$glb.RULEENGINE_IDS%", varname);
+		if (varvalue.indexOf ("!ERROR")&gt;=0) {
+		    Util_LogValue ("Couldn't find " + varname + " on user " + person_mskey);
+			return "-1";
+		}
+		copy = UserFunc.uReplaceString (copy, "%" + varname + "%", varvalue);
+		Util_LogValue (copy);
+	}
+	
+	//return copy;
+	return "";
+}</mx:Code>
+            </mx:Function>
+            <mx:Function Enabled="TRUE" Script="JScript" name="createSQLQuery">
+               <mx:Code>// Main function: createSQLQuery
+
+function createSQLQuery(condition){
+    
+    var arr = condition.split (",");
+    
+    var op = "";
+    
+    // Generate SQL filter from rules.
+    var SQL       = "select distinct mskey from idmv_vallink_basic_active where mcidstore=%$glb.SAP_MASTER_IDS_ID% and mskey in (";
+    var constant1 = "select mskey from idmv_vallink_basic_active where mcattrname='";
+    
+    for (var jj=0; jj&lt;arr.length; jj++) {
+        if (jj&gt;=1) {
+            SQL = SQL + " and mskey in (";
+        }
+        var arr2 = arr [jj].split ("=");
+        varname = arr2[0];
+        varvalue = arr2[1];
+        if (-1!=varvalue.indexOf ("%")) {
+            op = "like";
+        }
+        else {
+            op = "=";
+        }
+        var subquery = constant1 + varname + "' and mcsearchvalue " + op + " '" + varvalue.toUpperCase() + "'";
+        //Util_LogValue (subquery);
+        SQL = SQL + subquery + ")";
+        //Util_LogValue (SQL);
+    }
+    
+	Util_LogValue (SQL);
+	return SQL;
+}</mx:Code>
+            </mx:Function>
+            <mx:Function Enabled="TRUE" ErrorStatus="0" Script="JScript" name="sapc_rule_getConditionNamePos">
+               <mx:Code>// Main function: sapc_rule_getConditionNamePos
+// function expects input like this: 0!!MX_FIRSTNAME=Kevin;MX_LASTNAME=Smith
+// for this sample input, it will return MX_FIRSTNAME
+
+function sapc_rule_getConditionNamePos(Par) {
+
+    var script = "sapc_rule_getConditionNamePos::";
+    var logLevel = sapc_core_getPackageConstant("SAPC_LOG_LEVEL");
+    if (logLevel &gt;= 2) uWarning(script + Par);
+    var arr1 = Par.split("!!");
+    var position = arr1[0];
+    var condition = arr1[1];
+
+    var arr2 = condition.split("|");
+
+    for (var jj = 0; jj &lt; arr2.length; jj++) {
+        if (jj == position) {
+            var arr3 = arr2[jj].split("=");
+            if (logLevel &gt;= 2) uWarning(script + "Name" + position + " = [" + arr3[0] + "]");
+            return arr3[0];
+        }
+    }
+    //uWarning(arr2[0]);
+    return "";
+}</mx:Code>
+</mx:Function>
+            <mx:Function Enabled="TRUE" ErrorStatus="0" Script="JScript" name="sapc_rule_getConditionValuePos">
+               <mx:Code>// Main function: sapc_rule_getConditionValuePos
+// function expects input like this: "0!!MX_FIRSTNAME=Kevin,MX_LASTNAME=Smith"
+// for this sample input, it will return "Kevin"
+
+function sapc_rule_getConditionValuePos(Par) {
+
+    var script = "sapc_rule_getConditionValuePos::";
+    var logLevel = sapc_core_getPackageConstant("SAPC_LOG_LEVEL");
+
+    var arr1 = Par.split("!!");
+    var position = arr1[0];
+    var condition = arr1[1];
+
+    var arr2 = condition.split("|");
+
+    for (var jj = 0; jj &lt; arr2.length; jj++) {
+        if (jj == position) {
+            var arr3 = arr2[jj].split("=");
+            var value = arr3[1].toUpperCase();
+            if (logLevel &gt;= 2) uWarning(script + "Value" + position + " = [" + value + "]");
+            return value;
+        }
+    }
+    //uWarning(arr2[0]);
+    return "";
+}</mx:Code>
+</mx:Function>
+            <mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_rule_emptyStringSetAdministrator" Script="JScript" name="sapc_rule_emptyStringSetAdministrator"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_sendMailGeneric" Script="JScript" name="sapc_sendMailGeneric"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_jobErrorHandler" Script="JScript" name="sapc_jobErrorHandler"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_getRepConstant" Script="JScript" name="sapc_getRepConstant"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_getMskeyFromMskeyvalue" Script="JScript" name="sapc_getMskeyFromMskeyvalue"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_rule_resolveDynamicGroups" Script="JScript" name="sapc_rule_resolveDynamicGroups"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_rule_createSqlFilter" Script="JScript" name="sapc_rule_createSqlFilter"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_core_script_functions" Script="JScript" name="sapc_core_script_functions"/>
+<mx:Function Enabled="TRUE" ErrorStatus="0" Script="JScript" name="sapc_parseRolePrivs">
+<mx:Code>// Main function: sapc_parseRolePrivs
+
+function sapc_parseRolePrivs(Par) {
+    //Example calling DSE internal function 
+    //uStop("Terminated by user");
+    //if Par is empty --&gt; return "{A}";
+    //if Par has the pattern "Role1|Role2" --&gt; return "{R}&lt;Role1&gt;|&lt;Role2&gt;";
+
+    logLevel = sapc_core_getPackageConstant("SAPC_LOG_LEVEL");
+
+    if (Par == "") {
+        //No role or privilege is given, NOOP
+        return "{A}";
+    }
+
+    result = "";
+    rolePrivArray = Par.split("|");
+
+    for (i = 0; i &lt; rolePrivArray.length; i++) {
+        rolePrivMskeyvalue = rolePrivArray[i];
+
+        rolePrivMskey = sapc_getMskeyFromMskeyvalue(rolePrivMskeyvalue);
+
+        result = result + rolePrivMskey + "|";
+    }
+
+    result = "{R}" + result.substring(0, result.length - 1);
+
+    //result = "&lt;" + uReplaceString(Par, ";", "&gt;|&lt;") + "&gt;";
+
+    if (logLevel &gt;= 2) uErrMsg(1, "Script sapc_parseRolePrivs output: " + result);
+
+    return result;
+}</mx:Code>
+</mx:Function>
+</mx:Functions>
+</mx:Job>
+   </mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>520AD060-FDD5-4E94-8E54-7ED99C86D506</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC RULE: Create/Update Rules</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>0</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>On demand</SCHEDULE_RULE>
+<STATE>1</STATE>
+<TEST>0</TEST>
+</JOB>
+<JOB JOBGUID="7F2282DE-D1B5-423E-9839-D0443CD9014E" MCPACKAGEID="com.sap.rds.idm.rule.engine">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1461163364563</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<GROUP_ID>45485155-A0D1-4D97-8B62-A1A4323C99FB</GROUP_ID>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+   <mx:GUID>7330C317-D200-4FCD-8D61-B2A00F740DDB</mx:GUID>
+   <mx:VERSION>1.0</mx:VERSION>
+   <mx:DSEJobs>
+      <mx:Sequence>
+         <mx:Step Enabled="TRUE" Key="SAPC RULE: Recalculate DGs"/>
+      </mx:Sequence>
+      <mx:Job name="SAPC RULE: Recalculate DGs">
+         <mx:Description/>
+         <mx:Sequence>
+            <mx:Step Enabled="TRUE" Key="6253DA3E-5B43-4C7F-BB90-CE0CAE717D8D"/>
+         </mx:Sequence>
+         <mx:Globals/>
+         
+         <mx:Common>
+            <ENGINETYPE>1</ENGINETYPE>
+            <SCRIPTENG>JScript</SCRIPTENG>
+            <EVLOG>1</EVLOG>
+            <ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+            <XLRESET>1</XLRESET>
+            <SNMPTRAPLEVEL>1</SNMPTRAPLEVEL>
+            <MAXERROR>0</MAXERROR>
+            <LOGLIMIT>25</LOGLIMIT>
+            <MCLOGLEVEL>1</MCLOGLEVEL>
+            <RIGHT_TRIM>1</RIGHT_TRIM>
+         </mx:Common>
+         <mx:Pass name="6253DA3E-5B43-4C7F-BB90-CE0CAE717D8D">
+            <TYPE>To Generic</TYPE>
+            <DESCRIPTION>SAPC Recalculate DG members</DESCRIPTION>
+            <REPOSITORY>0</REPOSITORY>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>1</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>1</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>SELECT distinct mcMSKEY as MSKEY--, mcMSKEYVALUE as MSKEYVALUE
+FROM [idmv_entry_simple]
+where mcMSKEYVALUE like 'DG:RULE:%'
+-- and [mcMSKEY] not in (select mcMSKEY from [idmv_vallink_basic_active] where mcAttrName like 'SAPC_DYNG_DIRTY' and mcSearchValue = '1')
+ and mcIdStore = %$IDSID%</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<IDSTORE>1</IDSTORE>
+<SCRIPTNEXT>sapc_rule_resolveDynamicGroups</SCRIPTNEXT>
+<mx:Class>
+<mx:attr name="GROUP_ID">
+<mx:value>%MSKEY%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+      
+
+
+<mx:Functions>
+            <mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_rule_resolveDynamicGroups" Script="JScript" name="sapc_rule_resolveDynamicGroups"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_getMskeyFromMskeyvalue" Script="JScript" name="sapc_getMskeyFromMskeyvalue"/>
+<mx:Function Enabled="TRUE" ExternalScript="com.sap.rds.idm.core:jscript.sapc_core_script_functions" Script="JScript" name="sapc_core_script_functions"/>
+</mx:Functions>
+</mx:Job>
+   </mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>F45C0C50-0B5D-42CA-B1A0-C647622A54A5</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC RULE: Recalculate DGs</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>0</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>On demand</SCHEDULE_RULE>
+<STATE>1</STATE>
+<TEST>0</TEST>
+</JOB>
+</JOBS>
+<FOLDERS>
+<FOLDER GROUPGUID="45485155-A0D1-4D97-8B62-A1A4323C99FB">
+<ACTIVATEDATE>1439395580727</ACTIVATEDATE>
+<GROUP_NAME>Jobs</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCSOURCEGUID>45485155-A0D1-4D97-8B62-A1A4323C99FB</MCSOURCEGUID>
+<PROVISION_GROUP>0</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>0</WFSHOWGROUP>
+</FOLDER>
+<FOLDER GROUPGUID="9E65FDD6-2F77-4882-94B9-CCBAA814A394">
+<ACTIVATEDATE>1439395580727</ACTIVATEDATE>
+<GROUP_NAME>Processes</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCSOURCEGUID>9E65FDD6-2F77-4882-94B9-CCBAA814A394</MCSOURCEGUID>
+<PROVISION_GROUP>1</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>0</WFSHOWGROUP>
+</FOLDER>
+<FOLDER GROUPGUID="B77CE6C3-E40A-4E17-B15B-AF84E5DD5128">
+<ACTIVATEDATE>1439395580727</ACTIVATEDATE>
+<GROUP_NAME>Forms</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+<MCSOURCEGUID>B77CE6C3-E40A-4E17-B15B-AF84E5DD5128</MCSOURCEGUID>
+<PROVISION_GROUP>5</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>1</WFSHOWGROUP>
+</FOLDER>
+</FOLDERS>
+</PACKAGE>
+</PACKAGES>
+<DISPATCHERS>
+<DISPATCHER MACHINE="idm">
+<JOBID>520AD060-FDD5-4E94-8E54-7ED99C86D506</JOBID>
+<JOBID>4B001061-0107-4823-8ADB-7C09EB5267C3</JOBID>
+<JOBID>7F2282DE-D1B5-423E-9839-D0443CD9014E</JOBID>
+</DISPATCHER>
+</DISPATCHERS>
+<PACKAGE_HISTORY>
+<MCMODIFIEDBYUSERNAME>BPINST</MCMODIFIEDBYUSERNAME>
+<MCMODIFIEDDATE>1521558355000</MCMODIFIEDDATE>
+<MCPACKAGEID>com.sap.rds.idm.rule.engine</MCPACKAGEID>
+</PACKAGE_HISTORY>
+</IDM>
