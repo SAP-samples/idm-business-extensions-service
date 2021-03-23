@@ -14,7 +14,7 @@ Considerations:
 SAP Identity Management 8.0 SP07 (latest version)
 
 ## Download and Installation
-Please reffer to the Configuration Guide inside the package.
+Please refer to the Configuration Guide inside the package.
 
 ## Known Issues
 
