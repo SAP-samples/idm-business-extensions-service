@@ -29,6 +29,7 @@ Please refer to the Configuration Guide inside the package.
 For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
 If you require support from [SAP Services](https://www.sap.com/services.html) please send an email to <security@global.corp.sap>.
+Please do not open an incident to support component BC-IAM-IDM for issues encountered within the content of this repository.
 
 ## Contributing
 
