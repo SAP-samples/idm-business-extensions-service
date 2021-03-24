@@ -2,12 +2,12 @@
 
 ## Description
 
-This repository contains the content of the SAP Identity Management Business Extensions Service from SAP Consulting (formerly released as Rapid-Deployment Solution for SAP Identity Management, aka RDS). The aim is to make its content available for customers and partners, after the retirement of the RDS program ([Note 2624206](https://launchpad.support.sap.com/#/notes/2624206)).  
+This repository contains the content of the SAP Identity Management Business Extensions Service from [SAP Services](https://www.sap.com/services.html) (formerly released as Rapid-Deployment Solution for SAP Identity Management or IDM RDS). The aim is to make its content available for customers and partners, after the retirement of the RDS program ([Note 2624206](https://launchpad.support.sap.com/#/notes/2624206)).  
 
 Considerations:
 * The content can be downloaded and used without any license charges.
 * If you require support during installation, configuration or when using, modifying or extending the content, please send an email to <securityconsulting@global.corp.sap>.
-* If you did not purchase the service from SAP Consulting, you will get charged for the support activities. 
+* If you did not purchase the service from [SAP Services](https://www.sap.com/services.html), you will get charged for the support activities. 
 
 ## Requirements
 
@@ -28,7 +28,7 @@ Please refer to the Configuration Guide inside the package.
  
 For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
-If you require support from SAP Consulting please send an email to <securityconsulting@global.corp.sap>.
+If you require support from [SAP Services](https://www.sap.com/services.html) please send an email to <security@global.corp.sap>.
 
 ## Contributing
 
