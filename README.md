@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains the content of the SAP Identity Management Business Extensions Service from [SAP Services](https://www.sap.com/services.html) (formerly released as Rapid-Deployment Solution for SAP Identity Management or IDM RDS). The aim is to make its content available for customers and partners, after the retirement of the RDS program ([Note 2624206](https://launchpad.support.sap.com/#/notes/2624206)).  
+This repository contains the content of the [SAP Identity Management](https://www.sap.com/products/identity-management.html) Business Extensions Service from [SAP Services](https://www.sap.com/services.html) (formerly released as Rapid-Deployment Solution for SAP Identity Management or IDM RDS). The aim is to make its content available for customers and partners, after the retirement of the RDS program ([Note 2624206](https://launchpad.support.sap.com/#/notes/2624206)).  
 
 Considerations:
 * The content can be downloaded and used without any license charges.
@@ -11,7 +11,7 @@ Considerations:
 
 ## Requirements
 
-SAP Identity Management 8.0 SP07 (latest version)
+[SAP Identity Management](https://www.sap.com/products/identity-management.html) 8.0 SP07 (latest version)
 
 ## Download and Installation
 Please refer to the Configuration Guide inside the package.
