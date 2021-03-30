@@ -41,3 +41,6 @@ Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/idm-business-extensions-service)](https://api.reuse.software/info/github.com/SAP-samples/idm-business-extensions-service)
 
+# Further SAP Identity Management Content on GitHub
+
+You can find more content for SAP Identity Management from customers and partners in the [GitHub Repository of DSAG](https://github.com/1DSAG/IDM8.x)
