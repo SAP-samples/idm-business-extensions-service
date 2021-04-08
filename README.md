@@ -11,7 +11,7 @@ Considerations:
 
 ## Requirements
 
-[SAP Identity Management](https://www.sap.com/products/identity-management.html) 8.0 SP07 (latest version)
+[SAP Identity Management](https://www.sap.com/products/identity-management.html) 8.0 SP07 (Schema Version 1805)
 
 ## Download and Installation
 Please refer to the Configuration Guide inside the package.
