@@ -22,6 +22,7 @@ Please refer to the Configuration Guide inside the package.
 * MX_DISABLED and SAPC_IDEN_REP_DISABLED_<repName> not in list of modify trigger attributes of ABAP and ABAP BusinessSuite connector (fix planned for SP05)
 * Attribute MX_ACADEMMIC_TITLE_1 is using value help which has been removed in standard schema. This can lead to errors using new standard version of HCM Staging Area package (fix planned for SP05)
 * System Setup Job Create Minimum Data refers to privileges that do not exist anymore. Workaround: Remove non-existing privileges from Job. Fix planned for SP05.
+* Update Job of AD connector missing MC_REQ_PRIV in WriteGroupPrivileges Pass. Fix plannmed for SP05.
 
 ## How to obtain support
 
