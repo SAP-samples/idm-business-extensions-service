@@ -1,0 +1,3156 @@
+<IDM EXPORTED_ON="2022-02-09 14:59:18.8833333" IS_PACKAGE_FOLDER_EXPORT="0" PACKAGE_TRANSPORT_VERSION="8#0#8#2020#0#1#800SP8#1813#1813#1807" SCHEMA_VERSION="1813">
+<PACKAGES>
+<PACKAGE MCQUALIFIEDNAME="com.sap.rds.idm.hcm.stagingarea">
+<MCDISPLAYNAME>com.sap.consulting.hcm.stagingarea</MCDISPLAYNAME>
+<MCLASTMODIFIED>1585226446453</MCLASTMODIFIED>
+<MCMAJORVERSION>1</MCMAJORVERSION>
+<MCMINORVERSION>5</MCMINORVERSION>
+<MCPACKAGELEVEL>1706</MCPACKAGELEVEL>
+<MCPACKAGETYPE>0</MCPACKAGETYPE>
+<MCQUALIFIEDNAME>com.sap.rds.idm.hcm.stagingarea</MCQUALIFIEDNAME>
+<PACKAGE_VARS>
+<VARIABLE>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>-1</VARCATEGORY>
+<VARNAME>SAP_MASTER_IDS_ID</VARNAME>
+<VARTYPE>0</VARTYPE>
+<VARVALUE>1</VARVALUE>
+</VARIABLE>
+</PACKAGE_VARS>
+<USES>
+<USE>
+<MCFROMREFERENCE>6B000351-1F56-49B8-9BD5-D9FD832DFD90</MCFROMREFERENCE>
+<MCFROMTYPE>7</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>entrytype.add.MX_HCM_EMPLOYEE</MCTOQUALIFIEDNAME>
+<MCTOTYPE>9</MCTOTYPE>
+<MCVERSION>0</MCVERSION>
+<TOUSAGETYPE>10</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>7EFF36A6-4FAE-432A-96F6-8743DC6CB2D8</MCFROMREFERENCE>
+<MCFROMTYPE>7</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>entrytype.mod.MX_HCM_EMPLOYEE</MCTOQUALIFIEDNAME>
+<MCTOTYPE>9</MCTOTYPE>
+<MCVERSION>0</MCVERSION>
+<TOUSAGETYPE>11</TOUSAGETYPE>
+</USE>
+</USES>
+<PUBLIC_REFERENCES>
+<PUBLIC_REFERENCE>
+<MCNAME>SAPC_HCMToSAPMasterAdd</MCNAME>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCREFERENCE>6B000351-1F56-49B8-9BD5-D9FD832DFD90</MCREFERENCE>
+<MCTYPE>7</MCTYPE>
+</PUBLIC_REFERENCE>
+<PUBLIC_REFERENCE>
+<MCNAME>SAPC_HCMToSAPMasterModify</MCNAME>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCREFERENCE>7EFF36A6-4FAE-432A-96F6-8743DC6CB2D8</MCREFERENCE>
+<MCTYPE>7</MCTYPE>
+</PUBLIC_REFERENCE>
+</PUBLIC_REFERENCES>
+<PACKAGE_SCRIPTS>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: custom_generateHRID
+
+function custom_generateHRID(Par) {
+    return "";
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>custom_generateHRID</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: custom_initializePassword
+
+function custom_initializePassword(Par) {
+
+    // check if your password matches ABAP password policy which is defined in:
+    // http://help.sap.com/saphelp_nw04s/helpdata/en/d2/141fb593c742b5aad8f272dd487b74/frameset.htm
+    // check the default values delivered by SAP with your ABAP profile parameters
+    // for example:
+    // The first character may not be an exclamation point (!) or a question mark (?).
+
+    var str = "";
+
+    return str;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>custom_initializePassword</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_abap_getHelpValKey
+
+function sap_abap_getHelpValKey(Par) {
+    dbtype = "%$ddm.databasetype%";
+    nolock = "";
+    if (dbtype == 1) {
+        nolock = "WITH (NOLOCK)";
+    }
+
+    //input contains AttributeName!!ValText!!ValLocale which is used to access ValKey of table mxi_AttrValueHelp
+    //returns corresponding ValKey
+    var result = "";
+    var arrayOfStrings = Par.split("!!");
+    var attrName = arrayOfStrings[0];
+    var attrVal = arrayOfStrings[1];
+    var valLocale = ""; // default is empty string
+
+    if (attrVal == "NULLATTR") {
+        result = attrVal;
+    } else {
+        if (arrayOfStrings.length &gt; 2) {
+            valLocale = arrayOfStrings[2].toUpperCase();
+        }
+        var valueHelpTableName = sap_core_getDBTablePrefix() + "mxi_attrvaluehelp";
+        var sql = "select ValKey from " + valueHelpTableName + " " + nolock + " where ValId = '" + attrName + "' AND ValText = '" + attrVal + "'";
+        if (valLocale != "") {
+            sql = sql + " AND ValLocale = '" + valLocale + "'";
+        }
+        var sqlResult = uSelect(sql);
+
+        if (sqlResult != null &amp;&amp; sqlResult != "") {
+            var arrayOfValues = sqlResult.split("!!");
+            if (arrayOfValues.length &gt; 1) {
+                uInfo("sql: " + sql + " SQL result : " + sqlResult + " len: " + arrayOfValues.length);
+                uWarning("mxi_attrvalueHelp contains several keys for attribute: " + attrName + " with value: " + attrVal + " locale: " + valLocale);
+                for (var i = 0; i &lt; arrayOfValues.length; i++) {
+                    uInfo("key: " + arrayOfValues[i]);
+                }
+            } else {
+                result = arrayOfValues[0];
+            }
+        }
+    }
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_abap_getHelpValKey</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_addPassword
+
+function sap_addPassword(Par) {
+    // Parameter Par has following structure:
+    // Entry 54481 - {P0105-SYHR_A_P0105_AF_CELL=[20080709-99991231], 
+    // P0001-TEXT_P0001_WERKS=[20080709-99991231]ÃƒÆ’Ã¢â‚¬â€œffentlicher Dienst, 
+    // P0105-SYHR_A_P0105_AF_TEL_EXT=[20080709-20081231]1111111|[20090101-99991231]2222222,
+    // P0002-SYHR_A_P0002_AF_SPLIT_BEG=[20090101-99991231]01.01.2009|[20080709-20081231]09.07.2008, 
+    // P0002-NACHN=[20080709-99991231]WeiÃƒÆ’Ã…Â¸, 
+    // P0001-TEXT_P0001_KOSTL=[20080709-99991231]}
+
+    var entry = Par;
+    // Import required Java types.
+    importClass(java.util.HashMap);
+
+    if (Par != null &amp;&amp; Par != "") {
+        var disablePassword = 0;
+        // check if "ispassworddisabled" is set:
+        var keyExists = entry.containsKey("ispassworddisabled");
+
+        if (keyExists == true) {
+            var entryValue = entry.get("ispassworddisabled");
+            if (entryVAlue != null &amp;&amp; entryValue != "" &amp;&amp; (entryValue == "L" || entryValue == "1")) {
+                disablePassword = 1;
+                entry.put("passworddisabled", "1");
+                UserFunc.uInfo("Key: " + keyExists + " Value: " + entryValue);
+            }
+        }
+
+        if (disablePassword != 1) {
+            // call customer's exit to initialize the password
+            var password = UserFunc.custom_initializePassword(Par);
+            // if customer exit does not set the password:
+            // generate a password  
+            if (password == null || password == "") {
+                do {
+                    // Generate an 8 character password.
+                    password = UserFunc.uGeneratePassword(8);
+
+                    // check if generated password matches ABAP password policy defined in:
+                    // http://help.sap.com/saphelp_nw04s/helpdata/en/d2/141fb593c742b5aad8f272dd487b74/frameset.htm
+                    //
+                    // The first character may not be an exclamation mark (!) or a question mark (?).
+
+                } while (password.charAt(0) == '!' || password.charAt(0) == '?');
+            }
+            // password is set: encrypt, hash and add it to the HashMap entry
+            var encryptedPwd = UserFunc.uDESEncrypt("", password);
+            var hashedPwd = UserFunc.uMD5(password);
+
+            entry.put("encryptedPassword", encryptedPwd);
+            entry.put("hashedPassword", hashedPwd);
+        }
+    }
+
+
+    return entry;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_addPassword</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_calcID
+
+function sap_calcID(Par) {
+    // Input value has following format:
+    // "[20090101-99991231]&lt;Persnr&gt;!![20090101-99991231]&lt;sysUname&gt;!!&lt;SidCLNT000 1234&gt;"
+    // return value provides MSKEYVALUE for an employee
+
+    var msg = "";
+    var result = "";
+    var persNr = "";
+    var idStore = "%$pck.SAP_MASTER_IDS_ID%";
+
+    if (Par != null &amp;&amp; Par != "") {
+        var arrayOfStrings = Par.split("!!");
+        // split PERNR and SYSUNAME
+        if (arrayOfStrings.length &gt; 0) {
+            // Get PersNr
+            persNr = sap_cutDate(arrayOfStrings[0]);
+            if (persNr != null &amp;&amp; persNr != "") {
+                // verify existence of persNr in productive Identity Store
+                var sql = "select aValue from idmv_value_ext_active where mskey in " + "( select mskey from idmv_value_ext_active where attrName = 'MX_FS_PERSONNEL_NUMBER' and IS_ID = " + idStore + " and searchvalue = '" + persNr + "')" + " AND AttrName = 'MSKEYVALUE'";
+
+                var sqlResult = UserFunc.uSelect(sql);
+
+                if (sqlResult.length == 0) {
+                    // user with persNr does not exist yet
+                    result = UserFunc.sap_generateHRID(persNr);
+                } else {
+                    var valueArr = sqlResult.split("!!");
+                    if (valueArr.length == 1) {
+                        result = valueArr[0];
+                    } else {
+                        msg = "Personnel Number: " + persNr + " is used for multiple Identities: " + valueArr;
+                        UserFunc.uError("Script sap_calcID failed. Script input: " + Par + "; Message details: " + msg);
+                        UserFunc.sap_stopJobExecution(msg);
+                    }
+                }
+            } else {
+                msg = "Personnel Number not part of input Parameter: " + Par;
+                UserFunc.uError("Script sap_calcID failed. Script input: " + Par + "; Message details: " + msg);
+                UserFunc.sap_stopJobExecution(msg);
+            }
+        }
+    }
+
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_calcID</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// clean up global variable which is set in initialization script
+
+var password;
+
+function sap_clearPassword(Par) {
+    password = null;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_clearPassword</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_core_getContextVar
+
+function sap_core_getContextVar(Par) {
+    uVar = uGetContextVar(Par, "default-not good");
+    uInfo("sap_core_getContextVar:" + Par + ":" + uVar);
+
+    return uVar;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_core_getContextVar</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_core_getDBTablePrefix
+
+function sap_core_getDBTablePrefix(Par) {
+
+    var prefix = "";
+
+    var dbType = "%$ddm.databasetype%";
+    if (dbType == 1) { // MS-SQL
+        prefix = "dbo.";
+    }
+    uInfo("The used prefix for the tables are " + prefix);
+    return prefix;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_core_getDBTablePrefix</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_cutDate
+
+function sap_cutDate(Par) {
+    // Input value has following format:
+    //  "[20090101-99991231]value" or "[20090101-99991231]" 
+    // return value truncates date interval:
+    //  "value" or ""
+
+    var result = "";
+    if (Par != null &amp;&amp; Par != "") {
+        var beginSquare = Par.indexOf("[");
+        if (beginSquare == 0) {
+            var endSquare = Par.indexOf("]");
+            if (endSquare &gt; beginSquare &amp;&amp; Par.length &gt; endSquare) {
+                result = Par.substring(endSquare + 1, Par.length + 1);
+            }
+        } else // no date found: return input value
+        {
+            result = Par.toString();
+        }
+    }
+
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_cutDate</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_encryptPassword
+// use global variable which is set in initialization script
+//	in sap_initializePassword()
+
+var password;
+var passwordDisabled;
+
+function sap_encryptPassword(Par) {
+
+    var pwd;
+    if (passwordDisabled == 1) {
+        pwd = "";
+    } else {
+        pwd = UserFunc.uDESEncrypt("", password);
+
+    }
+
+    return pwd;
+
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_encryptPassword</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_encryptPasswordMD5
+// use global variable which is set in initialization script
+//	in sap_initializePassword()
+var password;
+var passwordDisabled;
+
+function sap_encryptPasswordMD5(Par) {
+
+    var pwd;
+    if (passwordDisabled == 1) {
+        pwd = "";
+    } else {
+        pwd = UserFunc.uMD5(password);
+
+    }
+
+    return pwd;
+
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_encryptPasswordMD5</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_generateHRID
+
+function sap_generateHRID(Par) {
+
+    var customID = (custom_generateHRID(Par));
+
+    if (customID == null || customID == "") {
+        var fields = Par.split("!!");
+
+        if (fields.length &gt; 0 &amp;&amp; fields[0].length &gt; 0) {
+            var employeeID = customID = fields[0];
+            var abapID = "";
+
+            if (fields.length &gt; 1 &amp;&amp; fields[1].length &gt; 0) {
+                abapID = fields[1];
+
+                if (abapID == null || abapID == "") {
+                    customID = employeeID;
+                } else {
+                    customID = abapID;
+                }
+            }
+        }
+    }
+    return customID;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_generateHRID</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>2</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_getSysUname
+
+function sap_getSysUname(Par) {
+    // Input value has following format:
+    //  "[20090101-99991231]&lt;Persnr&gt;!![20080101-20081231]&lt;sysUname1&gt;|[20090101-99991231]&lt;sysUname2&gt;"
+    // or optional with additional parameter write future hires
+    //  "[20090101-99991231]&lt;Persnr&gt;!![20080101-20081231]&lt;sysUname1&gt;|[20090101-99991231]&lt;sysUname2&gt;!!TRUE"
+    // return value provides MSKEYVALUE for an employee
+
+    var msg = "";
+    var result = "";
+    var persNr = "";
+    var idStore = "%$pck.SAP_MASTER_IDS_ID%";
+
+    if (Par != null &amp;&amp; Par != "") {
+        var arrayOfStrings = Par.split("!!");
+
+        // split PERNR and SYSUNAME [Optional: write future hires]
+        if (arrayOfStrings.length == 2 || arrayOfStrings.length == 3) {
+            // Get PersNr
+            persNr = sap_cutDate(arrayOfStrings[0]);
+
+            if (persNr != null &amp;&amp; persNr != "") {
+                // verify existence of persNr in productive Identity Store
+                var sql = "select aValue from idmv_value_basic_all where mskey in " + "( select mskey from idmv_value_basic_all where attrName = 'MX_FS_PERSONNEL_NUMBER' and IS_ID = " + idStore + " and searchvalue = '" + persNr + "')" + " AND AttrName = 'MSKEYVALUE'";
+
+                var sqlResult = UserFunc.uSelect(sql);
+
+
+
+                if (sqlResult.length == 0) {
+                    // user with persNr does not exist yet
+                    // use sysuname
+
+                    var today = new Date();
+                    var arrayOfSyUname = arrayOfStrings[1].split("|");
+                    var writeFutureHires = arrayOfStrings[2];
+                    uInfo("sap_getSysUname:: arrayOfSyUname: " + arrayOfSyUname + " length: " + arrayOfSyUname.length);
+                    uInfo("sap_getSysUname:: write future hires: " + writeFutureHires);
+                    // take multi-value strings into account
+                    for (var i = 0; i &lt; arrayOfSyUname.length; i++) {
+                        var dateArray = UserFunc.sap_getUTCDate(arrayOfSyUname[i]);
+                        uInfo("sap_getSysUname:: sap_getUTCDate(" + arrayOfSyUname[i] + ") returned: " + dateArray);
+                        var validFrom = dateArray[0];
+                        var validTo = dateArray[1];
+                        // make sure time dependent data is contained in dateArray:
+                        if (dateArray == arrayOfSyUname[i]) {
+                            //no date found
+                            result = arrayOfSyUname[i];
+                            msg = "use time independent data of SyUname: " + result;
+                            UserFunc.uInfo(1, "sap_getSysUname Par: " + Par + " " + msg);
+                            break; // loop
+                        } else {
+                            if (today &gt;= validFrom &amp;&amp; today &lt;= validTo) {
+                                result = UserFunc.sap_cutDate(arrayOfSyUname[i]);
+                                // leave loop
+                                break;
+                            } else if (today &lt; validFrom &amp;&amp; ("true".equalsIgnoreCase(writeFutureHires) || writeFutureHires == true)) {
+                                result = UserFunc.sap_cutDate(arrayOfSyUname[i]);
+                                uInfo("sap_getSysUname:: Future hire: " + result);
+                            } else {
+                                uInfo("sap_getSysUname:: skipping arrayOfSyUname: " + arrayOfSyUname[i]);
+                            }
+                        }
+                    }
+
+                    if (result == "") {
+                        //ERROR
+                        msg = "Invalid SyUname: " + arrayOfStrings[1] + " does not exist or is not valid today ";
+                        UserFunc.uError("Script sap_getSysUname failed. Script input: " + Par + "; Message details: " + msg);
+                        UserFunc.sap_stopJobExecution(msg);
+                    }
+                } else {
+                    var valueArr = sqlResult.split("!!");
+                    if (valueArr.length == 1) {
+                        result = valueArr[0];
+                    } else {
+                        msg = "Personnel Number: " + persNr + " is used for multiple Identities: " + valueArr;
+                        UserFunc.uError("Script sap_getSysUname failed. Script input: " + Par + "; Message details: " + msg);
+                        UserFunc.sap_stopJobExecution(msg);
+                    }
+                }
+            } else {
+                msg = "Personnel Number not part of input Parameter: " + Par;
+                UserFunc.uError("Script sap_getSysUname failed. Script input: " + Par + "; Message details: " + msg);
+                UserFunc.sap_stopJobExecution(msg);
+            }
+        }
+    }
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_getSysUname</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_getUTCDate
+
+function sap_getUTCDate(Par) {
+    // Input value has following format:
+    //  "[20090101-99991231]9999-12-31"
+    // has to be converted into 
+    //  "an array of UTC(int-values) from and to dates"
+    //  "array[Date.UTC(fromDate, Date.UTC(toDate)]"
+
+    var result = "";
+
+    if (Par != null &amp;&amp; Par != "") {
+        var value = Par.toString();
+
+        if (value.indexOf("[") == 0) {
+            // check format: "[YYYYMMDD-YYYYMMDD]value"
+            //               "012345678901234567890"
+            //		     "0         1         2"
+            var endSquare = value.indexOf("]");
+            var separator = value.indexOf("-");
+            //
+            if (separator != -1 &amp;&amp; endSquare != -1 &amp;&amp; separator &lt; endSquare) {
+                var validFrom = value.substring(1, separator);
+                var validTo = value.substring(separator + 1, endSquare);
+
+                // check date format: "YYYYMMDD"
+                //                    "012345678"
+                var year = validFrom.substring(0, 4); // "YYYY";
+                var month = validFrom.substring(4, 6); // "MM"
+                var day = validFrom.substring(6, 8); // "DD"	
+
+                var fromDate = Date.UTC(year, month - 1, day, 0, 0, 0, 0);
+
+                year = validTo.substring(0, 4); // "YYYY";
+                month = validTo.substring(4, 6); // "MM"
+                day = validTo.substring(6, 8); // "DD"	
+
+                var toDate = Date.UTC(year, month - 1, day, 23, 59, 59, 999);
+
+                result = new Array(fromDate, toDate);
+            } else {
+                result = new Array(0);
+                UserFunc.uWarning("sap_getUTCDate: Cannot parse invalid time format " + value);
+            }
+        } else // no time string to parse: return input parameter
+        {
+            result = new Array(0);
+        }
+    }
+
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_getUTCDate</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>2</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_handlePassword
+var password;
+var passwordDisabled;
+
+function sap_handlePassword(Par) {
+    // Parameter Par has following structure:
+    //  Entry1 - {securitypolicy=A, validfrom=0000-00-00, validto=0000-00-00, displayname=admie, ispassworddisabled=U, dateformat=1, lastname=admie, DefaultsSpda=K, 
+    //            DefaultsSpdb=H, Company=COMPANY:SAP_IDM_DEFAULT, logonuid=ADMIN, islocked=U, AddressCountry=DE}
+
+    // Import required Java types.
+    importClass(java.util.HashMap);
+
+    if (Par != null &amp;&amp; Par != "") {
+        var entry = Par;
+        var disablePassword = 0;
+        // get attributes from entry
+        // get attributes from entry
+
+        var keyExists = entry.containsKey("ispassworddisabled");
+
+        if (keyExists == true) {
+            var entryValue = entry.get("ispassworddisabled");
+            if (entryValue != "" &amp;&amp; (entryValue == "L" || entryValue == "1")) {
+                disablePassword = 1;
+
+            }
+        }
+
+        // in case password is disabled:
+        // set global script variable
+        // password to empty string
+        // passwordDisabled to 1
+        if (disablePassword == 1) {
+            password = "";
+            passwordDisabled = 1;
+
+        } else {
+            passwordDisabled = 0;
+            // sap_initializePassword will set global variable password
+            UserFunc.sap_initializePassword(Par);
+        }
+    }
+    return Par;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_handlePassword</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: ignoreTime
+
+function sap_ignoreTime(Par) {
+    // Input value has following format:
+    //  "[20090101-99991231]9999-12-31"
+    // return value truncates time interval
+    //  "9999-12-31"
+
+    var result = "";
+    var DELIMITER = "|";
+
+    if (Par != null &amp;&amp; Par != '' &amp;&amp; Par != "") {
+        var newId = UserFunc.sap_generateHRID(Par);
+        var arrayOfStrings = newId.split("|");
+        // take multi-value strings into account
+        if (arrayOfStrings.length &gt; 0) {
+            for (var i = 0; i &lt; arrayOfStrings.length; i++) {
+                if (arrayOfStrings[i].length &gt; 1) {
+                    var value = arrayOfStrings[i].toString();
+
+                    if (value.indexOf("[") == 0) {
+                        var endSquare = value.indexOf("]");
+                        result = value.substring(endSquare + 1, value.length + 1);
+                        UserFunc.uInfo("ignoreTime result: " + result);
+                        return result;
+                    }
+                }
+            }
+        }
+    }
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_ignoreTime</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_importPhoneNr
+
+function sap_importPhoneNr(Par) {
+    // Input Parameter contains %P0105-SYHR_A_P0105_AF_TEL_NR%!!%P0105-SYHR_A_P0105_AF_TEL_EXT%
+    // import time dependent values for phone number:
+    // 
+    // TEL_NR: [20080610-20081231]06227
+    // TEL_EXT:[20080610-20081231]998877
+    // and
+    // TEL_NR: [20090101-99991231]06227
+    // TEL_EXT:[20090101-99991231]778899
+    // concatenate TEL_NR and TEL_EXT
+    // {R}{VALIDFROM=2008-06-01!!VALIDTO=2008-12-31}06227-999|{VALIDFROM=2009-01-01!!VALIDTO=9999-12-31}06227-111
+
+    var result = "";
+    var DELIMITER = "|";
+    var operation = "{R}";
+    var tmp = "";
+    var arrayOfExt = null;
+
+    if (Par != null &amp;&amp; Par != "") {
+        var values = Par.split("!!"); //split TEL and EXT
+
+        if (values.length &gt; 1) // extensions exist
+        {
+            var extension = (values[1]).split(DELIMITER); //split time dependent parts
+            arrayOfExt = new Array(extension.length);
+
+            for (var i = 0; i &lt; extension.length; i++) {
+                arrayOfExt[i] = extension[i];
+            }
+        }
+
+        var arrayOfTel = values[0].split(DELIMITER); //split time dependent parts
+
+        // take multi-value strings into account
+        for (var i = 0; i &lt; arrayOfTel.length; i++) {
+            var addValue = "";
+            tmp = UserFunc.sap_parseTimeValue(arrayOfTel[i]);
+            if (tmp != "") {
+                // check for extensions
+                if (arrayOfExt != null) {
+                    var timePeriod;
+                    // check if tmp contains a date
+                    if (tmp.indexOf("{VALIDFROM") != -1) {
+                        // get time period: [20090101-99991231]
+                        timePeriod = arrayOfTel[i].substr(0, 19);
+
+                    }
+                    for (var j = 0; j &lt; arrayOfExt.length; j++) {
+                        if (arrayOfExt[j].indexOf(timePeriod) != -1) {
+                            var addValue = UserFunc.sap_cutDate(arrayOfExt[j]);
+
+                            if (addValue != "") {
+                                tmp = tmp.concat("-", addValue);
+                            }
+                            break;
+                        }
+                    }
+                }
+
+                // concatenate multi-value attributes
+                // {R}{VALIDFROM=2008-06-01!!VALIDTO=2008-12-31}06227-999|{VALIDFROM=2009-01-01!!VALIDTO=9999-12-31}06227-111
+                if (result != "") {
+                    //result = result.concat(DELIMITER, operation, tmp) ;
+                    result = result.concat(DELIMITER, tmp);
+
+                } else {
+                    result = operation.concat(tmp);
+                }
+            }
+        }
+    }
+
+    // in case result is empty: make sure ReplaceOperator is set
+    if (result == "") {
+        result = operation;
+    }
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_importPhoneNr</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>2</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_importTimeValues
+
+function sap_importTimeValues(Par) {
+    // Main function: sap_importTimeValues
+
+    // Input value has following format:
+    //  "[20080101-20081231]Abcd|[20090101-99991231]xyz!!MX_ATTRIBUTE"
+    // or
+    //  "[20080101-20081231]Abcd|[20090101-99991231]xyz!!MX_ATTRIBUTE!!TRUE"
+    // has to be converted into 
+    //  "{VALIDFROM=2008-01-01!!VALIDTO=2008-12-31}Abcd"
+    //  "{VALIDFROM=&lt;YYYY-MM-TT&gt;!!VALIDTO=&lt;YYYY-MM-DD&gt;}&lt;value&gt;"
+    //
+    // If the optional parameter "TRUE" is set, it means that if multiple values for a single-value attribute are passed,
+    // the execution doesn't stop with an error, but continues with a warning and only uses the first value!
+
+    var result = "";
+    var firstResult = "";
+    var DELIMITER = "|";
+    var operation = "{E}";
+    var tmp = "";
+    var multiValue = 0; //flag which specifies if multiple values are set: 0=false; 1=true
+    var idStore = "%$pck.SAP_MASTER_IDS_ID%";
+    var stopJob = 0; // 0=false, 1=true
+    var msg = "";
+    var found = 0;
+
+
+    if (Par != null &amp;&amp; Par != "") {
+        var paramOfStrings = Par.split("!!");
+
+        // get AttributeName
+        var attrName = paramOfStrings[1];
+
+
+        var allowMultipleFlag = "FALSE";
+        if (paramOfStrings.length &gt; 2) {
+            // if multiple values are contained in the param and this string is TRUE
+            // the first entry will be used. 
+            allowMultipleFlag = paramOfStrings[2];
+        }
+
+        //parse time values
+        var arrayOfStrings = paramOfStrings[0].split(DELIMITER);
+
+        var dateArray = new Array(arrayOfStrings.length);
+
+        // take multi-value strings into account
+        for (var i = 0; i &lt; arrayOfStrings.length; i++) {
+            if (arrayOfStrings[i].length &gt; 0) {
+                tmp = UserFunc.sap_parseTimeValue(arrayOfStrings[i]);
+                dateArray[i] = UserFunc.sap_getUTCDate(arrayOfStrings[i]);
+
+                if (tmp != "") {
+                    // concatenate multi-value attributes
+                    // {E}{VALIDFROM=2008-06-01!!VALIDTO=2008-12-31}Value1|{VALIDFROM=2008-06-01!!VALIDTO=2008-12-31}Value2
+                    if (result != "") {
+                        result = result.concat(DELIMITER, tmp);
+                        multiValue = 1;
+                    } else {
+                        result = operation.concat(tmp);
+                        firstResult = result;
+                    }
+                }
+            }
+        }
+    }
+
+    // in case result is empty: make sure ReplaceOperator is set
+    if (result == "") {
+        result = operation;
+    }
+
+    // in case multiple values are assigned to one attribute: verify if multi-value storage type needs to be set
+    // otherwise data will be lost
+    if (multiValue == 1) {
+        // check if target attribute is multi-value enabled
+        var sqlStmt = "select MultiValue from mxi_attributes where IS_ID = " + idStore + " AND attrName = '" + attrName + "'";
+
+        var sqlResult = UserFunc.uSelect(sqlStmt);
+
+        var intValue = parseInt(sqlResult);
+        if (isNaN(intValue)) {
+            msg = "sap_importTimeValues: MultiValue Column of Attribute: " + attrName + " is not a number: " + sqlResult;
+
+            UserFunc.uError(msg);
+            // set stopJob variable
+            stopJob = 1;
+        } else {
+            // Attribute is defined as single-value Attribute but contains multiple values
+            if (intValue == 0) {
+                var len = dateArray.length;
+                for (var i = 0; i &lt; len; i++) {
+                    for (var j = (i + 1); j &lt; len; j++) {
+
+
+
+                        if ((dateArray[i][0] &gt;= dateArray[j][0] &amp;&amp; dateArray[i][0] &lt;= dateArray[j][1]) ||
+                            (dateArray[i][1] &gt;= dateArray[j][0] &amp;&amp; dateArray[i][1] &lt;= dateArray[j][1]) ||
+                            (dateArray[j][0] &gt;= dateArray[i][0] &amp;&amp; dateArray[j][0] &lt;= dateArray[i][1]) ||
+                            (dateArray[j][1] &gt;= dateArray[i][0] &amp;&amp; dateArray[j][1] &lt;= dateArray[i][1])
+                        ) {
+                            var p1From = (new Date(dateArray[i][0])).toUTCString();
+                            var p1To = (new Date(dateArray[i][1])).toUTCString();
+                            var p2From = (new Date(dateArray[j][0])).toUTCString();
+                            var p2To = (new Date(dateArray[j][1])).toUTCString();
+                            if (!"TRUE".equalsIgnoreCase(allowMultipleFlag)) {
+                                UserFunc.uWarning("Found overlap: " + p1From + " todat: " + p1To +
+                                    " overlaps with period: " + p2From + " todat: " + p2To);
+                            }
+                            found = 1;
+                            // leave inner loop
+                            break;
+                        }
+                    }
+                    if (found == 1) {
+                        //leave outer loop
+                        break;
+                    }
+                }
+
+                if (found == 1) {
+                    if ("TRUE".equalsIgnoreCase(allowMultipleFlag)) {
+                        msg = "sap_importTimeValues Par: " + Par + " Attribute: " + attrName +
+                            " is NOT defined as Multivalue Attribute(Storage Type) in Schema of Identity Store: " +
+                            idStore + ". The values which should be imported contain multiple " +
+                            "values at the same point in time: " + result + ". Only the first value: " + firstResult + " is used.";
+
+                        UserFunc.uInfo(msg);
+                        //ignore the findings and return the first entry
+                        result = firstResult;
+                    } else {
+                        msg = "sap_importTimeValues Par: " + Par + " Attribute: " + attrName +
+                            " is NOT defined as Multivalue Attribute(Storage Type) in Schema of Identity Store: " +
+                            idStore + ". The values which should be imported contain multiple " +
+                            "values at the same point in time: " + result;
+
+                        UserFunc.uError(msg);
+                        // set stopJob variable
+                        stopJob = 1;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    if (stopJob == 1) {
+        UserFunc.sap_stopJobExecution(msg);
+    }
+
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_importTimeValues</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>2</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_importTimeValuesHelpValKey
+
+// Input value has following format:
+//  "[20080101-20081231]Abcd|[20090101-99991231]xyz!!MX_ATTRIBUTE"
+// or
+//  "[20080101-20081231]Abcd|[20090101-99991231]xyz!!MX_ATTRIBUTE!!LOCALE"
+// has to be converted into 
+//  "{VALIDFROM=2008-01-01!!VALIDTO=2008-12-31}0001"
+//  "{VALIDFROM=&lt;YYYY-MM-TT&gt;!!VALIDTO=&lt;YYYY-MM-DD&gt;}&lt;helpValueKey&gt;"
+//
+// If the optional parameter "LOCALE" is set, the value is saved as language dependent
+// in the help values table and therefore the LOCALE has to be used to find the right key.
+
+function sap_importTimeValuesHelpValKey(Par) {
+
+    var methodName = "sap_importTimeValuesHelpValKey";
+    var result = "";
+
+    UserFunc.uInfo(methodName + ": Par = " + Par);
+
+    if (Par == null || Par == "") {
+        return result;
+    }
+
+    var paramOfStrings = Par.split("!!");
+    var values = paramOfStrings[0];
+    var attrName = paramOfStrings[1];
+
+    var locale = "";
+    if (paramOfStrings.length &gt; 2) {
+        locale = paramOfStrings[2].toUpperCase();
+
+        UserFunc.uInfo(methodName + ": locale = " + locale);
+    }
+
+    // first convert the value in the format with {VALIDFROM!!VALIDTO}
+    var paramForImportTimeVal = paramOfStrings[0] + "!!" + paramOfStrings[1];
+    var convertedTimeValues = sap_importTimeValues(paramForImportTimeVal);
+
+    UserFunc.uInfo(methodName + ": convertedTimeValues = " + convertedTimeValues);
+
+    // get the help value key from the value without validity dates
+    var index = convertedTimeValues.lastIndexOf("}");
+    var valueText = convertedTimeValues.substring(index + 1);
+
+    var paramForGetHelpValKey = attrName + "!!" + valueText;
+    if (locale != "") {
+        paramForGetHelpValKey = paramForGetHelpValKey + "!!" + locale;
+    }
+
+    UserFunc.uInfo(methodName + ": paramForGetHelpValKey = " + paramForGetHelpValKey);
+
+    var valueKey = sap_abap_getHelpValKey(paramForGetHelpValKey);
+
+    if (valueKey == "" || valueKey == "NULLATTR") {
+
+        msg = "No value help key found for: " + paramForGetHelpValKey + " (check SAP Note 1715763)";
+        UserFunc.uWarning(msg);
+        // return the time values without replacement of value by key
+        return convertedTimeValues;
+    }
+
+    if (index &lt; 0) {
+        result = valueKey;
+    } else {
+        result = convertedTimeValues.substring(0, index + 1) + valueKey;
+    }
+
+    UserFunc.uInfo(methodName + ": result = " + result);
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_importTimeValuesHelpValKey</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_importTimeValuesOverwrite
+
+function sap_importTimeValuesOverwrite(Par) {
+    // Main function: sap_importTimeValues
+
+    // Input value has following format:
+    //  "[20080101-20081231]Abcd|[20090101-99991231]xyz!!MX_ATTRIBUTE"
+    // has to be converted into 
+    //  "{VALIDFROM=2008-06-01!!VALIDTO=2008-12-31}Abcd"
+    //  "{VALIDFROM=&lt;YYYY-MM-TT&gt;!!VALIDTO=&lt;YYYY-MM-DD&gt;}&lt;value&gt;"
+
+    var result = "";
+    var DELIMITER = "|";
+    var operation = "{E}";
+    var tmp = "";
+    var multiValue = 0; //flag which specifies if multiple values are set: 0=false; 1=true
+    var idStore = "%$pck.SAP_MASTER_IDS_ID%";
+    var stopJob = 0; // 0=false, 1=true
+    var msg = "";
+    var found = 0;
+
+
+    if (Par != null &amp;&amp; Par != "") {
+        var paramOfStrings = Par.split("!!");
+
+        // get AttributeName
+        var attrName = paramOfStrings[1];
+
+        //parse time values
+        var arrayOfStrings = paramOfStrings[0].split(DELIMITER);
+
+        var dateArray = new Array(arrayOfStrings.length);
+
+        // take multi-value strings into account
+        for (var i = 0; i &lt; arrayOfStrings.length; i++) {
+            if (arrayOfStrings[i].length &gt; 0) {
+                tmp = UserFunc.sap_parseTimeValue(arrayOfStrings[i]);
+                dateArray[i] = UserFunc.sap_getUTCDate(arrayOfStrings[i]);
+
+                if (tmp != "") {
+                    // concatenate multi-value attributes
+                    // {R}{VALIDFROM=2008-06-01!!VALIDTO=2008-12-31}Value1|{VALIDFROM=2008-06-01!!VALIDTO=2008-12-31}Value2
+                    if (result != "") {
+                        result = result.concat(DELIMITER, tmp);
+                        multiValue = 1;
+                    } else {
+                        result = operation.concat(tmp);
+                    }
+                }
+            }
+        }
+    }
+
+    // in case result is empty: make sure ReplaceOperator is set
+    if (result == "") {
+        result = operation;
+    }
+
+    // in case multiple values are assigned to one attribute: verify if multi-value storage type needs to be set
+    // otherwise data will be lost
+    if (multiValue == 1) {
+        // check if target attribute is multi-value enabled
+        var sqlStmt = "select MultiValue from mxi_attributes where IS_ID = " + idStore +
+            " AND attrName = '" + attrName + "'";
+
+        var sqlResult = UserFunc.uSelect(sqlStmt);
+
+        var intValue = parseInt(sqlResult);
+        if (isNaN(intValue)) {
+            msg = "sap_importTimeValues: MultiValue Column of Attribute: " + attrName +
+                " is not a number: " + sqlResult;
+
+            UserFunc.uError(msg);
+            // set stopJob variable
+            stopJob = 1;
+        } else {
+            // Attribute is defined as single-value Attribute but contains multiple values
+            if (intValue == 0) {
+                var len = dateArray.length;
+                for (var i = 0; i &lt; len; i++) {
+                    for (var j = (i + 1); j &lt; len; j++) {
+
+
+
+                        if ((dateArray[i][0] &gt;= dateArray[j][0] &amp;&amp; dateArray[i][0] &lt;= dateArray[j][1]) ||
+                            (dateArray[i][1] &gt;= dateArray[j][0] &amp;&amp; dateArray[i][1] &lt;= dateArray[j][1]) ||
+                            (dateArray[j][0] &gt;= dateArray[i][0] &amp;&amp; dateArray[j][0] &lt;= dateArray[i][1]) ||
+                            (dateArray[j][1] &gt;= dateArray[i][0] &amp;&amp; dateArray[j][1] &lt;= dateArray[i][1])
+                        ) {
+                            var p1From = (new Date(dateArray[i][0])).toUTCString();
+                            var p1To = (new Date(dateArray[i][1])).toUTCString();
+                            var p2From = (new Date(dateArray[j][0])).toUTCString();
+                            var p2To = (new Date(dateArray[j][1])).toUTCString();
+                            UserFunc.uWarning("Found overlap: " + p1From + " todat: " + p1To +
+                                " overlaps with period: " + p2From + " todat: " + p2To);
+
+                            found = 1;
+                            // leave inner loop
+                            break;
+                        }
+                    }
+                    if (found == 1) {
+                        //leave outer loop
+                        break;
+                    }
+                }
+
+                if (found == 1) {
+                    msg = "sap_importTimeValues Par: " + Par + " Attribute: " + attrName +
+                        " is NOT defined as Multivalue Attribute(Storage Type) in Schema of Identity Store: " +
+                        idStore + ". The values which should be imported contain multiple " +
+                        "values at the same point in time: " + result;
+
+                    UserFunc.uError(msg);
+                    // set stopJob variable
+                    stopJob = 1;
+                }
+            }
+        }
+    }
+
+
+
+    if (stopJob == 1) {
+        UserFunc.sap_stopJobExecution(msg);
+    }
+
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_importTimeValuesOverwrite</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>2</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_initializePassword
+// global variable which is used later on
+var password;
+
+function sap_initializePassword(Par) {
+    // call a customer's exit to initialize the password
+    password = (custom_initializePassword(Par));
+
+    // if customer exit does not set the password:
+    // generate a password  
+    if (password == null || password == "") {
+        do {
+            // Generate an 8 character password.
+            password = UserFunc.uGeneratePassword(8);
+
+            // check if generated password matches ABAP password policy defined in:
+            // http://help.sap.com/saphelp_nw04s/helpdata/en/d2/141fb593c742b5aad8f272dd487b74/frameset.htm
+            //
+            // The first character may not be an exclamation mark (!) or a question mark (?).
+
+        } while (password.charAt(0) == '!' || password.charAt(0) == '?');
+    }
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_initializePassword</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_isManager
+
+function sap_isManager(Par) {
+    // Par has following format:
+    //	%P0001-PERNR_IS_MANAGER%|%$rep.$NAME%|ROLE|%roleAssignments%
+    // Input value %roleAssignments% contains name of manager's role:
+    // for example input has format:
+    //  [20080530-99991231]X|ASJ000|ROLE|pcd:portal_content/.../employee_self_service|pcd:portal_content/.../manager_self_service
+    // Output needs to be in format:
+    //  {R}&lt;PRIV:ROLE:ASJ000:pcd:portal_content/.../employee_self_service&gt;|{VALID_FROM=2008-05-30!!VALID_TO=9999-12-31}	
+    //	   &lt;PRIV:ROLE:ASJ000:pcd:portal_content/.../manager_self_service&gt;
+
+    //***********************************************************
+    // NOTE:
+    //	this function does a Replace operation: 
+    //		MXREF_MX_PRIVILEGE 
+    //	will be replaced with these new values
+    //***********************************************************
+
+    var ret = "";
+
+
+
+    if (Par != null &amp;&amp; Par != "") {
+        var strArray = Par.split("|");
+        var isManager = strArray[0];
+        var repName = strArray[1];
+        var privType = strArray[2];
+        var employeeRole = strArray[3];
+        var managerRole = strArray[4];
+
+
+
+        if (employeeRole != null &amp;&amp; employeeRole != "") {
+            ret = ret.concat("{R}&lt;", "PRIV:", privType, ":", repName, ":", employeeRole, "&gt;");
+        }
+
+        if (isManager != null &amp;&amp; isManager != "") {
+            var value = UserFunc.sap_parseTimeValue(isManager);
+            var endTime = value.indexOf("}");
+            //
+            if (endTime != -1 &amp;&amp; value.length &gt; endTime) {
+                var found = value.indexOf("X", endTime + 1);
+                if (found != -1) {
+                    ret = ret.concat("|", value.substring(0, endTime + 1));
+                    //ret = value.substring(0, endTime+1);
+                    ret = ret.concat("&lt;PRIV:", privType, ":", repName, ":", managerRole, "&gt;");
+                }
+            }
+        }
+    }
+
+
+
+    return ret;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_isManager</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_parseTimeValue
+
+function sap_parseTimeValue(Par) {
+    // Input value has following format:
+    //  "[20090101-99991231]9999-12-31"
+    // has to be converted into 
+    //  "{VALID_FROM=2008-06-01!!VALID_TO=2008-12-31}9999-12-31"
+    //  "{VALID_FROM=&lt;YYYY-MM-TT&gt;!!VALID_TO=&lt;YYYY-MM-DD&gt;}&lt;YYYY-MM-DD&gt;"
+
+    var result = "";
+    var VALID_FROM = "{VALIDFROM=";
+    var VALID_TO = "!!VALIDTO=";
+    var END_CURLY = "}";
+    var NULLATTR = "NULLATTR";
+
+    if (Par != null &amp;&amp; Par != "") {
+        var value = Par.toString();
+
+        if (value.indexOf("[") == 0) {
+            // check format: "[YYYYMMDD-YYYYMMDD]value"
+            //               "012345678901234567890"
+            //		     "0         1         2"
+            var endSquare = value.indexOf("]");
+            var separator = value.indexOf("-");
+            //
+            if (separator != -1 &amp;&amp; endSquare != -1 &amp;&amp; separator &lt; endSquare) {
+                var validFrom = value.substring(1, separator);
+                var validTo = value.substring(separator + 1, endSquare);
+
+                // check date format: "YYYYMMDD"
+                //                    "012345678"
+                var year = validFrom.substring(0, 4); // "YYYY";
+                var month = validFrom.substring(4, 6); // "MM"
+                var day = validFrom.substring(6, 8); // "DD"	
+
+                result = VALID_FROM + year + "-" + month + "-" + day +
+                    VALID_TO;
+
+                year = validTo.substring(0, 4); // "YYYY";
+                month = validTo.substring(4, 6); // "MM"
+                day = validTo.substring(6, 8); // "DD"	
+
+                result = result + year + "-" + month + "-" + day + END_CURLY +
+                    value.substr(endSquare + 1);
+
+                // check if result contains an "empty value": only VALIDFROM and VALIDTO dates are set
+                // for empty values 
+                // set Value:  "NULLATTR" which means "no value", can be used for empty pending values                          
+                if (result.length == 42) // fix length format of "{VALIDFROM=YYYY-MM-TT!!VALIDTO=YYYY-MM-DD}"
+                {
+
+                    result = result + NULLATTR;
+                }
+            } else {
+                result = value;
+                UserFunc.uWarning("sap_parseTimeValue: Cannot parse invalid time format " + value);
+            }
+        } else // no time string to parse: return input parameter
+        {
+            result = value;
+        }
+    }
+
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_parseTimeValue</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_parseTimeValueNoNullAtt
+
+function sap_parseTimeValueNoNullAtt(Par) {
+    // Input value has following format:
+    //  "[20090101-99991231]9999-12-31"
+    // has to be converted into 
+    //  "{VALID_FROM=2008-06-01!!VALID_TO=2008-12-31}9999-12-31"
+    //  "{VALID_FROM=&lt;YYYY-MM-TT&gt;!!VALID_TO=&lt;YYYY-MM-DD&gt;}&lt;YYYY-MM-DD&gt;"
+
+    var result = "";
+    var VALID_FROM = "{VALIDFROM=";
+    var VALID_TO = "!!VALIDTO=";
+    var END_CURLY = "}";
+    var NULLATTR = "";
+
+    if (Par != null &amp;&amp; Par != "") {
+        var value = Par.toString();
+
+        if (value.indexOf("[") == 0) {
+            // check format: "[YYYYMMDD-YYYYMMDD]value"
+            //               "012345678901234567890"
+            //		     "0         1         2"
+            var endSquare = value.indexOf("]");
+            var separator = value.indexOf("-");
+            //
+            if (separator != -1 &amp;&amp; endSquare != -1 &amp;&amp; separator &lt; endSquare) {
+                var validFrom = value.substring(1, separator);
+                var validTo = value.substring(separator + 1, endSquare);
+
+                // check date format: "YYYYMMDD"
+                //                    "012345678"
+                var year = validFrom.substring(0, 4); // "YYYY";
+                var month = validFrom.substring(4, 6); // "MM"
+                var day = validFrom.substring(6, 8); // "DD"	
+
+                result = VALID_FROM + year + "-" + month + "-" + day +
+                    VALID_TO;
+
+                year = validTo.substring(0, 4); // "YYYY";
+                month = validTo.substring(4, 6); // "MM"
+                day = validTo.substring(6, 8); // "DD"	
+
+                result = result + year + "-" + month + "-" + day + END_CURLY +
+                    value.substr(endSquare + 1);
+
+                // check if result contains an "empty value": only VALIDFROM and VALIDTO dates are set
+                // for empty values 
+                // set Value:  "NULLATTR" which means "no value", can be used for empty pending values                          
+                if (result.length == 42) // fix length format of "{VALIDFROM=YYYY-MM-TT!!VALIDTO=YYYY-MM-DD}"
+                {
+
+                    result = result + NULLATTR;
+                }
+            } else {
+                result = value;
+                UserFunc.uWarning("sap_parseTimeValue: Cannot parse invalid time format " + value);
+            }
+        } else // no time string to parse: return input parameter
+        {
+            result = value;
+        }
+    }
+
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_parseTimeValueNoNullAtt</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_stopJobExecution
+
+function sap_stopJobExecution(Par) {
+
+    var message = "";
+    if (Par != null &amp;&amp; Par != '') {
+        message = Par;
+    } else {
+        message = "Stopping Job";
+    }
+
+    UserFunc.uStop(message);
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_stopJobExecution</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_useEmploymentStatus
+
+function sap_useEmploymentStatus(Par) {
+    // Par has following value:
+    //	%P0000-STAT2%
+    // Input value contains employment status
+    // for example input has format:
+    //  [20080530-20081231]3|[20090101-99991231]2
+    // Output needs to be in format:
+    //  {R}{VALIDFROM=2008-05-30!!VALIDTO=2008-12-31}NULLATTR|{VALIDFROM=2009-01-01!!VALIDTO=99999-12-31}1
+    //  1 is interpreted as Boolean-True
+    // NULLATTR is interpreted as empty value (=false)
+
+    var EMPLOYMENT_IS_ACTIVE = 3;
+    var result = "";
+    var DELIMITER = "|";
+    var operation = "";
+
+    if (Par != null &amp;&amp; Par != "") {
+        var emplStatusArray = Par.split("|");
+
+        for (var i = 0; i &lt; emplStatusArray.length; i++) {
+            var timeStatus = "";
+            var tmp = UserFunc.sap_parseTimeValueNoNullAtt(emplStatusArray[i]);
+            if (tmp != "") {
+                // check if tmp contains a date
+                if (tmp.indexOf("{VALIDFROM") != -1) {
+                    // get value of status
+                    var emplStatus = UserFunc.sap_cutDate(emplStatusArray[i]);
+
+                    if (emplStatus != "") {
+                        var intValue = parseInt(emplStatus);
+                        if (isNaN(intValue)) {
+                            UserFunc.uError("sap_useEmploymentStatus[" + i + "]: " +
+                                emplStatusArray[i] + " Status is not a number: " + emplStatus);
+                            // leave loop and return result = "1"
+                            result = "1";
+                            break;
+                        } else {
+                            // read date which has a fixed format:
+                            // {VALIDFROM=YYYY-MM-DD!!VALIDTO=YYYY-MM-DD}
+                            // 01234567890123456789012345678901234567890123
+                            timestatus = tmp.substring(0, 42);
+
+                            switch (intValue) {
+                                case 3:
+                                    // Empty string which is interpreted as empty value
+                                    timeStatus = timestatus.concat("");
+                                    break;
+                                default:
+                                    timeStatus = timestatus.concat("1");
+                            }
+
+                        }
+                    } else {
+                        // use date provided in tmp
+                        // if no employment status set: return 1
+                        timeStatus = tmp.concat("1");
+                        UserFunc.uInfo("sap_useEmploymentStatus def_timeStatus: " + timeStatus);
+                    }
+                } else {
+                    // tmp does not contain a timestamp
+                    UserFunc.uInfo("sap_useEmploymentStatus[" + i + "]: " +
+                        emplStatusArray[i] + " does not contain a valid date. ");
+                    // check if Status is set
+                    var intValue = parseInt(tmp);
+                    if (isNaN(intValue)) {
+                        UserFunc.uError("sap_useEmploymentStatus[" + i + "]: " +
+                            emplStatusArray[i] + " Status is not a number: " + tmp);
+                        // leave loop and return result = "1"
+                        result = "1";
+                        break;
+                    }
+                    if (intValue == 3) {
+                        // Empty string which is interpreted as empty value					
+                        result = "";
+                        break;
+                    } else {
+                        // leave loop and return result = "1"
+                        result = "1";
+                        break;
+                    }
+                }
+                // concatenate multi-value attributes
+                // {R}{VALIDFROM=2008-06-01!!VALIDTO=2008-12-31}06227-999|{VALIDFROM=2009-01-01!!VALIDTO=9999-12-31}06227-111
+                if (result != "") {
+                    result = result.concat(DELIMITER, timeStatus);
+                } else {
+                    result = operation.concat(timeStatus);
+                }
+            }
+        }
+    }
+
+    // if not set already: use default 1
+    if (result == "") {
+        result = "1";
+    }
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_useEmploymentStatus</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>2</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_useEmploymentStatusOverwrite
+
+function sap_useEmploymentStatusOverwrite(Par) {
+    // Par has following value:
+    //	%P0000-STAT2%
+    // Input value contains employment status
+    // for example input has format:
+    //  [20080530-20081231]3|[20090101-99991231]2
+    // Output needs to be in format:
+    //  {R}{VALIDFROM=2008-05-30!!VALIDTO=2008-12-31}NULLATTR|{VALIDFROM=2009-01-01!!VALIDTO=99999-12-31}1
+    //  1 is interpreted as Boolean-True
+    // NULLATTR is interpreted as empty value (=false)
+
+    var EMPLOYMENT_IS_ACTIVE = 3;
+    var result = "";
+    var DELIMITER = "|";
+    var operation = "{E}";
+
+    if (Par != null &amp;&amp; Par != "") {
+        var emplStatusArray = Par.split("|");
+
+        for (var i = 0; i &lt; emplStatusArray.length; i++) {
+            var timeStatus = "";
+            var tmp = UserFunc.sap_parseTimeValueNoNullAtt(emplStatusArray[i]);
+            if (tmp != "") {
+                // check if tmp contains a date
+                if (tmp.indexOf("{VALIDFROM") != -1) {
+                    // get value of status
+                    var emplStatus = UserFunc.sap_cutDate(emplStatusArray[i]);
+
+                    if (emplStatus != "") {
+                        var intValue = parseInt(emplStatus);
+                        if (isNaN(intValue)) {
+                            UserFunc.uError("sap_useEmploymentStatus[" + i + "]: " +
+                                emplStatusArray[i] + " Status is not a number: " + emplStatus);
+                            // leave loop and return result = "1"
+                            result = "1";
+                            break;
+                        } else {
+                            // read date which has a fixed format:
+                            // {VALIDFROM=YYYY-MM-DD!!VALIDTO=YYYY-MM-DD}
+                            // 01234567890123456789012345678901234567890123
+                            timestatus = tmp.substring(0, 42);
+
+                            switch (intValue) {
+                                case 3:
+                                    // Empty string which is interpreted as empty value
+                                    timeStatus = timestatus.concat("");
+                                    break;
+                                default:
+                                    timeStatus = timestatus.concat("1");
+                            }
+
+                        }
+                    } else {
+                        // use date provided in tmp
+                        // if no employment status set: return 1
+                        timeStatus = tmp.concat("1");
+                        UserFunc.uInfo("sap_useEmploymentStatus def_timeStatus: " + timeStatus);
+                    }
+                } else {
+                    // tmp does not contain a timestamp
+                    UserFunc.uInfo("sap_useEmploymentStatus[" + i + "]: " +
+                        emplStatusArray[i] + " does not contain a valid date. ");
+                    // check if Status is set
+                    var intValue = parseInt(tmp);
+                    if (isNaN(intValue)) {
+                        UserFunc.uError("sap_useEmploymentStatus[" + i + "]: " +
+                            emplStatusArray[i] + " Status is not a number: " + tmp);
+                        // leave loop and return result = "1"
+                        result = "1";
+                        break;
+                    }
+                    if (intValue == 3) {
+                        // Empty string which is interpreted as empty value					
+                        result = "";
+                        break;
+                    } else {
+                        // leave loop and return result = "1"
+                        result = "1";
+                        break;
+                    }
+                }
+                // concatenate multi-value attributes
+                // {R}{VALIDFROM=2008-06-01!!VALIDTO=2008-12-31}06227-999|{VALIDFROM=2009-01-01!!VALIDTO=9999-12-31}06227-111
+                if (result != "") {
+                    result = result.concat(DELIMITER, timeStatus);
+                } else {
+                    result = operation.concat(timeStatus);
+                }
+            }
+        }
+    }
+
+    // if not set already: use default 1
+    if (result == "") {
+        result = "1";
+    }
+
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sap_useEmploymentStatusOverwrite</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>2</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sapc_convertDate
+// Input: date in format DD.MM.YYYY
+// Output: date in format YYYY-MM-DD
+
+function sapc_convertDate(Par) {
+
+    // Input data
+    var currentDate = Par.substring(0, 10);
+
+    var logLevel = sapc_core_getPackageConstant("SAPC_LOG_LEVEL");
+
+    // Write current data to the log
+    if (logLevel &gt;= 3) {
+        UserFunc.uErrMsg(1, "sapc_convertValidDate currentDate: " + currentDate);
+    }
+
+    // Convert currentDate
+    var currentDateSplit = currentDate.split(".");
+    var currentDay = currentDateSplit[0];
+    var currentMonth = currentDateSplit[1];
+    var currentYear = currentDateSplit[2];
+    if (logLevel &gt;= 3) {
+        UserFunc.uErrMsg(1, "sapc_convertValidDate currentDay: " + currentDay + " currentMonth: " + currentMonth + " currentYear: " + currentYear);
+    }
+
+    // Prepare result
+    var result = currentYear + "-" + currentMonth + "-" + currentDay;
+    if (logLevel &gt;= 3) {
+        UserFunc.uErrMsg(1, "sapc_convertValidDate result: " + result);
+    }
+    return result;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sapc_convertDate</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>/*---------------------------------------------------------------------------------------------------------------------------
+ * Short description	: Generic functions for scripts
+ *----------------------------------------------------------------------------------------------------------------------------
+ * Functions            : sapc_core_scriptHeader
+ *							- Input: scriptName, Par (Parameter of calling script)
+ *							- Output: object containing following variables
+ *								o	scriptName
+ *								o	masterIDS
+ *								o	taskID
+ *								o	taskName (format: "Task:"/"Job:"&lt;taskID&gt;"/"&lt;taskName&gt;
+ *								o	auditID
+ *								o	logLevel
+ *								o	outPrefix (a string that can be used as prefix for log output like uErrMsg(1, rds.outPrefix + "yourText...");
+ *                        sapc_core_getPackageContant
+ *							- Input: Constante Name [, Package Name] (core package is taken if no package is given) or ConstantName!!PackageName
+ *							- Output: Constant Value
+ *						  sapc_uSetContextVar
+ *							- Input: varName, varValue OR varName##varValue OR varName!!varValue OR Object with attributes VARNAME, VARVALUE
+ *							- Output: void
+ *						  sapc_uGetContextVar
+ *							- Input varName as string or DSE Object
+ *							- Output varValue
+ *----------------------------------------------------------------------------------------------------------------------------
+ * Dependencies         :
+ *--------------------------------------------------------------------------------------------------------------------------*/
+
+function sapc_core_scriptHeader(scriptName, Par) {
+
+    var resultObject = {};
+    resultObject.scriptName = scriptName;
+    resultObject.masterIDS = sapc_core_getPackageConstant("SAPC_MASTER_IDS_ID");
+    resultObject.taskID = "%$ddm.actionid%";
+    resultObject.taskName = "";
+    resultObject.auditID = 0;
+    if (resultObject.taskID == "-1") { // is job
+        resultObject.taskID = "%$ddm.mcjob%";
+        resultObject.taskName = "Job:" + resultObject.taskID + "/" + uSelect("select name from mc_jobs " + resultObject.nolock + " where jobid = " + resultObject.taskID);
+    } else {
+        resultObject.taskName = "Task:" + resultObject.taskID + "/" + uGetTaskName(resultObject.taskID);
+        resultObject.auditID = uGetAuditID();
+    }
+
+    resultObject.logLevel = sapc_core_getPackageConstant("SAPC_LOG_LEVEL", "com.lxs.idm.hcm");
+
+    resultObject.outPrefix = resultObject.taskName + ":" + scriptName + ":";
+    if (resultObject.logLevel &gt;= 2) uErrMsg(1, resultObject.outPrefix + "Starting with parameters: " + Par);
+    return resultObject;
+}
+
+
+function sapc_core_getPackageConstant(constantName, packageName) {
+
+    // if second parameter is undefined the script got called with only constant name and is considered to return core constant or with !! separated (e.g. from single line in destination tab)
+    if (typeof packageName == "undefined") {
+        if (constantName.indexOf("!!") != -1) { // no package name given but !! separated 
+            var parArray = constantName.split("!!");
+            constantName = parArray[0];
+            packageName = parArray[1];
+        } else {
+            packageName = "com.sap.rds.idm.core";
+        }
+    }
+
+    var sql = "select mc_package_variables.VARVALUE from mc_package_variables %NOLOCK%, mc_package %NOLOCK% ";
+    sql += "where mc_package_variables.mcPackageID = mc_package.mcPackageID ";
+    sql += "and mc_package.mcQualifiedName = '" + packageName + "' ";
+    sql += "and mc_package_variables.VARNAME = '" + constantName + "'";
+    var constantValue = uSelect(sql);
+
+    uInfo("function:sapc_core_getPackageConstant:Retrieving constantName [" + constantName + "] of package [" + packageName + "] and returning constantValue [" + constantValue + "].");
+
+    return constantValue;
+}
+
+function sapc_uSetContextVar(varName, varValue) {
+    var maxLength = 1900;
+
+    if (varName.constructor == String) { // called in script or toIdentityStore pass (else toGeneric)
+        // if second parameter is undefined the script got called with only one string parameter
+        if (typeof varValue == "undefined") {
+            if (varName.indexOf("##") != -1) { // separator ##
+                uInfo("sapc_uSetContextVar called with ## separated parameter string");
+                var parArray = varName.split("##");
+                varName = parArray[0];
+                varValue = parArray[1];
+            } else {
+                uInfo("sapc_uSetContextVar called with !! separated parameter string");
+                var parArray = varName.split("!!");
+                varName = parArray[0];
+                varValue = parArray[1];
+            }
+        } else {
+            uInfo("sapc_uSetContextVar called with 2 parameters");
+        }
+    } else { // varName not string -&gt; called by toGeneric pass
+        uInfo("sapc_uSetContextVar called with object: " + varName);
+        _varName = varName;
+        varName = "" + _varName.get("VARNAME");
+        varValue = "" + _varName.get("VARVALUE");
+    }
+
+    if (varValue.length &lt; maxLength) { // variable not longer than 1900 char -&gt; normal uset
+        uSetContextVar(varName, varValue);
+        return "";
+    }
+
+    indexOfContextVariable = 0;
+    bOut = false;
+    do {
+        var aLimit = maxLength;
+        if (maxLength &gt; varValue.length) {
+            aLimit = varValue.length;
+        }
+        varValueLeft = varValue.substring(0, aLimit);
+        if (aLimit == maxLength) {
+            varValueRight = varValue.substring(maxLength);
+            if (varValueRight.length &lt;= 0) {
+                bOut = true;
+            }
+        } else {
+            bOut = true;
+        }
+        ConcatVarName = varName + "_" + indexOfContextVariable;
+        OutString = UserFunc.uSetContextVar(ConcatVarName, varValueLeft);
+        uInfo("Writing " + ConcatVarName + " with value " + varValueLeft);
+
+        varValue = varValueRight;
+        indexOfContextVariable++;
+    }
+    while (!bOut);
+    return "";
+}
+
+function sapc_uGetContextVar(varName) {
+
+    if (varName.constructor != String) { // called by toGeneric pass
+        uInfo("sapc_uSetContextVar called with object: " + varName);
+        varName = "" + varName.get("VARNAME");
+    }
+
+    // try to read normal context variable (no _n); if not existing read &lt;varname&gt;_n
+    value = uGetContextVar(varName, "XXXNOTEXISTINGPLACEHOLDERXXX");
+    if (!value.equalsIgnoreCase("XXXNOTEXISTINGPLACEHOLDERXXX")) {
+        uErrMsg(0, "Normal Get: " + value);
+        return value;
+    }
+
+    // if XXXNOTEXISTINGPLACEHOLDERXXX was returned the context var Par does not exist -&gt; try name of context var Par_[i]
+    bOut = false;
+    res = "";
+    indexOfContextVariable = 0;
+    do {
+        ConcatPar = Par + "_" + indexOfContextVariable;
+        value = UserFunc.uGetContextVar(ConcatPar, "XXXNOTEXISTINGPLACEHOLDERXXX");
+        if (!value.equalsIgnoreCase("XXXNOTEXISTINGPLACEHOLDERXXX")) {
+            uInfo("Get from: " + ConcatPar + " - " + value);
+            res = res + value;
+            uInfo("Total value: " + res);
+            indexOfContextVariable++;
+        } else {
+            // --- leave 
+            bOut = true;
+        }
+    }
+    while (!bOut);
+    uInfo("Returning: " + res);
+    return res;
+}
+
+function sapc_core_script_functions(Par) {
+    uErrMsg(1, "This is just a dummy");
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sapc_core_scriptHeader</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>2</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>/**---------------------------------------------------------------------------------------------------------------------------
+ * Short description	: This script generates a Hash and returns it - for ToIdentityStore passes.
+ *----------------------------------------------------------------------------------------------------------------------------
+ * Functions            : sapc_generateHash
+ *----------------------------------------------------------------------------------------------------------------------------
+ * Dependencies         :
+ *----------------------------------------------------------------------------------------------------------------------------
+ * Changes				:
+ * 2017-02-28	Gunnar Kosche   Script created	
+ *--------------------------------------------------------------------------------------------------------------------------*/
+function sapc_generateHash(Par) {
+    var sapc_core = sapc_core_scriptHeader("sapc_generateHash", Par);
+    var log = sapc_core.logLevel;
+
+    //generate hashes from the concatinated values
+    var idhash = uGenHash(Par, "MD5");
+    var retrun = idhash;
+    //store the values as context-vars
+
+    uSetContextVar("#IDENTITYHASH", "" + retrun);
+    if (log &gt;= 2) uWarning("CTX.#IDENTITYHASH=" + retrun);
+
+    return retrun;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sapc_generateHash</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Created by:	AS, SAP
+// Created on:	September, 2017
+// Exposition:	Inspired by SAP script sap_pernrExistenceCheck. Determines, wheather a hcm dataset will be pushed 
+//				further to Master ID store or is supposed to be ignored, when mandatory attributes are missing.
+
+function sapc_hcmAttributesExistenceCheck(Par) {
+
+    if (Par != null &amp;&amp; Par != "") {
+        var script = 'sapc_hcmAttributesExistenceCheck';
+        var pernr = Par.get("PERNR");
+        var cpn = Par.get("CPN");
+        var firstname = Par.get("FIRSTNAME");
+        var lastname = Par.get("LASTNAME");
+        var idStore = "%$pck.SAP_MASTER_IDS_ID%";
+        var stopJob = 0; // 0=false, 1=true
+        var msg = "";
+
+        //debugger
+        //uWarning(script + ":: pernr,cpn,firstname,lastname are: " + pernr + cpn + firstname + lastname);
+
+        if (cpn != null &amp;&amp; cpn != '') {
+            if (firstname != null &amp;&amp; firstname != '') {
+                if (lastname != null &amp;&amp; lastname != '') {
+                    if (pernr != null &amp;&amp; pernr != '') {
+                        //msg output only when job is stopped.
+                        //msg = script + ":: CPN, firstname, lastname and personnel number available from hcm dataset. Continue with Process.";
+                    } else {
+                        msg = script + ":: Personnel number is missing. Stop Job.";
+                        stopJob = 1;
+                    }
+                } else {
+                    msg = script + ":: Lastname is missing. Stop Job.";
+                    stopJob = 1;
+                }
+            } else {
+                msg = script + ":: Firstname is missing. Stop Job.";
+                stopJob = 1;
+            }
+        } else {
+            msg = script + ":: CPN is missing. Stop Job";
+            stopJob = 1;
+        }
+
+        if (stopJob == 1) {
+            uWarning(msg);
+            UserFunc.sap_stopJobExecution();
+        }
+    }
+
+    return "";
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sapc_hcmAttributesExistenceCheck</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_pernrExistenceCheck
+
+function sapc_pernrExistence(Par) {
+    // Check existence of perNr 
+
+    if (Par != null &amp;&amp; Par != "") {
+        var sysUname = Par.get("SYSUNAME");
+        var perNr = Par.get("PERNR");
+        var idStore = "%$pck.SAP_MASTER_IDS_ID%";
+        var stopJob = 0; // 0=false, 1=true
+        var msg = "";
+        var msKey = Par.get("MSKEY");
+        var msKeyValue = Par.get("MSKEYVALUE");
+
+        if (perNr != null) {
+            // verify existence of perNr in productive Identity Store
+            var sql = "select mskey from idmv_value_ext_active where attrName = 'MX_FS_PERSONNEL_NUMBER' and IS_ID = " + idStore + " and searchvalue = '" + perNr + "'";
+            var result = UserFunc.uSelect(sql);
+
+            if (result.length == 0) {
+                // user with perNr does not exist yet
+                if (sysUname != null &amp;&amp; sysUname != '') {
+                    msg = "User with PERNR: " + perNr + " does not exist. Using SYSUNAME: " + sysUname;
+                    stopJob = 0;
+                } else {
+                    msg = "User with PERNR: " + perNr + " does not exist. SYSUNAME is not set.";
+                    stopJob = 1;
+                }
+
+            } else {
+                stopJob = 0;
+                msg = "User with PERNR: " + perNr + " already exists. Mskey of User is: " + result;
+            }
+        } else {
+            stopJob = 1;
+            msg = "PERNR does not exist";
+        }
+
+        if (stopJob == 1) {
+            UserFunc.sap_stopJobExecution(msg);
+        }
+    }
+
+    return Par;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sapc_pernrExistence</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function: sap_core_setContextVariable
+
+function sapc_setContextVar(Par) {
+
+    var inputArray = Par.split("!!");
+
+    VarName = inputArray[0];
+    Value = inputArray[1];
+
+    OutString = uSetContextVar(VarName, Value);
+
+    return "";
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sapc_setContextVar</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>/*---------------------------------------------------------------------------------------------------------------------------
+ * Script/Function	: sapc_writeValueNowForFutures
+ * Category		    : provisioning script
+ * Short description	: returnvalue is the list of given values and if only future values are in the set the value with the 
+ *                     smallest date. Script is used for minimum data in the HCM - IDM interface.
+ *----------------------------------------------------------------------------------------------------------------------------
+ * Created/Changed	Date		By					Description of modification
+ *			yyyy-mm-dd	name or initials / ID
+ * Created	2016-03-10	Gunnar Kosche	initial implementation
+ * Changed 2017-01-16  Gunnar Kosche   JAVA only comparison implementation + sequence-bug fixed.
+ *
+ *----------------------------------------------------------------------------------------------------------------------------
+ * Main function: sapc_determineValidity
+ * 
+ * Argument: - {E}{VALIDFROM=&lt;YYYY-MM-TT&gt;!!VALIDTO=&lt;YYYY-MM-DD&gt;}&lt;value&gt;|{VALIDFROM=&lt;YYYY-MM-TT&gt;!!VALIDTO=&lt;YYYY-MM-DD&gt;}&lt;value&gt;
+ *
+ * Return value: - newElement + Argument
+ *
+ * Dependencies: - sapc_core_scriptHeader
+ *
+ *--------------------------------------------------------------------------------------------------------------------------*/
+var log;
+
+function sapc_writeValueNowForFutures(Par) {
+    importClass(java.text.SimpleDateFormat);
+    importClass(java.util.Calendar);
+
+    var core = sapc_core_scriptHeader("sapc_writeValueNowForFutures", Par);
+    log = core.logLevel;
+    //PAR = 
+    /*
+     * {VALIDFROM=2008-01-01!!VALIDTO=2008-12-31}Abcd
+     * {VALIDFROM=&lt;YYYY-MM-TT&gt;!!VALIDTO=&lt;YYYY-MM-DD&gt;}&lt;value&gt;|{VALIDFROM=&lt;YYYY-MM-TT&gt;!!VALIDTO=&lt;YYYY-MM-DD&gt;}&lt;value&gt;"
+     */
+    /**
+     * If all incoming validities start in the future, determine smallest, get the value and return it
+     */
+
+    //buffer Parameterlist as returnvalue
+    //split all entries by | to an array
+    //loop over all entries
+    ///remove first 4 chars "{E}{"
+    ///split each value into validity &amp; value ("}") array
+    ///split the validfrom and validto by "!!"
+    ///put validfrom &amp;&amp; value into a map
+    ///check if first item
+    ///YES =&gt; buffer = validfrom as datetime
+    ///NO =&gt; check if buffer is &gt; validfrom
+    ////YES =&gt; buffer = validfrom as datetime
+    ////NO =&gt; go on
+    //After the loop check the buffer-validfrom if it is &lt; now
+    //YES =&gt; return the given parameter-list
+    //NO =&gt; return the given parameter-list and the value from the map with the validfrom-key
+    var map = new java.util.HashMap();
+    var retrun = "";
+
+    if (Par == "{E}") return "";
+
+    var l = Len(Par) - 3;
+    var load = Right(Par, l);
+    //{VALIDFROM=&lt;YYYY-MM-TT&gt;!!VALIDTO=&lt;YYYY-MM-DD&gt;}&lt;value&gt;|{VALIDFROM=&lt;YYYY-MM-TT&gt;!!VALIDTO=&lt;YYYY-MM-DD&gt;}&lt;value&gt;
+    var parArray = load.split("|");
+    //{{VALIDFROM=2008-01-01!!VALIDTO=2008-12-31}Abcd;{VALIDFROM=2008-12-31!!VALIDTO=2399-12-31}efgh}
+    var len = parArray.length;
+    var buffer = "";
+    var inputFormat = new java.lang.String("yyyy-MM-dd");
+    for (var i = 0; i &lt; len; i++) {
+        if (log &gt;= 3) uWarning("parArray[i] = " + parArray[i]);
+        var validityPar = Mid(parArray[i], 5, parArray[i].length);
+
+        var paramValue = validityPar.split("}");
+        var validityParams = paramValue[0];
+        var value = paramValue[1];
+        var valditiyArray = validityParams.split("!!");
+        var validfromPair = valditiyArray[0].split("=");
+        var validfrom = validfromPair[1];
+        var validtoPair = valditiyArray[1].split("=");
+        var validto = validtoPair[1];
+        if (log &gt;= 3) uWarning("validfrom = '" + validfrom + "' validto = '" + validto + "' value = '" + value + "'");
+
+        var formater = new SimpleDateFormat(inputFormat);
+        var date = formater.parse(validfrom);
+        var cal = Calendar.getInstance();
+        cal.setTime(date);
+        var validFromTime = cal.getTime();
+        map.put(validFromTime, value);
+        //		var ret = formater.format(cal.getTime());
+
+        if (i == 0) {
+            buffer = validFromTime;
+            if (log &gt;= 3) uWarning("buffer = validFromTime - '" + validFromTime + "'");
+        } else {
+            if (buffer &gt; validFromTime) {
+                buffer = validFromTime;
+                if (log &gt;= 3) uWarning("buffer &gt; validFromTime =&gt; '" + validFromTime + "'");
+            }
+        }
+    }
+    var formaterNow = new SimpleDateFormat(inputFormat);
+    var nowDate = formaterNow.parse("%$ddm.date8601%");
+    var nowCal = Calendar.getInstance();
+    nowCal.setTime(nowDate);
+    var bufferCal = Calendar.getInstance();
+    bufferCal.setTime(buffer);
+    if (log &gt;= 3) uWarning("now = '" + nowCal.getTime() + "' buffer = '" + bufferCal.getTime() + "'");
+    if (bufferCal.before(nowCal) || bufferCal.equals(nowCal)) {
+        retrun = "{E}" + load;
+        if (log &gt;= 2) uWarning("buffer &lt;= now returning ... '" + retrun + "'");
+        return "{E}" + load;
+    } else {
+        var retValue = map.get(buffer);
+        bufferCal.add(Calendar.DAY_OF_MONTH, -1);
+        var valTo = formaterNow.format(bufferCal.getTime());
+        retrun = "{E}{VALIDFROM=%$ddm.date8601%!!VALIDTO=" + valTo + "}" + retValue + "|" + load;
+        if (log &gt;= 2) uWarning("buffer &gt; now returning ... '" + retrun + "'");
+        return retrun;
+    }
+
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTNAME>sapc_writeValueNowForFutures</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+</PACKAGE_SCRIPTS>
+<JOBS>
+<JOB JOBGUID="76C13D60-9269-4079-A064-471B421A20AF" MCPACKAGEID="com.sap.rds.idm.hcm.stagingarea">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1634264232787</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+                            
+                            <mx:GUID>695a0109dbc648a6889db9dffdfaa6c3</mx:GUID>
+                            
+                            <mx:VERSION>1.0</mx:VERSION>
+                            
+                            <mx:DSEJobs>
+                                
+                                <mx:Sequence>
+                                    
+                                    <mx:Step Enabled="TRUE" Key="SAPC_WriteShadowPersonToStagingArea"/>
+                                    
+                                </mx:Sequence>
+                                
+                                <mx:Job name="SAPC_WriteShadowPersonToStagingArea">
+                                    
+                                    <mx:Description/>
+                                    
+                                    <mx:Sequence>
+                                        
+                                        <mx:Step Enabled="TRUE" Key="bfa8e25d-de66-43b1-be83-0681694b10e8"/>
+                                        
+                                    </mx:Sequence>
+                                    
+                                    <mx:Common>
+                                        
+                                        <ENGINETYPE>1</ENGINETYPE>
+                                        
+                                        <SCRIPTENG>JScript</SCRIPTENG>
+                                        
+                                        <EVLOG>0</EVLOG>
+                                        
+                                        <ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+                                        
+                                        <XLRESET>1</XLRESET>
+                                        
+                                    </mx:Common>
+                                    
+                                    <mx:Pass name="bfa8e25d-de66-43b1-be83-0681694b10e8">
+                                        
+                                        <TYPE>ToIDStore</TYPE>
+                                        
+                                        <DESCRIPTION>SAPC_WriteShadowPersonToSAPMaster</DESCRIPTION>
+                                        
+                                        <COMPACTDB/>
+                                        
+                                        <REPOSITORY>0</REPOSITORY>
+                                        
+                                        <MAXDELETE>5%</MAXDELETE>
+                                        
+                                        <AUDITLEVEL>0</AUDITLEVEL>
+                                        
+                                        <DELTAENABLED>0</DELTAENABLED>
+                                        
+                                        <SKIP>1</SKIP>
+                                        
+                                        <JUSTDELTA>0</JUSTDELTA>
+                                        
+                                        <MARKDEL>0</MARKDEL>
+                                        
+                                        <AUTODELETE>0</AUTODELETE>
+                                        
+                                        <CURRTAB>2</CURRTAB>
+                                        
+                                        <READFROMPVO>1</READFROMPVO>
+                                        
+                                        <FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+                                        
+                                        <USEIDSTORE>0</USEIDSTORE>
+                                        
+                                        <SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+                                        
+                                        <IDSTORE>2</IDSTORE>
+                                        
+                                        <USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+                                        
+                                        <DELIMITER>|</DELIMITER>
+                                        
+                                        <STOREID>%$pck.SAP_MASTER_IDS_ID%</STOREID>
+                                        
+                                        <DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+                                        
+                                        <PROBE>0</PROBE>
+                                        
+                                        <SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+                                        
+                                        <mx:Class>
+                                            
+                                            <mx:attr name="MSKEYVALUE">
+                                                
+                                                <mx:value>$FUNCTION.sap_cutDate(%P0000-PERNR%)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_ENTRYTYPE">
+                                                
+                                                <mx:value>SAPC_SHADOW_PERSON</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="DISPLAYNAME">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-ENAME%!!DISPLAYNAME)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#MX_PASSWORD_DISABLED">
+                                                
+                                                <mx:value>%passworddisabled%</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FIRSTNAME">
+                                                
+                                                <mx:value>$FUNCTION.sapc_writeValueNowForFutures($FUNCTION.sap_importTimeValues(%P0002-VORNA%!!MX_FIRSTNAME)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_LANGUAGE">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0002-SPRSL%!!MX_LANGUAGE)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_LASTNAME">
+                                                
+                                                <mx:value>$FUNCTION.sapc_writeValueNowForFutures($FUNCTION.sap_importTimeValues(%P0002-NACHN%!!MX_LASTNAME)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#Lock user is obsolete">
+                                                
+                                                <mx:value>in case emplyoment status P0000-STAT2  &lt;&gt; 3</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#MX_LOCKED">
+                                                
+                                                <mx:value>$FUNCTION.sap_useEmploymentStatusOverwrite(%P0000-STAT2%)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_MAIL_PRIMARY">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0105-SYHR_A_P0105_AF_EMAIL%!!MX_MAIL_PRIMARY!!TRUE)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_MOBILE_PRIMARY">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0105-SYHR_A_P0105_AF_CELL%!!MX_MOBILE_PRIMARY)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_PHONE_PRIMARY">
+                                                
+                                                <mx:value>$FUNCTION.sap_importPhoneNr(%P0105-SYHR_A_P0105_AF_TEL_NR%!!%P0105-SYHR_A_P0105_AF_TEL_EXT%)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_HCM_SYSUNAME">
+                                                
+                                                <mx:value>$FUNCTION.sap_cutDate(%P0105-SYHR_A_P0105_AF_SYSUNAME%)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#MX_HCM_SYSUNAME">
+                                                
+                                                <mx:value>$FUNCTION.sap_getSysUname(%P0000-PERNR%!!%P0105-SYHR_A_P0105_AF_SYSUNAME%)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#Address city, country, street">
+                                                
+                                                <mx:value>not part of standard LDAP Extract</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_ADDRESS_CITY">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P8001-ORT01%!!MX_ADDRESS_CITY)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_ADDRESS_COUNTRY">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P8001-LAND1%!!MX_ADDRESS_COUNTRY)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_ADDRESS_STREETADDRESS">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P8001-STRAS%!!MX_ADDRESS_STREETADDRESS)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_WORKPLACE_BUILDING">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P8001-TEXT_P8001_BUILD%!!MX_WORKPLACE_BUILDING)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_WORKPLACE_ROOM">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P8001-ROOM1%!!MX_WORKPLACE_ROOM)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_PERSONNEL_NUMBER">
+                                                
+                                                <mx:value>$FUNCTION.sap_cutDate(%P0000-PERNR%)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_EMPLOYMENT_STATUS_ID">
+                                                
+                                                <mx:value>$FUNCTION.sapc_writeValueNowForFutures($FUNCTION.sap_importTimeValuesOverwrite(%P0000-STAT2%!!MX_FS_EMPLOYMENT_STATUS_ID)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_EMPLOYMENT_STATUS">
+                                                
+                                                <mx:value>$FUNCTION.sapc_writeValueNowForFutures($FUNCTION.sap_importTimeValuesOverwrite(%P0000-TEXT_P0000_STAT2%!!MX_FS_EMPLOYMENT_STATUS)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_WORK_CONTRACT_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-ANSVH%!!MX_FS_WORK_CONTRACT_ID)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_WORK_CONTRACT">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-TEXT_P0001_ANSVH%!!MX_FS_WORK_CONTRACT)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_PERSONNEL_SUBAREA_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-BTRTL%!!MX_FS_PERSONNEL_SUBAREA_ID)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_PERSONNEL_SUBAREA">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-TEXT_P0001_BTRTL%!!MX_FS_PERSONNEL_SUBAREA)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_COMPANY_CODE_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-BUKRS%!!MX_FS_COMPANY_CODE_ID)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_COMPANY_CODE">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-TEXT_P0001_BUKRS%!!MX_FS_COMPANY_CODE)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_BUSINESS_AREA_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-GSBER%!!MX_FS_BUSINESS_AREA_ID)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_BUSINESS_AREA">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-TEXT_P0001_GSBER%!!MX_FS_BUSINESS_AREA)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_COST_CENTER_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-KOSTL%!!MX_FS_COST_CENTER_ID)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_COST_CENTER">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-TEXT_P0001_KOSTL%!!MX_FS_COST_CENTER)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_ORGANIZATIONAL_UNIT_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-ORGEH%!!MX_FS_ORGANIZATIONAL_UNIT_ID)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_ORGANIZATIONAL_UNIT">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-TEXT_P0001_ORGEH%!!MX_FS_ORGANIZATIONAL_UNIT)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_EMPLOYEE_GROUP_ID">
+                                                
+                                                <mx:value>$FUNCTION.sapc_writeValueNowForFutures($FUNCTION.sap_importTimeValues(%P0001-PERSG%!!MX_FS_EMPLOYEE_GROUP_ID)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_EMPLOYEE_GROUP">
+                                                
+                                                <mx:value>$FUNCTION.sapc_writeValueNowForFutures($FUNCTION.sap_importTimeValues(%P0001-TEXT_P0001_PERSG%!!MX_FS_EMPLOYEE_GROUP)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_EMPLOYEE_SUBGROUP_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-PERSK%!!MX_FS_EMPLOYEE_SUBGROUP_ID)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_EMPLOYEE_SUBGROUP">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-TEXT_P0001_PERSK%!!MX_FS_EMPLOYEE_SUBGROUP)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_POSITION_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-PLANS%!!MX_FS_POSITION_ID)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_POSITION">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-TEXT_P0001_PLANS%!!MX_FS_POSITION)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#MX_FS_JOB_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-STELL%!!MX_FS_JOB_ID)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#MX_FS_JOB">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-TEXT_P0001_STELL%!!MX_FS_JOB)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_PERSONNEL_AREA_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-WERKS%!!MX_FS_PERSONNEL_AREA_ID)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_PERSONNEL_AREA">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-TEXT_P0001_WERKS%!!MX_FS_PERSONNEL_AREA)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_SALUTATION_ID">
+                                                
+                                                <mx:value>$FUNCTION.sapc_writeValueNowForFutures($FUNCTION.sap_importTimeValues(%P0002-ANRED%!!MX_FS_SALUTATION_ID)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_SALUTATION">
+                                                
+                                                <mx:value>$FUNCTION.sapc_writeValueNowForFutures($FUNCTION.sap_importTimeValuesHelpValKey(%P0002-TEXT_P0002_ANRED%!!MX_SALUTATION!!%$TEXT_LOCALE%)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#MX_FS_ACADEMIC_TITLE_1_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0002-TITEL%!!MX_FS_ACADEMIC_TITLE_1_ID)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#MX_ACADEMIC_TITLE_1">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0002-TITEL%!!MX_ACADEMIC_TITLE_1)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_CENTRALPERSON_ID">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P8003-OBJID%!!MX_FS_CENTRALPERSON_ID!!TRUE)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_PERSONNEL_NUMBER_OF_MANAGER">
+                                                
+                                                <mx:value>$FUNCTION.sapc_writeValueNowForFutures($FUNCTION.sap_importTimeValues(%P0001-SYHR_A_P0001_AF_OMNGR_NR%!!MX_FS_PERSONNEL_NUMBER_OF_MANAGER)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_SOURCE_SYSTEM">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0002-SOURCE_SYSTEM%!!MX_FS_SOURCE_SYSTEM)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_IDENTITY_TYPE">
+                                                
+                                                <mx:value>EMPLOYEE</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="MX_FS_PERNR_IS_MANAGER">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%P0001-SYHR_A_P0001_AF_P_IS_MGR%!!MX_FS_PERNR_IS_MANAGER)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#MXREF_MX_PRIVILEGE">
+                                                
+                                                <mx:value>following function assigns automatically Portal role employee and determins if Portal manager role has to be assigned.</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#MXREF_MX_PRIVILEGE">
+                                                
+                                                <mx:value>$FUNCTION.sap_isManager(%P0001-SYHR_A_P0001_AF_P_IS_MGR%|S6T100|ROLE|pcd:portal_content/com.sap.pct/every_user/com.sap.pct.erp.ess.bp_folder/com.sap.pct.erp.ess.roles/com.sap.pct.erp.ess.employee_self_service|pcd:portal_content/com.sap.pct/line_manager/com.sap.pct.erp.mss.bp_folder/com.sap.pct.erp.mss.14.bp_folder/com.sap.pct.erp.mss.14.roles/com.sap.pct.erp.mss.manager_self_service)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="#SAP Consulting">
+                                                
+                                                <mx:value/>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="SAPC_IDEN_BIRTHDATE">
+                                                
+                                                <mx:value>$FUNCTION.sapc_convertDate($FUNCTION.sap_cutDate(%P0002-GBDAT%)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="SAPC_IDEN_HCM_ACTION_STATUS">
+                                                
+                                                <mx:value>$FUNCTION.sapc_writeValueNowForFutures($FUNCTION.sap_importTimeValues(%P0000-MASSN%!!SAPC_IDEN_HCM_ACTION_STATUS)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="SAPC_IDEN_HCM_LAST_DAY_WORK_Z0">
+                                                
+                                                <mx:value>$FUNCTION.sap_importTimeValues(%Z_Z0_LAST_WORK_DAY%!!SAPC_IDEN_HCM_ACTION_STATUS)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="SAPC_IDEN_EMP_STATUS_ADDITIONAL_ID">
+                                                
+                                                <mx:value>$FUNCTION.sapc_writeValueNowForFutures($FUNCTION.sap_importTimeValues(%P0000-STAT1%!!SAPC_IDEN_EMP_STATUS_ADDITIONAL_ID)$$)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                        </mx:Class>
+                                        
+                                    </mx:Pass>
+                                    
+                                    <mx:Globals>
+                                        
+                                        <mx:attr name="$TEXT_LOCALE">
+                                            
+                                            <mx:description>Locale of the exported texts from HCM 1715763</mx:description>
+                                            
+                                            <mx:type>0</mx:type>
+                                            
+                                            <mx:value>EN</mx:value>
+                                            
+                                        </mx:attr>
+                                        
+                                        <mx:attr name="$WRITE_FUTURE_DATED_HIRES">
+                                            
+                                            <mx:description>Switch for processing of future date hires 1802414</mx:description>
+                                            
+                                            <mx:type>0</mx:type>
+                                            
+                                            <mx:value>TRUE</mx:value>
+                                            
+                                        </mx:attr>
+                                        
+                                    </mx:Globals>
+                                    
+                                    <mx:Functions>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_addPassword"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="custom_generateHRID"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="custom_initializePassword"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_abap_getHelpValKey"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_calcID"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_clearPassword"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_core_getDBTablePrefix"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_cutDate"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_encryptPassword"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_encryptPasswordMD5"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_generateHRID"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_getSysUname"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_getUTCDate"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_handlePassword"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_ignoreTime"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_importPhoneNr"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_importTimeValues"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_importTimeValuesOverwrite"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_importTimeValuesHelpValKey"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_initializePassword"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_isManager"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_parseTimeValue"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_parseTimeValueNoNullAtt"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_stopJobExecution"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_useEmploymentStatus"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_useEmploymentStatusOverwrite"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapc_writeValueNowForFutures"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapc_core_scriptHeader"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapc_convertDate"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapc_generateHash"/>
+                                        
+                                    </mx:Functions>
+                                    
+                                </mx:Job>
+                                
+                            </mx:DSEJobs>
+                            
+                        </mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>2</MCSCRIPTSTATUS>
+<MCSOURCEGUID>76C13D60-9269-4079-A064-471B421A20AF</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC Write Shadow Person to SAP Master</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="C4F9CEC0-D014-4A7D-A2F8-BE0165CD05CD" MCPACKAGEID="com.sap.rds.idm.hcm.stagingarea">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>MXMC_admin</CHANGED_BY>
+<CHANGED_DATE>1634264232827</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+                            
+                            <mx:GUID>3aa8303bf62a4ea1ad07b9dffdfaa6c3</mx:GUID>
+                            
+                            <mx:VERSION>1.0</mx:VERSION>
+                            
+                            <mx:DSEJobs>
+                                
+                                <mx:Sequence>
+                                    
+                                    <mx:Step Enabled="TRUE" Key="SAPC_CheckMandatoryAttributsOfHCMEmployee"/>
+                                    
+                                </mx:Sequence>
+                                
+                                <mx:Job name="SAPC_CheckMandatoryAttributsOfHCMEmployee">
+                                    
+                                    <mx:Description/>
+                                    
+                                    <mx:Sequence>
+                                        
+                                        <mx:Step Enabled="TRUE" Key="fa91ccf1-c798-4cc6-a5bd-204b59b9257d"/>
+                                        
+                                    </mx:Sequence>
+                                    
+                                    <mx:Globals/>
+                                    
+                                    <mx:Common>
+                                        
+                                        <ENGINETYPE>1</ENGINETYPE>
+                                        
+                                        <SCRIPTENG>JScript</SCRIPTENG>
+                                        
+                                        <EVLOG>0</EVLOG>
+                                        
+                                        <ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+                                        
+                                        <XLRESET>1</XLRESET>
+                                        
+                                    </mx:Common>
+                                    
+                                    <mx:Pass name="fa91ccf1-c798-4cc6-a5bd-204b59b9257d">
+                                        
+                                        <TYPE>To Generic</TYPE>
+                                        
+                                        <DESCRIPTION>SAPC_CheckMandatoryAttributesOfHCMEmployee</DESCRIPTION>
+                                        
+                                        <REPOSITORY>0</REPOSITORY>
+                                        
+                                        <MAXDELETE>5%</MAXDELETE>
+                                        
+                                        <AUDITLEVEL>-1</AUDITLEVEL>
+                                        
+                                        <DELTAENABLED>0</DELTAENABLED>
+                                        
+                                        <SKIP>1</SKIP>
+                                        
+                                        <JUSTDELTA>0</JUSTDELTA>
+                                        
+                                        <MARKDEL>0</MARKDEL>
+                                        
+                                        <AUTODELETE>0</AUTODELETE>
+                                        
+                                        <CURRTAB>2</CURRTAB>
+                                        
+                                        <READFROMPVO>0</READFROMPVO>
+                                        
+                                        <FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+                                        
+                                        <USEIDSTORE>0</USEIDSTORE>
+                                        
+                                        <IDSTORE>null</IDSTORE>
+                                        
+                                        <SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+                                        
+                                        <SCRIPTNEXT>sapc_hcmAttributesExistenceCheck</SCRIPTNEXT>
+                                        
+                                        <mx:Class>
+                                            
+                                            <mx:attr name="MSKEY">
+                                                
+                                                <mx:value>%MSKEY%</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="PERNR">
+                                                
+                                                <mx:value>$FUNCTION.sap_cutDate(%P0000-PERNR%)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="CPN">
+                                                
+                                                <mx:value>$FUNCTION.sap_cutDate(%P8003-OBJID%)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="FIRSTNAME">
+                                                
+                                                <mx:value>%P0002-VORNA%</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                            <mx:attr name="LASTNAME">
+                                                
+                                                <mx:value>$FUNCTION.sap_cutDate(%P0002-NACHN%)$$</mx:value>
+                                                
+                                            </mx:attr>
+                                            
+                                        </mx:Class>
+                                        
+                                    </mx:Pass>
+                                    
+                                    <mx:Functions>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_cutDate"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sap_stopJobExecution"/>
+                                        
+                                        <mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapc_hcmAttributesExistenceCheck"/>
+                                        
+                                    </mx:Functions>
+                                    
+                                </mx:Job>
+                                
+                            </mx:DSEJobs>
+                            
+                        </mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>2</MCSCRIPTSTATUS>
+<MCSOURCEGUID>C4F9CEC0-D014-4A7D-A2F8-BE0165CD05CD</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>SAPC HCM Attributes Existence Check</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+</JOBS>
+<TASKS>
+<TASK MCPACKAGEID="com.sap.rds.idm.hcm.stagingarea" TASKGUID="2904B8C1-9063-4D79-99E9-F9D9E02590F2" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>EFD16F75-2566-489A-BBE9-8F55D1D48EE2</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1504129710000</TASKCHANGED>
+<TASKGROUP>69210D1A-2075-4977-A852-B5DF25AAF165</TASKGROUP>
+<TASKNAME>SAPC_WriteShadowPersonToSAPMaster</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>3</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>245,0,40,40:|120,200,271,60:</CHILDLAYOUT>
+<CHILDORDER>2</CHILDORDER>
+<TASKLNK>B55A340C-37AA-47A4-BC92-85535B317389</TASKLNK>
+<TASKQUALIFIEDNAME>0</TASKQUALIFIEDNAME>
+<TASKREF>2904B8C1-9063-4D79-99E9-F9D9E02590F2</TASKREF>
+</LINK>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>245,0,40,40:245,320,40,40|120,80,271,60:</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>7FFBD37C-200A-4496-A82F-9BF8BA469512</TASKLNK>
+<TASKQUALIFIEDNAME>0</TASKQUALIFIEDNAME>
+<TASKREF>2904B8C1-9063-4D79-99E9-F9D9E02590F2</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.hcm.stagingarea" TASKGUID="6B000351-1F56-49B8-9BD5-D9FD832DFD90" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>40DF9844-17E2-432F-9DBF-084596494EEC</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1505285878000</TASKCHANGED>
+<TASKGROUP>46BBF5B4-4D9D-4B3A-9BF9-B9B44E2D5B59</TASKGROUP>
+<TASKNAME>SAPC_HCMToSAPMasterAdd</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>2</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>245,0,40,40:245,200,40,40|140,80,231,60:</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>2904B8C1-9063-4D79-99E9-F9D9E02590F2</TASKLNK>
+<TASKQUALIFIEDNAME>0</TASKQUALIFIEDNAME>
+<TASKREF>6B000351-1F56-49B8-9BD5-D9FD832DFD90</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.hcm.stagingarea" TASKGUID="7EFF36A6-4FAE-432A-96F6-8743DC6CB2D8" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>FF9E0851-54BC-4F5D-BA57-885241EC3609</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1505285846000</TASKCHANGED>
+<TASKGROUP>46BBF5B4-4D9D-4B3A-9BF9-B9B44E2D5B59</TASKGROUP>
+<TASKNAME>SAPC_HCMToSAPMasterModify</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>245,0,40,40:245,200,40,40|140,80,231,60:</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>2904B8C1-9063-4D79-99E9-F9D9E02590F2</TASKLNK>
+<TASKQUALIFIEDNAME>0</TASKQUALIFIEDNAME>
+<TASKREF>7EFF36A6-4FAE-432A-96F6-8743DC6CB2D8</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.hcm.stagingarea" TASKGUID="7FFBD37C-200A-4496-A82F-9BF8BA469512">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>C4F9CEC0-D014-4A7D-A2F8-BE0165CD05CD</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>66C25EE5-BB57-4193-990D-C209E63FE6A0</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1504148921000</TASKCHANGED>
+<TASKNAME>SAPC HCM Attributes Existence Check</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sap.rds.idm.hcm.stagingarea" TASKGUID="B55A340C-37AA-47A4-BC92-85535B317389">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>76C13D60-9269-4079-A064-471B421A20AF</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>40471A09-EB06-4B45-837B-166867AB380C</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1504148921000</TASKCHANGED>
+<TASKNAME>SAPC Write Shadow Person to SAP Master</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+</TASKS>
+<FOLDERS>
+<FOLDER GROUPGUID="46BBF5B4-4D9D-4B3A-9BF9-B9B44E2D5B59">
+<ACTIVATEDATE>1505285797000</ACTIVATEDATE>
+<GROUP_NAME>Triggers</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCSOURCEGUID>7063083b2d2c4c608ce2b9dffdfaa6c3</MCSOURCEGUID>
+<PROVISION_GROUP>1</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>0</WFSHOWGROUP>
+</FOLDER>
+<FOLDER GROUPGUID="69210D1A-2075-4977-A852-B5DF25AAF165">
+<ACTIVATEDATE>1504065654000</ACTIVATEDATE>
+<GROUP_NAME>Processes</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+<MCSOURCEGUID>1fbf2d02993e4c0d9e24b9dffdfaa6c3</MCSOURCEGUID>
+<PROVISION_GROUP>1</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>0</WFSHOWGROUP>
+</FOLDER>
+</FOLDERS>
+</PACKAGE>
+</PACKAGES>
+<DISPATCHERS>
+<DISPATCHER MACHINE="disp02">
+<JOBID>76C13D60-9269-4079-A064-471B421A20AF</JOBID>
+<JOBID>C4F9CEC0-D014-4A7D-A2F8-BE0165CD05CD</JOBID>
+</DISPATCHER>
+</DISPATCHERS>
+<PACKAGE_HISTORY>
+<MCDESCRIPTION>SA - Missing Test Job has been imported</MCDESCRIPTION>
+<MCMODIFIEDBYUSERNAME>ADMINISTRATOR</MCMODIFIEDBYUSERNAME>
+<MCMODIFIEDDATE>1634264233000</MCMODIFIEDDATE>
+<MCPACKAGEID>com.sap.rds.idm.hcm.stagingarea</MCPACKAGEID>
+</PACKAGE_HISTORY>
+</IDM>
