@@ -7,22 +7,21 @@ This repository contains the content of the [SAP Identity Management](https://ww
 Considerations:
 * The content can be downloaded and used without any license charges.
 * If you require support during installation, configuration or when using, modifying or extending the content, please send an email to <securityconsulting@global.corp.sap>.
-* If you did not purchase the service from [SAP Services](https://www.sap.com/services.html), you will get charged for the support activities. 
+* If you did not purchase the service from [SAP Services](https://www.sap.com/services.html), you will get charged for the support activities.
+* If you are not on SP04 yet, consider the SP04 Patch Hot To before patching to SP05
 
 ## Requirements
 
-[SAP Identity Management](https://www.sap.com/products/identity-management.html) 8.0 SP07 (Schema Version 1805)
+[SAP Identity Management](https://www.sap.com/products/identity-management.html) 8.0 SP08 (Schema Version 1814)
 
 ## Download and Installation
 Please refer to the Configuration Guide inside the package.
 
 ## Known Issues
 
-* When using SP08 of Identity Management 8.0 certain java class imports inside javascript will lead to errors due to the changed Rhino javascript engine version (fix planned for SP05), this applies to classes Iterator and Date.
-* MX_DISABLED and SAPC_IDEN_REP_DISABLED_<repName> not in list of modify trigger attributes of ABAP and ABAP BusinessSuite connector (fix planned for SP05).
-* Attribute MX_ACADEMMIC_TITLE_1 is using value help which has been removed in standard schema. This can lead to errors using new standard version of HCM Staging Area package (fix planned for SP05).
-* System Setup Job Create Minimum Data refers to privileges that do not exist anymore. Workaround: Remove non-existing privileges from Job. Fix planned for SP05.
-* Update Job of AD connector missing MC_REQ_PRIV in WriteGroupPrivileges Pass. Fix plannmed for SP05.
+* sapc_core_catchProvisioningError contains undefined attributes
+* HANA DB: Cannot lock/unlock with system specific attribute (triggering modify -> enable/disable not part of modify in HANA)
+* ABAP & ABAP BS - Job Read Last Logon & Lock State not supporting SU10 chagens
 
 ## How to obtain support
 
