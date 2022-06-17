@@ -22,6 +22,7 @@ Please refer to the [Wiki Page](https://github.com/SAP-samples/idm-business-exte
 * sapc_core_catchProvisioningError contains undefined attributes
 * HANA DB: Cannot lock/unlock with system specific attribute (triggering modify -> enable/disable not part of modify in HANA)
 * ABAP & ABAP BS - Job Read Last Logon & Lock State not supporting SU10 chagens
+* Mass Jobs for Download like Config Item Download are not working with SP05. This will be fixed ASAP
 
 ## How to obtain support
 
