@@ -15,7 +15,7 @@ Considerations:
 [SAP Identity Management](https://www.sap.com/products/identity-management.html) 8.0 SP08 (Schema Version 1814)
 
 ## Download and Installation
-Please refer to the Configuration Guide inside the package.
+Please refer to the [Wiki Page](https://github.com/SAP-samples/idm-business-extensions-service/wiki)
 
 ## Known Issues
 
