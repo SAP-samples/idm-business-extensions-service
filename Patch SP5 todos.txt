@@ -9,3 +9,8 @@ SAPC_DYNG_FOR_RULE_ENGINE
 SAPC_DYNG_REF_MX_PRIVILEGE
 SAPC_DYNG_REF_MX_ROLE
 SAPC_DYNG_UPLOAD_FILE
+
+GRANT SELECT ON mcv_syslog_ext TO MXMC_rt_role
+Add link to script sapc_getFolderNameFromActivityText (com.sap.rds.idm.mass.administration) to all custom Mass Download Jobs
+
+Import Schema_SP05_Delta.idmschema - select "No" when prompted whether to overwrite the existing schema
