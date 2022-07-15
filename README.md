@@ -8,22 +8,28 @@ Considerations:
 * The content can be downloaded and used without any license charges.
 * If you require support during installation, configuration or when using, modifying or extending the content, please send an email to <securityconsulting@global.corp.sap>.
 * If you did not purchase the service from [SAP Services](https://www.sap.com/services.html), you will get charged for the support activities.
-* If you are not on SP04 yet, consider the SP04 Patch Hot To before patching to SP05
+* If you are not on SP04 yet, consider the SP04 Patch Hot To before patching to SP05.
 
 ## Requirements
 
-[SAP Identity Management](https://www.sap.com/products/identity-management.html) 8.0 SP08 (Schema Version 1814)
+[SAP Identity Management](https://www.sap.com/products/identity-management.html) 8.0 SP08 (Schema Version 1814).
 
 ## Download and Installation
-Please refer to the [Wiki Page](https://github.com/SAP-samples/idm-business-extensions-service/wiki)
 
-## Known Issues
+Please refer to the [Wiki Page](https://github.com/SAP-samples/idm-business-extensions-service/wiki).
 
-* sapc_core_catchProvisioningError contains undefined attributes
-* HANA DB: Cannot lock/unlock with system specific attribute (triggering modify -> enable/disable not part of modify in HANA)
-* ABAP & ABAP BS - Job Read Last Logon & Lock State not supporting SU10 chagens
+
+* sapc_core_catchProvisioningError contains undefined attributes.
+* HANA DB: Cannot lock/unlock with system specific attribute (triggering modify -> enable/disable not part of modify in HANA).
+* ABAP & ABAP BS - Job Read Last Logon & Lock State not supporting SU10 changes.
 * Mass Jobs for Download like Config Item Download are not working with SP05. Fixed with Patch 1.
 * Mass Jobs in state running will not lead to error state if started again with SP05 due to modification of behaviour of SWITCH cases. Fixed with Patch 1.
+
+## Release Notes 
+
+* SCIM connector package with IAS Support
+* Re-implementation of the rule engine
+* Improvements to mass administration logic
 
 ## How to obtain support
 
