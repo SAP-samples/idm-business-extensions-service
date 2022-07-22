@@ -14,3 +14,5 @@ GRANT SELECT ON mcv_syslog_ext TO MXMC_rt_role
 Add link to script sapc_getFolderNameFromActivityText (com.sap.rds.idm.mass.administration) to all custom Mass Download Jobs
 
 Import Schema_SP05_Delta.idmschema - select "No" when prompted whether to overwrite the existing schema
+
+Perform Step "Upload Default Translation Texts" of Chapter https://github.com/SAP-samples/idm-business-extensions-service/wiki#314-create-minimum-data-in-the-system with the file SAPC_Translation_Upload_SystemSpecificAttributes.csv_delta
