@@ -1,0 +1,39 @@
+Patch SP5 todos (before package immport)
+________________________________________
+
+Delete Attributes:
+SAPC_DYNG_DIRTY
+SAPC_DYNG_FILTER_ATTRIBUTE_NAME#
+SAPC_DYNG_FILTER_ATTRIBUTE_VALUE#
+SAPC_DYNG_FOR_RULE_ENGINE
+SAPC_DYNG_REF_MX_PRIVILEGE
+SAPC_DYNG_REF_MX_ROLE
+SAPC_DYNG_UPLOAD_FILE
+SAPC_TRIGGER_UPDATE_JOB
+
+GRANT SELECT ON mcv_syslog_ext TO MXMC_rt_role
+
+Import Schema_SP05_Delta.idmschema - select "No" when prompted whether to overwrite the existing schema
+
+Perform Step "Upload Default Translation Texts" of Chapter https://github.com/SAP-samples/idm-business-extensions-service/wiki#314-create-minimum-data-in-the-system with the file SAPC_Translation_Upload_SystemSpecificAttributes.csv_delta
+
+Import packages
+
+Patch SP05 todos (after package import
+______________________________________
+The BE forms have privileges assigned to it (1:1 privilege to form) to enable access administration for every single form in the UI (without need to checkout packages) Execute Job "SAPC Create Minimum Data" (com.sap.rds.idm.system.administration -> Jobs -> System Setup Jobs)
+
+Mass administration jobs were identified by its name previously. This has been changed to GUIDs. Depending on the version from which you upgrade, you might need to update the value help for your jobs.
+To check whether you have guides or job names inside the value help, run query:
+select * from mxi_AttrValueHelp where valid like '%SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY%'
+The valKey fields should only contain GUIS
+To update the value help of the IdM BE standard jbobs, you can remove those values from the table mxi_AttrValueHelp manually and execute the job SAPC Setup Mass Operations (com.sap.rds.idm.mass.administration -> Jobs -> Initial Setup)
+To update the value help of your custom mass admin jobs, You can remove the entries from the table mxi_attrValueHelp manually and upload new values for the value help using the mass admin job "SAPC Attribute Value Help - Upload"
+
+Execute Job "Delete Request Config Items (SP4 patching)" (com.sap.rds.idm.mass.administration -> Jobs -> Initial Setup) to delete the old config items for mass administrations. Those are not used anymore.
+
+Add link to script sapc_getFolderNameFromActivityText (com.sap.rds.idm.mass.administration) to all custom Mass Download Jobs
+
+In every mass admin job where you read from file
+ - replace the "File Name" in the "Source" tab of the FromASCII pass with the following line: $FUNCTION.sapc_getJobVar(SAPC_REQ_TRIGGER_MASS_CHANGE_FILE_PATH)$$
+ - delete the reference to script sapc_getFileNameForMassOperation from these jobs
