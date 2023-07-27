@@ -37,4 +37,5 @@ Add link to script sapc_getFolderNameFromActivityText (com.sap.rds.idm.mass.admi
 In every mass admin job where you read from file
  - replace the "File Name" in the "Source" tab of the FromASCII pass with the following line: $FUNCTION.sapc_getJobVar(SAPC_REQ_TRIGGER_MASS_CHANGE_FILE_PATH)$$
  - delete the reference to script sapc_getFileNameForMassOperation from these jobs
+ - Link the scripts "sapc_setInitialJobConstants" and "sapc_getRequestMSKEY" into all custom mass administration jobs
  - Copy the pass "Set Job Vars" from any BE standard mass administration Job into the first position of every custom mass administration job.
