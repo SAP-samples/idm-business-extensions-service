@@ -12,6 +12,7 @@ SAPC_DYNG_UPLOAD_FILE
 SAPC_TRIGGER_UPDATE_JOB
 
 GRANT SELECT ON mcv_syslog_ext TO MXMC_rt_role
+Import Stored Procedure IDM_BE_sapc_mc_repository_delete_<yourDBtype>.sql
 
 Import Schema_SP05_Delta.idmschema - select "No" when prompted whether to overwrite the existing schema
 
@@ -21,7 +22,9 @@ Import packages
 
 Patch SP05 todos (after package import
 ______________________________________
-The BE forms have privileges assigned to it (1:1 privilege to form) to enable access administration for every single form in the UI (without need to checkout packages) Execute Job "SAPC Create Minimum Data" (com.sap.rds.idm.system.administration -> Jobs -> System Setup Jobs)
+The BE forms have privileges assigned to it (1:1 privilege to form) to enable access administration for every single form in the UI (without need to checkout packages)
+1. Copy file SAPC_Form_Privileges.csv into your UPLOAD folder
+2. Execute Job "SAPC Create Minimum Data" (com.sap.rds.idm.system.administration -> Jobs -> System Setup Jobs)
 
 Mass administration jobs were identified by its name previously. This has been changed to GUIDs. Depending on the version from which you upgrade, you might need to update the value help for your jobs.
 To check whether you have guides or job names inside the value help, run query:
@@ -29,6 +32,8 @@ select * from mxi_AttrValueHelp where valid like '%SAPC_REQ_TRIGGER_MASS_CHANGE_
 The valKey fields should only contain GUIS
 To update the value help of the IdM BE standard jbobs, you can remove those values from the table mxi_AttrValueHelp manually and execute the job SAPC Setup Mass Operations (com.sap.rds.idm.mass.administration -> Jobs -> Initial Setup)
 To update the value help of your custom mass admin jobs, You can remove the entries from the table mxi_attrValueHelp manually and upload new values for the value help using the mass admin job "SAPC Attribute Value Help - Upload"
+
+After managing the values in mxi_attrValueHelp, assure the values are used by attribute SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY (Value Help Table mxi_AttrValueHelp, Values ID SAPC_REQ_TRIGGER_MASS_CHANGE_ACTIVITY) - on very old RDS versions, the values were hard coded.
 
 Execute Job "Delete Request Config Items (SP4 patching)" (com.sap.rds.idm.mass.administration -> Jobs -> Initial Setup) to delete the old config items for mass administrations. Those are not used anymore.
 
